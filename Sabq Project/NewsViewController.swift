@@ -1,30 +1,41 @@
 //
-//  newsViewController.swift
+//  NewsViewController.swift
 //  Sabq Project
 //
-//  Created by Mai Abd Elmonem on 10/17/19.
+//  Created by mai ahmed on 10/18/19.
 //  Copyright © 2019 Mai Abd Elmonem. All rights reserved.
 //
 
 import UIKit
 
-class NewsViewController: UIViewController {
+class NewsViewController: UIViewController{
+//, UITableViewDelegate, UITableViewDataSource {
+
+    
+
+    @IBOutlet weak var newsTableView: UITableView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        self.view.backgroundColor = .red
+//        self.newsTableView.delegate = self
+//        self.newsTableView.dataSource = self
+        setupComponent()
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    func setupComponent() {
+        newsTableView.estimatedRowHeight = 50
+        newsTableView.register(UINib(nibName: "NewsTableViewCell", bundle: nil), forCellReuseIdentifier: "tableCell")
     }
-    */
+    
+//    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+//
+//    }
+//
+//    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+//
+//    }
 
+
+  
 }
