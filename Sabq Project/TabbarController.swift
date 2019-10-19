@@ -17,29 +17,59 @@ class TabbarController: UITabBarController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-//        self.view.backgroundColor = .white
         newsViewController = NewsViewController()
         commonViewController = CommonNewsViewController()
         searchViewController = SearchNewsViewController()
         bookmarkViewController = BookmarksViewController()
         
-        subviewControllers.append(newsViewController!)
-        subviewControllers.append(commonViewController!)
-        subviewControllers.append(searchViewController!)
         subviewControllers.append(bookmarkViewController!)
+        subviewControllers.append(searchViewController!)
+        subviewControllers.append(commonViewController!)
+        subviewControllers.append(newsViewController!)
         
-        newsViewController?.tabBarItem = UITabBarItem(title: "الاخبار", image: #imageLiteral(resourceName: "ic_newspaper"), selectedImage: #imageLiteral(resourceName: "ic_newspaper_active"))
+        newsViewController?.tabBarItem = UITabBarItem(title: NSLocalizedString("titleOftab1", comment: "tab1"), image: #imageLiteral(resourceName: "ic_newspaper"), selectedImage: #imageLiteral(resourceName: "ic_newspaper_active"))
         newsViewController?.tabBarItem.tag = 0
-        commonViewController?.tabBarItem = UITabBarItem(title: "الشائع", image: #imageLiteral(resourceName: "ic_star"), selectedImage: #imageLiteral(resourceName: "ic_star_active"))
+        commonViewController?.tabBarItem = UITabBarItem(title: NSLocalizedString("titleOftab2", comment: "tab2"), image: #imageLiteral(resourceName: "ic_star"), selectedImage: #imageLiteral(resourceName: "ic_star_active"))
         commonViewController?.tabBarItem.tag = 1
-        searchViewController?.tabBarItem = UITabBarItem(title: "بحث", image: #imageLiteral(resourceName: "ic_search"), selectedImage: #imageLiteral(resourceName: "ic_search_active"))
+        searchViewController?.tabBarItem = UITabBarItem(title: NSLocalizedString("titleOftab3", comment: "tab3"), image: #imageLiteral(resourceName: "ic_search"), selectedImage: #imageLiteral(resourceName: "ic_search_active"))
         searchViewController?.tabBarItem.tag = 2
-        bookmarkViewController?.tabBarItem = UITabBarItem(title: NSLocalizedString("titleOftab3", comment: "tab3"), image: #imageLiteral(resourceName: "ic_bookmark"), selectedImage: #imageLiteral(resourceName: "ic_bookmark_active"))
+        bookmarkViewController?.tabBarItem = UITabBarItem(title: NSLocalizedString("titleOftab4", comment: "tab4"), image: #imageLiteral(resourceName: "ic_bookmark"), selectedImage: #imageLiteral(resourceName: "ic_bookmark_active"))
         bookmarkViewController?.tabBarItem.tag = 3
         
         self.setViewControllers(subviewControllers, animated: true)
         self.selectedIndex = 0
         self.selectedViewController = newsViewController
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        let nav = self.navigationController?.navigationBar
+//        nav?.barStyle = UIBarStyle.
+//        let userImageView = UIImageView(frame: CGRect(x: 0, y: 0, width: 40, height: 40))
+//        userImageView.contentMode = .scaleAspectFill
+//        let userImage = UIImage(named: "img_user")
+//        userImageView.image = userImage
+//        navigationItem.leftBarButtonItem = userImageView
+        
+        let userImage = UIBarButtonItem(image: UIImage (named: "img_user"), style: UIBarButtonItem.Style.plain, target: self, action: #selector(user))
+        self.navigationItem.leftBarButtonItem = userImage
+        
+         let notification_btn = UIBarButtonItem(image: UIImage (named: "notification-icon"), style: UIBarButtonItem.Style.plain, target: self, action: #selector(notificationButton))
+        self.navigationItem.rightBarButtonItem = notification_btn
+        
+        
+        let logoImage = UIImageView(frame: CGRect(x: 0, y: 0, width: 40, height: 40))
+        logoImage.contentMode = .scaleAspectFill
+        let image = UIImage(named: "img_logo")
+        logoImage.image = image
+        navigationItem.titleView = logoImage
+    }
+    
+    @objc func user() {
+        print("userPhoto")
+    }
+    
+    @objc func notificationButton() {
+        print("notifications")
     }
     
 //    override func tabBar(_ tabBar: UITabBar, didSelect item: UITabBarItem) {
