@@ -3,16 +3,27 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2D1837CD235C7A4500EE99AF /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D1837C5235C7A4500EE99AF /* BaseViewController.swift */; };
+		2D1837CE235C7A4500EE99AF /* BasePresenterProtocals.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D1837C6235C7A4500EE99AF /* BasePresenterProtocals.swift */; };
+		2D1837CF235C7A4500EE99AF /* BaseModelProtocal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D1837C7235C7A4500EE99AF /* BaseModelProtocal.swift */; };
+		2D1837D0235C7A4500EE99AF /* UIViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D1837C8235C7A4500EE99AF /* UIViewController+Extension.swift */; };
+		2D1837D1235C7A4500EE99AF /* BaseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D1837C9235C7A4500EE99AF /* BaseModel.swift */; };
+		2D1837D2235C7A4500EE99AF /* BasePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D1837CA235C7A4500EE99AF /* BasePresenter.swift */; };
+		2D1837D3235C7A4500EE99AF /* BaseViewProtocal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D1837CB235C7A4500EE99AF /* BaseViewProtocal.swift */; };
+		2D1837D4235C7A4500EE99AF /* BaseListAdaptor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D1837CC235C7A4500EE99AF /* BaseListAdaptor.swift */; };
+		2D1837E8235CAB0D00EE99AF /* CustomSliderCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D1837E6235CAB0D00EE99AF /* CustomSliderCollectionViewCell.swift */; };
+		2D1837E9235CAB0D00EE99AF /* CustomSliderCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2D1837E7235CAB0D00EE99AF /* CustomSliderCollectionViewCell.xib */; };
 		2D92157523589EC400E8245A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D92157423589EC400E8245A /* AppDelegate.swift */; };
 		2D92157C23589EC500E8245A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2D92157B23589EC500E8245A /* Assets.xcassets */; };
 		2D9215872358A25900E8245A /* TabbarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D9215862358A25900E8245A /* TabbarController.swift */; };
 		2D92158B2358A8C300E8245A /* CommonNewsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D92158A2358A8C300E8245A /* CommonNewsViewController.swift */; };
 		2D92158D2358A90F00E8245A /* SearchNewsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D92158C2358A90F00E8245A /* SearchNewsViewController.swift */; };
 		2D92158F2358A92500E8245A /* BookmarksViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D92158E2358A92500E8245A /* BookmarksViewController.swift */; };
+		37A98CBCDD66BDE55593CD74 /* Pods_Sabq_Project.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CA49120740BDDCA0C74FB036 /* Pods_Sabq_Project.framework */; };
 		5D3B3E74235A80C900EA3C6A /* NewsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D3B3E72235A80C900EA3C6A /* NewsViewController.swift */; };
 		5D3B3E75235A80C900EA3C6A /* NewsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5D3B3E73235A80C900EA3C6A /* NewsViewController.xib */; };
 		5D3B3E78235A8AB000EA3C6A /* NewsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D3B3E76235A8AB000EA3C6A /* NewsTableViewCell.swift */; };
@@ -22,6 +33,16 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2D1837C5235C7A4500EE99AF /* BaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
+		2D1837C6235C7A4500EE99AF /* BasePresenterProtocals.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BasePresenterProtocals.swift; sourceTree = "<group>"; };
+		2D1837C7235C7A4500EE99AF /* BaseModelProtocal.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseModelProtocal.swift; sourceTree = "<group>"; };
+		2D1837C8235C7A4500EE99AF /* UIViewController+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extension.swift"; sourceTree = "<group>"; };
+		2D1837C9235C7A4500EE99AF /* BaseModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseModel.swift; sourceTree = "<group>"; };
+		2D1837CA235C7A4500EE99AF /* BasePresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BasePresenter.swift; sourceTree = "<group>"; };
+		2D1837CB235C7A4500EE99AF /* BaseViewProtocal.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseViewProtocal.swift; sourceTree = "<group>"; };
+		2D1837CC235C7A4500EE99AF /* BaseListAdaptor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseListAdaptor.swift; sourceTree = "<group>"; };
+		2D1837E6235CAB0D00EE99AF /* CustomSliderCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomSliderCollectionViewCell.swift; sourceTree = "<group>"; };
+		2D1837E7235CAB0D00EE99AF /* CustomSliderCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomSliderCollectionViewCell.xib; sourceTree = "<group>"; };
 		2D92157123589EC400E8245A /* Sabq Project.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Sabq Project.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2D92157423589EC400E8245A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2D92157B23589EC500E8245A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -36,6 +57,9 @@
 		5D3B3E77235A8AB000EA3C6A /* NewsTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NewsTableViewCell.xib; sourceTree = "<group>"; };
 		5D3B3E7B235A93D200EA3C6A /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5D3B3E7D235A995600EA3C6A /* Localizable.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
+		8DE915049B07F9EFEC866150 /* Pods-Sabq Project.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Sabq Project.debug.xcconfig"; path = "Target Support Files/Pods-Sabq Project/Pods-Sabq Project.debug.xcconfig"; sourceTree = "<group>"; };
+		CA49120740BDDCA0C74FB036 /* Pods_Sabq_Project.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Sabq_Project.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D531A925109581B34A342AFB /* Pods-Sabq Project.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Sabq Project.release.xcconfig"; path = "Target Support Files/Pods-Sabq Project/Pods-Sabq Project.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -43,17 +67,109 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				37A98CBCDD66BDE55593CD74 /* Pods_Sabq_Project.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2D1837C2235C794900EE99AF /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				5D3B3E7B235A93D200EA3C6A /* LaunchScreen.storyboard */,
+				2D92157B23589EC500E8245A /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		2D1837C3235C79BA00EE99AF /* Entity */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Entity;
+			sourceTree = "<group>";
+		};
+		2D1837C4235C7A4500EE99AF /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				2D1837C5235C7A4500EE99AF /* BaseViewController.swift */,
+				2D1837C6235C7A4500EE99AF /* BasePresenterProtocals.swift */,
+				2D1837C7235C7A4500EE99AF /* BaseModelProtocal.swift */,
+				2D1837C8235C7A4500EE99AF /* UIViewController+Extension.swift */,
+				2D1837C9235C7A4500EE99AF /* BaseModel.swift */,
+				2D1837CA235C7A4500EE99AF /* BasePresenter.swift */,
+				2D1837CB235C7A4500EE99AF /* BaseViewProtocal.swift */,
+				2D1837CC235C7A4500EE99AF /* BaseListAdaptor.swift */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
+		2D1837D5235C7A9F00EE99AF /* Scence */ = {
+			isa = PBXGroup;
+			children = (
+				2D1837EB235CAC0D00EE99AF /* NewsHome */,
+			);
+			path = Scence;
+			sourceTree = "<group>";
+		};
+		2D1837D6235C7AE700EE99AF /* Supporting files */ = {
+			isa = PBXGroup;
+			children = (
+				2D92158023589EC500E8245A /* Info.plist */,
+				5D3B3E7D235A995600EA3C6A /* Localizable.strings */,
+			);
+			path = "Supporting files";
+			sourceTree = "<group>";
+		};
+		2D1837EA235CABF200EE99AF /* View */ = {
+			isa = PBXGroup;
+			children = (
+				2D9215862358A25900E8245A /* TabbarController.swift */,
+				2D92158A2358A8C300E8245A /* CommonNewsViewController.swift */,
+				2D92158C2358A90F00E8245A /* SearchNewsViewController.swift */,
+				2D92158E2358A92500E8245A /* BookmarksViewController.swift */,
+				5D3B3E72235A80C900EA3C6A /* NewsViewController.swift */,
+				5D3B3E73235A80C900EA3C6A /* NewsViewController.xib */,
+				5D3B3E76235A8AB000EA3C6A /* NewsTableViewCell.swift */,
+				5D3B3E77235A8AB000EA3C6A /* NewsTableViewCell.xib */,
+				2D1837E6235CAB0D00EE99AF /* CustomSliderCollectionViewCell.swift */,
+				2D1837E7235CAB0D00EE99AF /* CustomSliderCollectionViewCell.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		2D1837EB235CAC0D00EE99AF /* NewsHome */ = {
+			isa = PBXGroup;
+			children = (
+				2D1837ED235CAC4400EE99AF /* Model */,
+				2D1837EC235CAC3900EE99AF /* Presenter */,
+				2D1837EA235CABF200EE99AF /* View */,
+			);
+			path = NewsHome;
+			sourceTree = "<group>";
+		};
+		2D1837EC235CAC3900EE99AF /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		2D1837ED235CAC4400EE99AF /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		2D92156823589EC400E8245A = {
 			isa = PBXGroup;
 			children = (
 				2D92157323589EC400E8245A /* Sabq Project */,
 				2D92157223589EC400E8245A /* Products */,
+				91BF9CCC415D576F5CE79D1C /* Pods */,
+				A72BE744EE21DE261AAEB960 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -68,21 +184,31 @@
 		2D92157323589EC400E8245A /* Sabq Project */ = {
 			isa = PBXGroup;
 			children = (
-				5D3B3E7D235A995600EA3C6A /* Localizable.strings */,
+				2D1837C4235C7A4500EE99AF /* Base */,
+				2D1837C3235C79BA00EE99AF /* Entity */,
+				2D1837D5235C7A9F00EE99AF /* Scence */,
+				2D1837D6235C7AE700EE99AF /* Supporting files */,
+				2D1837C2235C794900EE99AF /* Resources */,
 				2D92157423589EC400E8245A /* AppDelegate.swift */,
-				2D92157B23589EC500E8245A /* Assets.xcassets */,
-				5D3B3E7B235A93D200EA3C6A /* LaunchScreen.storyboard */,
-				2D92158023589EC500E8245A /* Info.plist */,
-				2D9215862358A25900E8245A /* TabbarController.swift */,
-				2D92158A2358A8C300E8245A /* CommonNewsViewController.swift */,
-				2D92158C2358A90F00E8245A /* SearchNewsViewController.swift */,
-				2D92158E2358A92500E8245A /* BookmarksViewController.swift */,
-				5D3B3E72235A80C900EA3C6A /* NewsViewController.swift */,
-				5D3B3E73235A80C900EA3C6A /* NewsViewController.xib */,
-				5D3B3E76235A8AB000EA3C6A /* NewsTableViewCell.swift */,
-				5D3B3E77235A8AB000EA3C6A /* NewsTableViewCell.xib */,
 			);
 			path = "Sabq Project";
+			sourceTree = "<group>";
+		};
+		91BF9CCC415D576F5CE79D1C /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				8DE915049B07F9EFEC866150 /* Pods-Sabq Project.debug.xcconfig */,
+				D531A925109581B34A342AFB /* Pods-Sabq Project.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		A72BE744EE21DE261AAEB960 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				CA49120740BDDCA0C74FB036 /* Pods_Sabq_Project.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -92,9 +218,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 2D92158323589EC500E8245A /* Build configuration list for PBXNativeTarget "Sabq Project" */;
 			buildPhases = (
+				35CAD4548EF16B3DF41163F1 /* [CP] Check Pods Manifest.lock */,
 				2D92156D23589EC400E8245A /* Sources */,
 				2D92156E23589EC400E8245A /* Frameworks */,
 				2D92156F23589EC400E8245A /* Resources */,
+				928348D04EA49991CBFD6EF8 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -143,6 +271,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2D1837E9235CAB0D00EE99AF /* CustomSliderCollectionViewCell.xib in Resources */,
 				5D3B3E7E235A995600EA3C6A /* Localizable.strings in Resources */,
 				2D92157C23589EC500E8245A /* Assets.xcassets in Resources */,
 				5D3B3E7C235A93D200EA3C6A /* LaunchScreen.storyboard in Resources */,
@@ -153,17 +282,68 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		35CAD4548EF16B3DF41163F1 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Sabq Project-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		928348D04EA49991CBFD6EF8 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Sabq Project/Pods-Sabq Project-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Sabq Project/Pods-Sabq Project-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Sabq Project/Pods-Sabq Project-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		2D92156D23589EC400E8245A /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				2D92158F2358A92500E8245A /* BookmarksViewController.swift in Sources */,
+				2D1837D0235C7A4500EE99AF /* UIViewController+Extension.swift in Sources */,
 				5D3B3E78235A8AB000EA3C6A /* NewsTableViewCell.swift in Sources */,
+				2D1837CE235C7A4500EE99AF /* BasePresenterProtocals.swift in Sources */,
+				2D1837E8235CAB0D00EE99AF /* CustomSliderCollectionViewCell.swift in Sources */,
 				2D92157523589EC400E8245A /* AppDelegate.swift in Sources */,
 				2D9215872358A25900E8245A /* TabbarController.swift in Sources */,
+				2D1837D4235C7A4500EE99AF /* BaseListAdaptor.swift in Sources */,
+				2D1837D1235C7A4500EE99AF /* BaseModel.swift in Sources */,
 				5D3B3E74235A80C900EA3C6A /* NewsViewController.swift in Sources */,
+				2D1837D2235C7A4500EE99AF /* BasePresenter.swift in Sources */,
+				2D1837CD235C7A4500EE99AF /* BaseViewController.swift in Sources */,
 				2D92158B2358A8C300E8245A /* CommonNewsViewController.swift in Sources */,
+				2D1837D3235C7A4500EE99AF /* BaseViewProtocal.swift in Sources */,
+				2D1837CF235C7A4500EE99AF /* BaseModelProtocal.swift in Sources */,
 				2D92158D2358A90F00E8245A /* SearchNewsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -291,10 +471,11 @@
 		};
 		2D92158423589EC500E8245A /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8DE915049B07F9EFEC866150 /* Pods-Sabq Project.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = "Sabq Project/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/Sabq Project/Supporting files/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -309,10 +490,11 @@
 		};
 		2D92158523589EC500E8245A /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D531A925109581B34A342AFB /* Pods-Sabq Project.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = "Sabq Project/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/Sabq Project/Supporting files/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

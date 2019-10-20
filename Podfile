@@ -6,5 +6,7 @@ target 'Sabq Project' do
   use_frameworks!
 
   # Pods for Sabq Project
+pod 'Moya'
+pod 'SDWebImage', '~> 5.0'
 
 end
