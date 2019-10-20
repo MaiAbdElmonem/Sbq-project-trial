@@ -8,10 +8,10 @@
 
 import UIKit
 
-class NewsTableViewCell:UITableViewCell,UICollectionViewDataSource, UICollectionViewDelegate {
+class NewsTableViewCell:UITableViewCell,UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
     
     @IBOutlet weak var sliderCollectionView: UICollectionView!
-    
+     let cellReuseId = "CollectionViewCell"
     class var customCell : NewsTableViewCell {
         let cell = Bundle.main.loadNibNamed("NewsTableViewCell", owner: self, options: nil)?.last
         return cell as! NewsTableViewCell
