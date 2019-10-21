@@ -8,7 +8,11 @@
 
 import UIKit
 
-class NewsViewController: UIViewController{
+class NewsViewController: BaseViewController< NewsPresenter > , NewsViewProtocal{
+    func getNewsSlider(slider: [Material], materials: [Material]) {
+        
+    }
+    
 //, UITableViewDelegate, UITableViewDataSource {
 
     

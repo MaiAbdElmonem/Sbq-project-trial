@@ -9,19 +9,19 @@
 import Foundation
 
 //protocol listAdapterDelegate:class {
-//    
+//
 //}
 
 protocol BaseListAdapterProtocal:class {
     associatedtype DataType
-//    associatedtype AdapterDelegate where AdapterDelegate:listAdapterDelegate
-
+    //    associatedtype AdapterDelegate where AdapterDelegate:listAdapterDelegate
+    
     var list: [DataType]? { get set}
     
-//    var delegate:AdapterDelegate? { get set }
+    //    var delegate:AdapterDelegate? { get set }
     
     var reloadData:(() -> Void)? { get set}
-
+    
     var showEmptyState: ((Bool) -> Void)? { get set}
     
     func add(item: DataType)
