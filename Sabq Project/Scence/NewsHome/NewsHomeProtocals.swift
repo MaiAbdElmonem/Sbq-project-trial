@@ -8,14 +8,12 @@
 
 import Foundation
 
-protocol NewsPresenterProtocal: BasePresenterProtocol{
-   
+protocol NewsPresenterProtocal: BasePresenterProtocol{   
     func loadNewsSliders()
-   
 }
 
 protocol NewsViewProtocal:BaseViewProtocal {
-    func getNewsSlider(slider : [Material], materials:[Material])
+//    func getNewsSlider(slider : [Material], materials:[Material])
 }
 
 protocol NewsModelProtocal:BaseModelProtocal {
@@ -25,6 +23,6 @@ protocol NewsModelProtocal:BaseModelProtocal {
 }
 
 
-protocol NewsAdapterProtocal:BaseListAdapterProtocal {
-   
-}
+//protocol NewsAdapterProtocal:BaseListAdapterProtocal {
+//
+//}

@@ -8,10 +8,6 @@
 
 import Foundation
 
-//protocol listAdapterDelegate:class {
-//
-//}
-
 protocol BaseListAdapterProtocal:class {
     associatedtype DataType
     //    associatedtype AdapterDelegate where AdapterDelegate:listAdapterDelegate

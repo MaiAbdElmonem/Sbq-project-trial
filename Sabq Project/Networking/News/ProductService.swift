@@ -51,16 +51,16 @@ extension NewsService: TargetType {
     var task: Task {        
         switch self {
         case .slider :
-            let headerparams: [String : Any] = [:]
-            return .requestParameters(parameters: headerparams,
+            
+            return .requestParameters(parameters: ["" : ""],
                                                 encoding: URLEncoding.default)
         case .videos:
-            let headerparams: [String : Any] = [:]
-            return .requestParameters(parameters: headerparams, encoding: URLEncoding.default)
+           
+            return .requestParameters(parameters: ["type":"video"], encoding: URLEncoding.default)
             
         case .aricles:
-            let headerparams: [String : Any] = [:]
-            return .requestParameters(parameters: headerparams, encoding: URLEncoding.default)
+            
+            return .requestParameters(parameters: ["" : ""], encoding: URLEncoding.default)
         }
     }
     
