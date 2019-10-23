@@ -11,7 +11,7 @@ import UIKit
 
 //Each enum case represents the data type that requires the different TableViewCell
 enum  NewsItemType{
-    case material
+//    case material
     case videos
 //    case aricles
 }
@@ -24,17 +24,38 @@ protocol NewsListItem {
 //Each item will conform to the protocol.
 
 class NewsAdapter: NSObject, BaseListAdapterProtocal{
+    var showEmptyState: ((Bool) -> Void)?
+    
    
     
     typealias DataType = NewsListItem
      var list: [NewsListItem]?
     var slider = [SliderItems]()
     var reloadData: (() -> Void)?
-    var showEmptyState: ((Bool) -> Void)?
+//    var showEmptyState: ((Bool) -> Void)?
     
     var homeTable:UITableView?
-    init(tableview : UITableView) {
-        self.homeTable = tableview
+    func setTableView(newsTable : UITableView){
+        self.homeTable = newsTable
+    }
+    
+    func addSliders(sliders: [Material]) {
+        if list == nil {
+            list = []
+        }
+        
+        if !sliders.isEmpty {
+            let slidersItem = SliderItems(sliders: sliders)
+            slider.append(slidersItem)
+        }
+        
+//        if !materials.isEmpty {
+//            for material in materials {
+//                let materialsItem = MaterialItems(material: material)
+//                list?.append(materialsItem)
+//            }
+//        }
+        reloadData?()
     }
     
     func add(item: NewsListItem) {
@@ -42,9 +63,9 @@ class NewsAdapter: NSObject, BaseListAdapterProtocal{
     }
     
     func add(items: [NewsListItem]) {
-        if list == nil {
-            list = []
-        }
+//        if list == nil {
+//            list = []
+//        }
        list?.append(contentsOf: items)
         reloadData!()
     }
@@ -71,9 +92,9 @@ extension NewsAdapter: UITableViewDataSource {
     }
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         switch section {
-        case 0:
+        case 0: //showSliderarr
             return slider.count
-        default:
+        default: //rest of list
             return count()
         }
     }
@@ -82,35 +103,46 @@ extension NewsAdapter: UITableViewDataSource {
          let item = list![indexPath.section]
         
         switch indexPath.section {
-        case 0:
-            if let cell = homeTable?.dequeueReusableCell(withIdentifier: <#T##String#>, for: indexPath) as?  {
-                cell
+        case 0: //slidertableSection
+            if let cell = homeTable?.dequeueReusableCell(withIdentifier: "SliderTableViewCell", for: indexPath) as? SliderTableViewCell {
+                cell.slideList = slider[indexPath.row].sliders
                 return cell
             }
         default:
-            <#code#>
+            switch item.type {
+                
+//            case .material:
+//                if let item = item as? MaterialItems, let cell = homeTable?.dequeueReusableCell(withIdentifier: <#T##String#>, for: <#T##IndexPath#>)
+            case .videos:
+                let item = item as? VideoItems
+                guard let cell = homeTable?.dequeueReusableCell(withIdentifier: "VideoTableCell") else { return UITableViewCell() }
+                 return cell
+            }
+           
         }
+         return UITableViewCell()
     }
     
 }
+
 //Create the first ViewModeItem for the slider cell.
 class SliderItems {
      var rowCount: Int { return 1 }
     var sliders : [Material]
-    init(slider:[Material]) {
-        self.sliders = slider
+    init(sliders:[Material]) {
+        self.sliders = sliders
     }
 }
 
-class MaterialItems: NewsListItem {
-    var type: NewsItemType {
-        return .material
-    }
-    var material : Material
-    init(material:Material) {
-        self.material = material
-    }
-}
+//class MaterialItems: NewsListItem {
+//    var type: NewsItemType {
+//        return .material
+//    }
+//    var material : Material
+//    init(material:Material) {
+//        self.material = material
+//    }
+//}
 
 class VideoItems: NewsListItem {
     var type : NewsItemType {
@@ -148,55 +180,6 @@ class VideoItems: NewsListItem {
     
    
 
-//    var list: [[Material]]?
-//    typealias DataType = [Material]
-//    
-//    func add(item: [Material], at index: Int) {
-//        list?.append(item)
-//        reloadData!()
-//    }
-//    
-//    func add(items: [[Material]]) {
-//        list = items
-//        reloadData!()
-//    }
-//    
-//    func update(item: [Material]) {
-//        
-//    }
-//    
-//    
-//    
-//    
-//   
-//  
-//    
-//   
-//    
-//    var reloadData: (() -> Void)?
-//    
-//    var showEmptyState: ((Bool) -> Void)?
-//    
-//   
-//    
-//    func count() -> Int {
-//        if list != nil {
-//            return list!.count
-//        }else {
-//            return 0
-//        }
-//    }
-//    
-//    func isLastIndex(index: IndexPath) -> Bool {
-//        return true
-//    }
-//    
-//    
-    
-   
-    
-   
-  
-    
+
     
 

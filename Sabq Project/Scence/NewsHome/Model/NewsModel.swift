@@ -13,7 +13,7 @@ class NewsModel : BaseModel, NewsModelProtocal {
     func getNewsSlider(compelation: @escaping (Result<Any, Error>) -> Void) {
         NetworkManager.shared.getNewsSlider() { (result,statusCode) in
             do {
-                let res = try result.get() 
+                let res = try result.get()
                 compelation(.success(res))
                 print(res)
             } catch {

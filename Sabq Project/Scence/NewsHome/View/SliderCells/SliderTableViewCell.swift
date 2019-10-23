@@ -8,14 +8,15 @@
 
 import UIKit
 
-class NewsTableViewCell:UITableViewCell,UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
+class SliderTableViewCell:UITableViewCell,UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
     
     @IBOutlet weak var sliderCollectionView: UICollectionView!
      let cellReuseId = "CollectionViewCell"
-    class var customCell : NewsTableViewCell {
-        let cell = Bundle.main.loadNibNamed("NewsTableViewCell", owner: self, options: nil)?.last
-        return cell as! NewsTableViewCell
-    }
+    var slideList : [Material]?
+//    class var customCell : SliderTableViewCell {
+//        let cell = Bundle.main.loadNibNamed("SliderTableViewCell", owner: self, options: nil)?.last
+//        return cell as! SliderTableViewCell
+//    }
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -44,11 +45,12 @@ class NewsTableViewCell:UITableViewCell,UICollectionViewDataSource, UICollection
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 5
+        return slideList!.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: cellReuseId, for: indexPath)
+        let cell = sliderCollectionView.dequeueReusableCell(withReuseIdentifier: cellReuseId, for: indexPath) as! CustomSliderCollectionViewCell
+        cell.config(materialObj: slideList![indexPath.row])
         return cell
     }
     
@@ -56,8 +58,6 @@ class NewsTableViewCell:UITableViewCell,UICollectionViewDataSource, UICollection
         return UIEdgeInsets(top: 0, left: 10, bottom: 0, right: 10)
     }
     
-    func config(){
-        
-    }
+   
     
 }

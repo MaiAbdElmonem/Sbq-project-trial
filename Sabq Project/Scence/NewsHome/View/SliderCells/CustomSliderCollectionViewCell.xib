@@ -84,6 +84,13 @@
             </constraints>
             <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
             <size key="customSize" width="370" height="591"/>
+            <connections>
+                <outlet property="descriptionTextview" destination="LYt-if-fcJ" id="g4E-6M-eci"/>
+                <outlet property="newsImage" destination="BEy-3k-SS9" id="N7u-lQ-KCB"/>
+                <outlet property="noOfViewsLabel" destination="JYG-KQ-iJM" id="fmV-oN-gx4"/>
+                <outlet property="timeLabel" destination="8yh-05-e96" id="sR1-3D-ZZu"/>
+                <outlet property="titleTextview" destination="6wf-gn-XWA" id="e1u-cF-TcS"/>
+            </connections>
             <point key="canvasLocation" x="191.30434782608697" y="104.12946428571428"/>
         </collectionViewCell>
     </objects>
