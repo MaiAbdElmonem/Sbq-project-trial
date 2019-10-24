@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import UIKit
 
 class Module {
     static func HomeModule() -> NewsViewController { // as routuing
@@ -17,4 +18,11 @@ class Module {
         view.setPresenter(presenter: presenter)
         return view    //to return and start listactors
     }
+    
+    
+    
+//    func arablicLang()  {
+//        UIView.appearance().semanticContentAttribute = .forceRightToLeft
+    //        self.directParentView.semanticContentAttribute = .forceRightToLeft
+//    }
 }

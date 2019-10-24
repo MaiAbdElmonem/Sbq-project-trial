@@ -9,6 +9,9 @@
 import UIKit
 
 class ImageCollectionViewCell: UICollectionViewCell {
+    @IBOutlet weak var newsImage: UIImageView!
+    @IBOutlet weak var titleLabel: UILabel!
+    @IBOutlet weak var timeLabel: UILabel!
     
     class var CustomCell : ImageCollectionViewCell {
         let cell = Bundle.main.loadNibNamed("ImageCollectionViewCell", owner: self, options: nil)?.last
@@ -21,9 +24,10 @@ class ImageCollectionViewCell: UICollectionViewCell {
     }
     
     func configImage(comicsObj : Comic){
-        
+        titleLabel.text = comicsObj.title
+        timeLabel.text = comicsObj.publishDate
         let placeholderimage = UIImage(named: "imgslider")
-        //        newsImage.sd_setImage(with: URL(string: materialObj.coverPhoto!), placeholderImage: placeholderimage)
+                newsImage.sd_setImage(with: URL(string: comicsObj.coverPhoto!), placeholderImage: placeholderimage)
     }
 
 

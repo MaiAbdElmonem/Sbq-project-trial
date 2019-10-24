@@ -33,6 +33,8 @@
 		2D1837D4235C7A4500EE99AF /* BaseListAdaptor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D1837CC235C7A4500EE99AF /* BaseListAdaptor.swift */; };
 		2D1837E8235CAB0D00EE99AF /* CustomSliderCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D1837E6235CAB0D00EE99AF /* CustomSliderCollectionViewCell.swift */; };
 		2D1837E9235CAB0D00EE99AF /* CustomSliderCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2D1837E7235CAB0D00EE99AF /* CustomSliderCollectionViewCell.xib */; };
+		2D840E622361DB2B00DC70BB /* MaterialTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D840E602361DB2B00DC70BB /* MaterialTableViewCell.swift */; };
+		2D840E632361DB2B00DC70BB /* MaterialTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2D840E612361DB2B00DC70BB /* MaterialTableViewCell.xib */; };
 		2D92157523589EC400E8245A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D92157423589EC400E8245A /* AppDelegate.swift */; };
 		2D92157C23589EC500E8245A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2D92157B23589EC500E8245A /* Assets.xcassets */; };
 		2D9215872358A25900E8245A /* TabbarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D9215862358A25900E8245A /* TabbarController.swift */; };
@@ -92,6 +94,8 @@
 		2D1837CC235C7A4500EE99AF /* BaseListAdaptor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseListAdaptor.swift; sourceTree = "<group>"; };
 		2D1837E6235CAB0D00EE99AF /* CustomSliderCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomSliderCollectionViewCell.swift; sourceTree = "<group>"; };
 		2D1837E7235CAB0D00EE99AF /* CustomSliderCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomSliderCollectionViewCell.xib; sourceTree = "<group>"; };
+		2D840E602361DB2B00DC70BB /* MaterialTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MaterialTableViewCell.swift; sourceTree = "<group>"; };
+		2D840E612361DB2B00DC70BB /* MaterialTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MaterialTableViewCell.xib; sourceTree = "<group>"; };
 		2D92157123589EC400E8245A /* Sabq Project.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Sabq Project.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2D92157423589EC400E8245A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2D92157B23589EC500E8245A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -247,6 +251,7 @@
 		2D1837EA235CABF200EE99AF /* View */ = {
 			isa = PBXGroup;
 			children = (
+				2D840E5F2361DAE300DC70BB /* Materialcell */,
 				2D03FF4A236130B800952302 /* ArticleCell */,
 				2D03FF49236130A900952302 /* ImageCell */,
 				2D03FF482361308700952302 /* VideoCells */,
@@ -304,6 +309,15 @@
 				5D3B3E73235A80C900EA3C6A /* NewsViewController.xib */,
 			);
 			path = ViewControllerTableCell;
+			sourceTree = "<group>";
+		};
+		2D840E5F2361DAE300DC70BB /* Materialcell */ = {
+			isa = PBXGroup;
+			children = (
+				2D840E602361DB2B00DC70BB /* MaterialTableViewCell.swift */,
+				2D840E612361DB2B00DC70BB /* MaterialTableViewCell.xib */,
+			);
+			path = Materialcell;
 			sourceTree = "<group>";
 		};
 		2D92156823589EC400E8245A = {
@@ -504,6 +518,7 @@
 				2D03FF522361314A00952302 /* VideoCollectionViewCell.xib in Resources */,
 				2D03FF5E2361322F00952302 /* ArticleTableViewCell.xib in Resources */,
 				5D3B3E7E235A995600EA3C6A /* Localizable.strings in Resources */,
+				2D840E632361DB2B00DC70BB /* MaterialTableViewCell.xib in Resources */,
 				2D92157C23589EC500E8245A /* Assets.xcassets in Resources */,
 				2D03FF5A236131AF00952302 /* ImageTableViewCell.xib in Resources */,
 				5D3B3E7C235A93D200EA3C6A /* LaunchScreen.storyboard in Resources */,
@@ -590,6 +605,7 @@
 				2D03FF4723612D8100952302 /* ImageResponse.swift in Sources */,
 				2D03FF45236124FF00952302 /* ArticleResponse.swift in Sources */,
 				2D03FF552361319600952302 /* ImageCollectionViewCell.swift in Sources */,
+				2D840E622361DB2B00DC70BB /* MaterialTableViewCell.swift in Sources */,
 				2DCBF858235DFAC800BC5C41 /* NewsModel.swift in Sources */,
 				2DCBF84A235DA79200BC5C41 /* Material.swift in Sources */,
 				2D03FF4D2361311F00952302 /* VideoTableViewCell.swift in Sources */,

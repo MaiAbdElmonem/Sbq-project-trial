@@ -16,7 +16,10 @@ protocol NewsPresenterProtocal: BasePresenterProtocol{
 }
 
 protocol NewsViewProtocal:BaseViewProtocal {
-//    func getNewsSlider(slider : [Material], materials:[Material])
+    func getNewsSliderList(sliderArr : [Material], materialsArr : [Material])
+    func getNewsVideosList(videoArr : [Comic])
+     func getNewsImagesList(ImagesArr : [Comic])
+     func getNewsArticlesList(articlesArr : [Material])
 }
 
 protocol NewsModelProtocal:BaseModelProtocal {

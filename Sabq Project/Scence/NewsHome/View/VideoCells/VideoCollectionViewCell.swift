@@ -9,7 +9,10 @@
 import UIKit
 
 class VideoCollectionViewCell: UICollectionViewCell {
-
+    @IBOutlet weak var videoImage: UIImageView!
+    @IBOutlet weak var titleLabel: UILabel!
+    @IBOutlet weak var timeLabel: UILabel!
+    
     class var CustomCell : VideoCollectionViewCell {
         let cell = Bundle.main.loadNibNamed("VideoCollectionViewCell", owner: self, options: nil)?.last
         return cell as! VideoCollectionViewCell
@@ -21,9 +24,10 @@ class VideoCollectionViewCell: UICollectionViewCell {
     }
     
     func config(comicsObj : Comic){
-      
+      titleLabel.text = comicsObj.title
+        timeLabel.text = comicsObj.publishDate
         let placeholderimage = UIImage(named: "imgslider")
-//        newsImage.sd_setImage(with: URL(string: materialObj.coverPhoto!), placeholderImage: placeholderimage)
+        videoImage.sd_setImage(with: URL(string: comicsObj.coverPhoto!), placeholderImage: placeholderimage)
     }
 
 

@@ -18,7 +18,7 @@
                 <rect key="frame" x="0.0" y="0.0" width="370" height="591"/>
                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 <subviews>
-                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="BEy-3k-SS9">
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="imgslider" translatesAutoresizingMaskIntoConstraints="NO" id="BEy-3k-SS9">
                         <rect key="frame" x="0.0" y="0.0" width="370" height="200"/>
                         <constraints>
                             <constraint firstAttribute="height" relation="lessThanOrEqual" constant="200" id="nlo-Ya-tIy"/>
@@ -66,7 +66,9 @@
                 </subviews>
             </view>
             <constraints>
+                <constraint firstItem="ZTg-uK-7eu" firstAttribute="bottom" secondItem="8yh-05-e96" secondAttribute="bottom" constant="2" id="8VW-Nd-xVY"/>
                 <constraint firstItem="JYG-KQ-iJM" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="192" id="DwL-RD-BF4"/>
+                <constraint firstItem="ZTg-uK-7eu" firstAttribute="bottom" secondItem="JYG-KQ-iJM" secondAttribute="bottom" constant="2" id="DxZ-Y4-X69"/>
                 <constraint firstItem="6wf-gn-XWA" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="23" id="Eja-Eg-NwI"/>
                 <constraint firstItem="6wf-gn-XWA" firstAttribute="top" secondItem="BEy-3k-SS9" secondAttribute="bottom" constant="21" id="FWS-OW-eLi"/>
                 <constraint firstItem="BEy-3k-SS9" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="GYg-7u-dvr"/>
@@ -94,4 +96,7 @@
             <point key="canvasLocation" x="191.30434782608697" y="104.12946428571428"/>
         </collectionViewCell>
     </objects>
+    <resources>
+        <image name="imgslider" width="375" height="241"/>
+    </resources>
 </document>

@@ -11,6 +11,7 @@ import UIKit
 
 //Each enum case represents the data type that requires the different TableViewCell
 enum  NewsItemType{
+    case material
     case images
     case videos
     case aricles
@@ -26,7 +27,7 @@ protocol NewsListItem {
 class NewsAdapter: NSObject, BaseListAdapterProtocal{
   
     typealias DataType = NewsListItem
-     var list: [NewsListItem]?
+    var list: [NewsListItem]?
     var slider = [SliderItems]()
     var reloadData: (() -> Void)?
     var showEmptyState: ((Bool) -> Void)?
@@ -41,10 +42,9 @@ class NewsAdapter: NSObject, BaseListAdapterProtocal{
             list = []
         }
         
-        if !sliders.isEmpty {
-            let slidersItem = SliderItems(sliders: sliders)
-            slider.append(slidersItem)
-        }
+
+        let slidersItem = SliderItems(sliders: sliders)
+        slider.append(slidersItem)
         
         reloadData?()
     }
@@ -54,9 +54,7 @@ class NewsAdapter: NSObject, BaseListAdapterProtocal{
     }
     
     func add(items: [NewsListItem]) {
-//        if list == nil {
-//            list = []
-//        }
+
        list?.append(contentsOf: items)
         reloadData!()
     }
@@ -85,7 +83,7 @@ extension NewsAdapter: UITableViewDataSource {
         switch section {
         case 0: //showSliderarr
             return slider.count
-        default: //rest of list
+        default: //rest of list of second secetion
             return count()
         }
     }
@@ -117,6 +115,11 @@ extension NewsAdapter: UITableViewDataSource {
                 let item = item as! ArticlesItems
                 let cell = homeTable?.dequeueReusableCell(withIdentifier: "ArticleTableViewCell", for: indexPath) as! ArticleTableViewCell
                 cell.articleList = item.articles
+                
+            case .material:
+                let item = item as! MaterialItems
+                let cell = homeTable?.dequeueReusableCell(withIdentifier: "MaterialTableViewCell", for: indexPath) as! MaterialTableViewCell
+                cell.config(materialObj: item.material)
             }
            
         }
@@ -135,15 +138,15 @@ class SliderItems {
     }
 }
 
-//class MaterialItems: NewsListItem {
-//    var type: NewsItemType {
-//        return .material
-//    }
-//    var material : Material
-//    init(material:Material) {
-//        self.material = material
-//    }
-//}
+class MaterialItems: NewsListItem {
+    var type: NewsItemType {
+        return .material
+    }
+    var material : Material
+    init(material:Material) {
+        self.material = material
+    }
+}
 
 class VideoItems: NewsListItem {
     var type : NewsItemType {

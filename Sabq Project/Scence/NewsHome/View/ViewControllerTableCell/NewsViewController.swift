@@ -9,12 +9,8 @@
 import UIKit
 
 class NewsViewController: BaseViewController< NewsPresenter > , NewsViewProtocal{
-    
+   
 //    var results : RootClass?
-//    func getNewsSlider(slider: [Material], materials: [Material]) {
-//        adapter.addSliders(sliders: slider)
-//    }
-//    
 
     @IBOutlet weak var newsTableView: UITableView!
     var adapter = NewsAdapter()
@@ -23,13 +19,17 @@ class NewsViewController: BaseViewController< NewsPresenter > , NewsViewProtocal
         newsTableView.delegate = self
         newsTableView.dataSource = adapter
         adapter.setTableView(newsTable: newsTableView)
+         presenter.loadNewsSliders()
         adapter.reloadData = reloadTableData
-        presenter.loadNewsSliders()
+       
         setupComponent()
     }
     
     func setupComponent() {
 //        newsTableView.estimatedRowHeight = 50
+        let materialNib = UINib(nibName: "MaterialTableViewCell", bundle: nil)
+        newsTableView.register(materialNib, forCellReuseIdentifier: "MaterialTableViewCell")
+        
         let sliderNib = UINib(nibName: "SliderTableViewCell", bundle: nil)
             newsTableView.register(sliderNib, forCellReuseIdentifier: "SliderTableViewCell")
         
@@ -44,10 +44,26 @@ class NewsViewController: BaseViewController< NewsPresenter > , NewsViewProtocal
 
 
     }
-//
+
     func reloadTableData(){
         newsTableView.separatorStyle = .singleLine
         newsTableView.reloadData()
+    }
+    
+    func getNewsSliderList(sliderArr: [Material], materialsArr: [Material]) {
+//        adapter.add(items: sliderArr , materialsArr )as! [NewsListItem]
+    }
+    
+    func getNewsVideosList(videoArr: [Comic]) {
+        adapter.add(items: videoArr as! [NewsListItem])
+    }
+    
+    func getNewsImagesList(ImagesArr: [Comic]) {
+        
+    }
+    
+    func getNewsArticlesList(articlesArr: [Material]) {
+        
     }
     
 //    func numberOfSections(in tableView: UITableView) -> Int {

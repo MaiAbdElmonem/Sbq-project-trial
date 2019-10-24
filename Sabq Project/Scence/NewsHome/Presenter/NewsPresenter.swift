@@ -22,9 +22,9 @@ class NewsPresenter : BasePresenter, NewsPresenterProtocal {
         homeModel?.getNewsSlider { result in
             do {
 //                let results = try result.get() as! RootClass
-                let slider = (try result.get() as! RootClass).slider
-                let materials = (try result.get() as! RootClass).materials
-//                self.homeView?.getNewsSlider(slider: slider! , materials: material!)
+                let newsslider = (try result.get() as! RootClass).slider
+                let newsmaterials = (try result.get() as! RootClass).materials
+                self.homeView?.getNewsSliderList(sliderArr: newsslider!, materialsArr: newsmaterials!)
             }catch {
                 print(error)
             }
@@ -35,19 +35,18 @@ class NewsPresenter : BasePresenter, NewsPresenterProtocal {
         homeModel?.getNewsImages { result in
             do{
                 let imagecomics = (try result.get() as! ImageResponse).comics
-                
+                self.homeView?.getNewsImagesList(ImagesArr: imagecomics!)
             }catch{
                 print(error)
             }
         }
     }
     
-    
-    
     func loadNewsVideos() {
         homeModel?.getNewsVideos { result in
             do {
-                let comics = (try result.get() as! VideoResponse).comics
+                let videocomics = (try result.get() as! VideoResponse).comics
+                self.homeView?.getNewsVideosList(videoArr: videocomics!)
             }catch {
                 print(error)
         }
@@ -57,7 +56,8 @@ class NewsPresenter : BasePresenter, NewsPresenterProtocal {
     func loadNewsArticles() {
         homeModel?.getNewsArticles { result in
             do {
-                let materials = (try result.get() as! ArticleResponse).materials
+                let articlesmaterials = (try result.get() as! ArticleResponse).materials
+                self.homeView?.getNewsArticlesList(articlesArr: articlesmaterials!)
             }catch{
                 print(error)
             }

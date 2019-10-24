@@ -17,7 +17,7 @@ class TabbarController: UITabBarController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        newsViewController = NewsViewController()
+        newsViewController = Module.HomeModule()
         commonViewController = CommonNewsViewController()
         searchViewController = SearchNewsViewController()
         bookmarkViewController = BookmarksViewController()
