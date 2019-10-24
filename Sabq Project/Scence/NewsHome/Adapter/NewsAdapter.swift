@@ -11,9 +11,9 @@ import UIKit
 
 //Each enum case represents the data type that requires the different TableViewCell
 enum  NewsItemType{
-//    case material
+    case images
     case videos
-//    case aricles
+    case aricles
 }
 //because we want to use our data within the same tableView, need to have the single DataItem, that will determine all properties. We can achieve this by using the protocol, that will provide computed properties to our items:
 protocol NewsListItem {
@@ -46,12 +46,6 @@ class NewsAdapter: NSObject, BaseListAdapterProtocal{
             slider.append(slidersItem)
         }
         
-//        if !materials.isEmpty {
-//            for material in materials {
-//                let materialsItem = MaterialItems(material: material)
-//                list?.append(materialsItem)
-//            }
-//        }
         reloadData?()
     }
     
@@ -108,12 +102,21 @@ extension NewsAdapter: UITableViewDataSource {
         default:
             switch item.type {
                 
-//            case .material:
-//                if let item = item as? MaterialItems, let cell = homeTable?.dequeueReusableCell(withIdentifier: <#T##String#>, for: <#T##IndexPath#>)
             case .videos:
-                let item = item as? VideoItems
-                guard let cell = homeTable?.dequeueReusableCell(withIdentifier: "VideoTableCell") else { return UITableViewCell() }
+                let item = item as! VideoItems
+                let cell = homeTable?.dequeueReusableCell(withIdentifier: "VideoTableViewCell", for: indexPath) as! VideoTableViewCell
+                cell.videosList = item.videos
                  return cell
+                
+            case .images:
+                let item = item as! ImagesItems
+                let cell = homeTable?.dequeueReusableCell(withIdentifier: "ImageTableViewCell", for: indexPath) as! ImageTableViewCell
+                cell.imageList = item.images
+                
+            case .aricles:
+                let item = item as! ArticlesItems
+                let cell = homeTable?.dequeueReusableCell(withIdentifier: "ArticleTableViewCell", for: indexPath) as! ArticleTableViewCell
+                cell.articleList = item.articles
             }
            
         }
@@ -121,6 +124,7 @@ extension NewsAdapter: UITableViewDataSource {
     }
     
 }
+
 
 //Create the first ViewModeItem for the slider cell.
 class SliderItems {
@@ -145,21 +149,31 @@ class VideoItems: NewsListItem {
     var type : NewsItemType {
         return .videos
     }
-    var videos : [Material]
-    init(videos:[Material]) {
+    var videos : [Comic]
+    init(videos:[Comic]) {
         self.videos = videos
     }
 }
 
-//class ArticlesItems: NewsListItem {
-//    var type : NewsItemType {
-//        return .aricles
-//    }
-//    var articles : [Material]
-//    init(articles:[Material]) {
-//        self.articles = articles
-//    }
+class ImagesItems: NewsListItem {
+    var type : NewsItemType{
+        return .images
+    }
+    var images : [Comic]
+    init(images:[Comic]) {
+        self.images=images
+    }
+}
 
+class ArticlesItems: NewsListItem {
+    var type : NewsItemType {
+        return .aricles
+    }
+    var articles : [Material]
+    init(articles:[Material]) {
+        self.articles = articles
+    }
+}
     
     
     

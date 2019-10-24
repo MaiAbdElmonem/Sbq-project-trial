@@ -30,8 +30,19 @@ class NewsViewController: BaseViewController< NewsPresenter > , NewsViewProtocal
     
     func setupComponent() {
 //        newsTableView.estimatedRowHeight = 50
-        let sliderNib = UINib(nibName: "SliderTableViewCell", bundle: Bundle.main)
+        let sliderNib = UINib(nibName: "SliderTableViewCell", bundle: nil)
             newsTableView.register(sliderNib, forCellReuseIdentifier: "SliderTableViewCell")
+        
+        let videoNib = UINib(nibName: "VideoTableViewCell", bundle: nil)
+        newsTableView.register(videoNib, forCellReuseIdentifier: "VideoTableViewCell")
+        
+        let imageNib = UINib(nibName: "ImageTableViewCell", bundle: nil)
+        newsTableView.register(imageNib, forCellReuseIdentifier: "ImageTableViewCell")
+        
+        let articleNib = UINib(nibName: "ArticleTableViewCell", bundle: nil)
+        newsTableView.register(articleNib, forCellReuseIdentifier: "ArticleTableViewCell")
+
+
     }
 //
     func reloadTableData(){
