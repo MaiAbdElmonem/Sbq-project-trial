@@ -9,9 +9,9 @@
 import Foundation
 
 class NewsModel : BaseModel, NewsModelProtocal {
-   
+  
     func getNewsSlider(compelation: @escaping (Result<Any, Error>) -> Void) {
-        NetworkManager.shared.getNewsSlider() { (result,statusCode) in
+        NetworkManager.shared.getNewsSlider { (result,statusCode) in
             do {
                 let res = try result.get()
                 compelation(.success(res))
@@ -23,11 +23,12 @@ class NewsModel : BaseModel, NewsModelProtocal {
         }
     }
     
-    func getNewsVideos(compelation: @escaping (Result<Any, Error>) -> Void) {
-        NetworkManager.shared.getNewsVideos { (result,statusCode) in
+    func getNewsImages(compelation: @escaping (Result<Any, Error>) -> Void) {
+        NetworkManager.shared.getNewsImages { (result,statusCode) in
             do {
-                let res = try result.get().materials
-                compelation(.success(res!))
+                let res = try result.get()
+                compelation(.success(res))
+                print(res)
             } catch {
                 print(error)
                 compelation(.failure(error))
@@ -35,15 +36,29 @@ class NewsModel : BaseModel, NewsModelProtocal {
         }
     }
     
-//    func getNewsArticles(compelation: @escaping (Result<Any, Error>) -> Void) {
-//        NetworkManager.shared.g { (result,statusCode) in
-//            do {
-//                let res = try result.get().slider
-//                compelation(.success(res!))
-//            } catch {
-//                print(error)
-//                compelation(.failure(error))
-//            }
-//        }
-//    }
+    
+    
+    func getNewsVideos(compelation: @escaping (Result<Any, Error>) -> Void) {
+        NetworkManager.shared.getNewsVideos { (result,statusCode) in
+            do {
+                let res = try result.get()
+                compelation(.success(res))
+            } catch {
+                print(error)
+                compelation(.failure(error))
+            }
+        }
+    }
+    
+    func getNewsArticles(compelation: @escaping (Result<Any, Error>) -> Void) {
+        NetworkManager.shared.getNewsAricles { (result,statusCode) in
+            do {
+                let res = try result.get()
+                compelation(.success(res))
+            } catch {
+                print(error)
+                compelation(.failure(error))
+            }
+        }
+    }
 }

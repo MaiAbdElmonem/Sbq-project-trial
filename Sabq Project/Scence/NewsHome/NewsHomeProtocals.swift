@@ -8,8 +8,11 @@
 
 import Foundation
 
-protocol NewsPresenterProtocal: BasePresenterProtocol{   
+protocol NewsPresenterProtocal: BasePresenterProtocol{
     func loadNewsSliders()
+    func loadNewsVideos()
+    func loadNewsImages()
+    func loadNewsArticles()
 }
 
 protocol NewsViewProtocal:BaseViewProtocal {
@@ -18,8 +21,10 @@ protocol NewsViewProtocal:BaseViewProtocal {
 
 protocol NewsModelProtocal:BaseModelProtocal {
     func getNewsSlider( compelation: @escaping(Result<Any,Error>) ->Void)
+//    func getNewsMaterial( compelation: @escaping(Result<Any,Error>) ->Void)
      func getNewsVideos( compelation: @escaping(Result<Any,Error>) ->Void)
-//     func getNewsArticles( compelation: @escaping(Result<Any,Error>) ->Void)
+     func getNewsImages( compelation: @escaping(Result<Any,Error>) ->Void)
+     func getNewsArticles( compelation: @escaping(Result<Any,Error>) ->Void)
 }
 
 

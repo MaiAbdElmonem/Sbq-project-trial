@@ -9,7 +9,7 @@
 import Foundation
 
 class NewsPresenter : BasePresenter, NewsPresenterProtocal {
-   
+  
     var homeModel : NewsModelProtocal?
     var homeView : NewsViewProtocal?
     
@@ -19,16 +19,51 @@ class NewsPresenter : BasePresenter, NewsPresenterProtocal {
     }
     
     func loadNewsSliders() {
-        homeModel?.getNewsSlider() { result in
+        homeModel?.getNewsSlider { result in
             do {
 //                let results = try result.get() as! RootClass
                 let slider = (try result.get() as! RootClass).slider
-                let material = (try result.get() as! RootClass).materials
+                let materials = (try result.get() as! RootClass).materials
 //                self.homeView?.getNewsSlider(slider: slider! , materials: material!)
             }catch {
                 print(error)
             }
         }
     }
+    
+    func loadNewsImages() {
+        homeModel?.getNewsImages { result in
+            do{
+                let imagecomics = (try result.get() as! ImageResponse).comics
+                
+            }catch{
+                print(error)
+            }
+        }
+    }
+    
+    
+    
+    func loadNewsVideos() {
+        homeModel?.getNewsVideos { result in
+            do {
+                let comics = (try result.get() as! VideoResponse).comics
+            }catch {
+                print(error)
+        }
+    }
+  }
+    
+    func loadNewsArticles() {
+        homeModel?.getNewsArticles { result in
+            do {
+                let materials = (try result.get() as! ArticleResponse).materials
+            }catch{
+                print(error)
+            }
+            
+        }
+    }
+    
     
 }

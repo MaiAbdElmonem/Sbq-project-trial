@@ -11,7 +11,7 @@ import UIKit
 class SliderTableViewCell:UITableViewCell,UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
     
     @IBOutlet weak var sliderCollectionView: UICollectionView!
-     let cellReuseId = "CollectionViewCell"
+    
     var slideList : [Material]?
 //    class var customCell : SliderTableViewCell {
 //        let cell = Bundle.main.loadNibNamed("SliderTableViewCell", owner: self, options: nil)?.last
@@ -30,12 +30,9 @@ class SliderTableViewCell:UITableViewCell,UICollectionViewDataSource, UICollecti
         flowLayout.minimumLineSpacing = 5.0
         flowLayout.minimumInteritemSpacing = 5.0
         self.sliderCollectionView.collectionViewLayout = flowLayout
-        //Comment if you set Datasource and delegate in .xib
-        self.sliderCollectionView.dataSource = self
-        self.sliderCollectionView.delegate = self
         //————————register the xib for collection view cell
         let cellNib = UINib(nibName: "CustomSliderCollectionViewCell", bundle: nil)
-        self.sliderCollectionView.register(cellNib, forCellWithReuseIdentifier: cellReuseId)
+        self.sliderCollectionView.register(cellNib, forCellWithReuseIdentifier: "CustomSliderCollectionViewCell")
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
@@ -49,7 +46,7 @@ class SliderTableViewCell:UITableViewCell,UICollectionViewDataSource, UICollecti
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = sliderCollectionView.dequeueReusableCell(withReuseIdentifier: cellReuseId, for: indexPath) as! CustomSliderCollectionViewCell
+        let cell = sliderCollectionView.dequeueReusableCell(withReuseIdentifier: "CustomSliderCollectionViewCell", for: indexPath) as! CustomSliderCollectionViewCell
         cell.config(materialObj: slideList![indexPath.row])
         return cell
     }

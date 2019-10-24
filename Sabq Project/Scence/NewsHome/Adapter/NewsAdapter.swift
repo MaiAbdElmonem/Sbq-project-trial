@@ -24,15 +24,12 @@ protocol NewsListItem {
 //Each item will conform to the protocol.
 
 class NewsAdapter: NSObject, BaseListAdapterProtocal{
-    var showEmptyState: ((Bool) -> Void)?
-    
-   
-    
+  
     typealias DataType = NewsListItem
      var list: [NewsListItem]?
     var slider = [SliderItems]()
     var reloadData: (() -> Void)?
-//    var showEmptyState: ((Bool) -> Void)?
+    var showEmptyState: ((Bool) -> Void)?
     
     var homeTable:UITableView?
     func setTableView(newsTable : UITableView){

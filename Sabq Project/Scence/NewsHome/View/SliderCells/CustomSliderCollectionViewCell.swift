@@ -25,7 +25,7 @@ class CustomSliderCollectionViewCell: UICollectionViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
-        self.backgroundColor = UIColor.red
+//        self.backgroundColor = UIColor.red
     }
     
     func config(materialObj : Material){
