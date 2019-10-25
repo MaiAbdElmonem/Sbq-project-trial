@@ -28,7 +28,8 @@ class NewsAdapter: NSObject, BaseListAdapterProtocal{
   
     typealias DataType = NewsListItem
     var list: [NewsListItem]?
-    var slider = [SliderItems]()
+    var slider : [Material]?
+    
     var reloadData: (() -> Void)?
     var showEmptyState: ((Bool) -> Void)?
     
@@ -37,17 +38,46 @@ class NewsAdapter: NSObject, BaseListAdapterProtocal{
         self.homeTable = newsTable
     }
     
-    func addSliders(sliders: [Material]) {
-        if list == nil {
-            list = []
+    func addSlidersandMaterial(sliders: [Material], materials:[Material]) {
+      let sliderarr =  SliderItems(sliders: sliders)
+        slider = sliderarr.sliders
+       
+        for material in materials {
+            let materialsItems = MaterialItems(material: material)
+            print("\(material.title)")
+            list?.append(materialsItems)
+     
         }
-        
-
-        let slidersItem = SliderItems(sliders: sliders)
-        slider.append(slidersItem)
-        
-        reloadData?()
+        reloadData!()
     }
+    
+    
+    
+    
+//    func addVideos(items: [Comic]) {
+//    if !items.isEmpty {
+//    let materialsItem = VideoItems(videos: items)
+//    list?.insert(materialsItem, at: 5)
+//    }
+//    reloadData?()
+//    }
+//
+//
+//    func addImages(items: [Comic]) {
+//        if !items.isEmpty {
+//            let materialsItem = ImagesItems(images: items)
+//            list?.insert(materialsItem, at: 11)
+//        }
+//        reloadData?()
+//    }
+//
+//    func addArticles(items: [Material]) {
+//        if !items.isEmpty {
+//            let materialsItem = ArticlesItems(articles: items)
+//            list?.insert(materialsItem, at: 17)
+//        }
+//        reloadData?()
+//    }
     
     func add(item: NewsListItem) {
 //        list = item
@@ -82,44 +112,45 @@ extension NewsAdapter: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         switch section {
         case 0: //showSliderarr
-            return slider.count
+            return 1
         default: //rest of list of second secetion
             return count()
         }
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-         let item = list![indexPath.section]
+        // let item = list![indexPath.row].type
         
         switch indexPath.section {
         case 0: //slidertableSection
             if let cell = homeTable?.dequeueReusableCell(withIdentifier: "SliderTableViewCell", for: indexPath) as? SliderTableViewCell {
-                cell.slideList = slider[indexPath.row].sliders
+                cell.slideList = slider!
                 return cell
             }
         default:
-            switch item.type {
+            switch  list![indexPath.row].type{
                 
             case .videos:
-                let item = item as! VideoItems
+                //let item = item as! VideoItems
                 let cell = homeTable?.dequeueReusableCell(withIdentifier: "VideoTableViewCell", for: indexPath) as! VideoTableViewCell
-                cell.videosList = item.videos
+                cell.videosList = list![indexPath.row] as! [Comic]
                  return cell
                 
             case .images:
-                let item = item as! ImagesItems
+           //     let item = item as! ImagesItems
                 let cell = homeTable?.dequeueReusableCell(withIdentifier: "ImageTableViewCell", for: indexPath) as! ImageTableViewCell
-                cell.imageList = item.images
+                cell.imageList = list![indexPath.row] as! [Comic]
                 
             case .aricles:
-                let item = item as! ArticlesItems
+               // let item = item as! ArticlesItems
                 let cell = homeTable?.dequeueReusableCell(withIdentifier: "ArticleTableViewCell", for: indexPath) as! ArticleTableViewCell
-                cell.articleList = item.articles
+                cell.articleList = list![indexPath.row] as? [Material]
                 
             case .material:
-                let item = item as! MaterialItems
+             //   let item = item as! MaterialItems
                 let cell = homeTable?.dequeueReusableCell(withIdentifier: "MaterialTableViewCell", for: indexPath) as! MaterialTableViewCell
-                cell.config(materialObj: item.material)
+                let x = list![indexPath.row] as! Material
+                cell.config(materialObj: x)
             }
            
         }
@@ -131,7 +162,7 @@ extension NewsAdapter: UITableViewDataSource {
 
 //Create the first ViewModeItem for the slider cell.
 class SliderItems {
-     var rowCount: Int { return 1 }
+//     var rowCount: Int { return 1 }
     var sliders : [Material]
     init(sliders:[Material]) {
         self.sliders = sliders
@@ -139,9 +170,8 @@ class SliderItems {
 }
 
 class MaterialItems: NewsListItem {
-    var type: NewsItemType {
-        return .material
-    }
+    var type: NewsItemType = .material
+    
     var material : Material
     init(material:Material) {
         self.material = material

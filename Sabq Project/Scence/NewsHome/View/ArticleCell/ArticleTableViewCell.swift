@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ArticleTableViewCell: UITableViewCell, UICollectionViewDelegate, UICollectionViewDataSource {
+class ArticleTableViewCell: UITableViewCell, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
   
     @IBOutlet weak var articleCollectionCell: UICollectionView!
     var articleList : [Material]?

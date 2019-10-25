@@ -19,10 +19,10 @@ class NewsViewController: BaseViewController< NewsPresenter > , NewsViewProtocal
         newsTableView.delegate = self
         newsTableView.dataSource = adapter
         adapter.setTableView(newsTable: newsTableView)
-         presenter.loadNewsSliders()
-        adapter.reloadData = reloadTableData
-       
         setupComponent()
+        presenter.loadNewsSliders()
+       
+        adapter.reloadData = newsTableView.reloadData
     }
     
     func setupComponent() {
@@ -45,24 +45,25 @@ class NewsViewController: BaseViewController< NewsPresenter > , NewsViewProtocal
 
     }
 
-    func reloadTableData(){
-        newsTableView.separatorStyle = .singleLine
+    
+    func getNewsSliderList(sliderArr: [Material], materialsArr: [Material]) {
+       adapter.addSlidersandMaterial(sliders: sliderArr, materials: materialsArr)
         newsTableView.reloadData()
     }
     
-    func getNewsSliderList(sliderArr: [Material], materialsArr: [Material]) {
-//        adapter.add(items: sliderArr , materialsArr )as! [NewsListItem]
-    }
-    
     func getNewsVideosList(videoArr: [Comic]) {
-        adapter.add(items: videoArr as! [NewsListItem])
+//        adapter.addVideos(items: videoArr)
+//        presenter.loadNewsVideos()
     }
     
     func getNewsImagesList(ImagesArr: [Comic]) {
-        
+//        adapter.addImages(items: ImagesArr)
+//        presenter.loadNewsImages()
     }
     
     func getNewsArticlesList(articlesArr: [Material]) {
+//        adapter.addArticles(items: articlesArr)
+//        presenter.loadNewsArticles()
         
     }
     
@@ -99,6 +100,6 @@ extension NewsViewController : UITableViewDelegate {
         if indexPath.section == 0 {
             return 510
         }
-        return CGFloat(integerLiteral: 517)
+        return CGFloat(integerLiteral: 130)
     }
 }

@@ -4,7 +4,7 @@
 
 import Foundation
 
-struct RootClass : Codable {
+struct RootClass : Decodable {
 
 	let code : Int?
 	let materials : [Material]?

@@ -8,7 +8,7 @@
 
 import UIKit
 
-class VideoTableViewCell: UITableViewCell, UICollectionViewDelegate, UICollectionViewDataSource {
+class VideoTableViewCell: UITableViewCell, UICollectionViewDelegate, UICollectionViewDataSource,UICollectionViewDelegateFlowLayout {
    
     @IBOutlet weak var videoCollectionCell: UICollectionView!
     var videosList : [Comic]?

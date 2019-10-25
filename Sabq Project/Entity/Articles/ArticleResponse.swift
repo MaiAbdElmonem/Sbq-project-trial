@@ -8,7 +8,7 @@
 
 import Foundation
 
-struct ArticleResponse : Codable {
+struct ArticleResponse : Decodable {
     
     let code : Int?
     let materials : [Material]?

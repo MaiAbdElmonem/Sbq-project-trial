@@ -20,13 +20,22 @@ class NewsPresenter : BasePresenter, NewsPresenterProtocal {
     
     func loadNewsSliders() {
         homeModel?.getNewsSlider { result in
-            do {
-//                let results = try result.get() as! RootClass
-                let newsslider = (try result.get() as! RootClass).slider
-                let newsmaterials = (try result.get() as! RootClass).materials
-                self.homeView?.getNewsSliderList(sliderArr: newsslider!, materialsArr: newsmaterials!)
-            }catch {
-                print(error)
+//            do {
+////                let results = try result.get() as! RootClass
+//                let newsslider =result
+//                    //(try result.get() as! RootClass).slider
+//                let newsmaterials = (try result.get() as! RootClass).materials
+//                self.homeView!.getNewsSliderList(sliderArr: newsslider!, materialsArr: newsmaterials!)
+//            }catch {
+//                print(error)
+//            }
+            
+            switch result{
+            case .success(let obj):
+                let slider = (obj as! RootClass).slider!
+                let material = (obj  as! RootClass).materials!
+                self.homeView!.getNewsSliderList(sliderArr: slider, materialsArr: material)
+            case .failure(_): print("help from model")
             }
         }
     }

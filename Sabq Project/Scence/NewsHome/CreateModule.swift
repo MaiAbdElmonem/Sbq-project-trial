@@ -13,6 +13,7 @@ class Module {
     static func HomeModule() -> NewsViewController { // as routuing
         let model = NewsModel()
         let view = NewsViewController()
+        view.title = "sabq"
         let presenter = NewsPresenter(model: model, view: view)
         //run presenter of what view
         view.setPresenter(presenter: presenter)

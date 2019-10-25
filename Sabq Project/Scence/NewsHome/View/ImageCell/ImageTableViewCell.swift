@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ImageTableViewCell: UITableViewCell, UICollectionViewDelegate, UICollectionViewDataSource{
+class ImageTableViewCell: UITableViewCell, UICollectionViewDelegate, UICollectionViewDataSource,UICollectionViewDelegateFlowLayout{
    
     @IBOutlet weak var imageCollectionCell: UICollectionView!
     var imageList : [Comic]?

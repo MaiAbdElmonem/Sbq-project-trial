@@ -12,7 +12,7 @@ class SliderTableViewCell:UITableViewCell,UICollectionViewDataSource, UICollecti
     
     @IBOutlet weak var sliderCollectionView: UICollectionView!
     
-    var slideList : [Material]?
+    var slideList : [Material]=[]
 //    class var customCell : SliderTableViewCell {
 //        let cell = Bundle.main.loadNibNamed("SliderTableViewCell", owner: self, options: nil)?.last
 //        return cell as! SliderTableViewCell
@@ -27,8 +27,8 @@ class SliderTableViewCell:UITableViewCell,UICollectionViewDataSource, UICollecti
         let flowLayout = UICollectionViewFlowLayout()
         flowLayout.scrollDirection = .horizontal
         flowLayout.itemSize = CGSize(width: 70, height: 80)
-        flowLayout.minimumLineSpacing = 5.0
-        flowLayout.minimumInteritemSpacing = 5.0
+        flowLayout.minimumLineSpacing = 0
+        flowLayout.minimumInteritemSpacing = 0
         self.sliderCollectionView.collectionViewLayout = flowLayout
         //————————register the xib for collection view cell
         let cellNib = UINib(nibName: "CustomSliderCollectionViewCell", bundle: nil)
@@ -42,18 +42,18 @@ class SliderTableViewCell:UITableViewCell,UICollectionViewDataSource, UICollecti
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return slideList!.count
+        return slideList.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = sliderCollectionView.dequeueReusableCell(withReuseIdentifier: "CustomSliderCollectionViewCell", for: indexPath) as! CustomSliderCollectionViewCell
-        cell.config(materialObj: slideList![indexPath.row])
+        cell.config(materialObj: slideList[indexPath.row])
         return cell
     }
     
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
-        return UIEdgeInsets(top: 0, left: 10, bottom: 0, right: 10)
-    }
+//    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
+//        return UIEdgeInsets(top: 0, left: 10, bottom: 0, right: 10)
+//    }
     
    
     
