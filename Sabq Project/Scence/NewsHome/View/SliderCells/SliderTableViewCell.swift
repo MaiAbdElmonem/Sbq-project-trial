@@ -12,7 +12,7 @@ class SliderTableViewCell:UITableViewCell,UICollectionViewDataSource, UICollecti
     
     @IBOutlet weak var sliderCollectionView: UICollectionView!
     
-    var slideList : [Material]=[]
+    var slideList : [Material]?
 //    class var customCell : SliderTableViewCell {
 //        let cell = Bundle.main.loadNibNamed("SliderTableViewCell", owner: self, options: nil)?.last
 //        return cell as! SliderTableViewCell
@@ -42,12 +42,12 @@ class SliderTableViewCell:UITableViewCell,UICollectionViewDataSource, UICollecti
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return slideList.count
+        return slideList?.count ?? 0
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = sliderCollectionView.dequeueReusableCell(withReuseIdentifier: "CustomSliderCollectionViewCell", for: indexPath) as! CustomSliderCollectionViewCell
-        cell.config(materialObj: slideList[indexPath.row])
+        guard let cell = sliderCollectionView.dequeueReusableCell(withReuseIdentifier: "CustomSliderCollectionViewCell", for: indexPath) as? CustomSliderCollectionViewCell else{return UICollectionViewCell()}
+        cell.config(materialObj: slideList![indexPath.row])
         return cell
     }
     

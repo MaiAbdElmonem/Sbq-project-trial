@@ -21,17 +21,18 @@ class NewsViewController: BaseViewController< NewsPresenter > , NewsViewProtocal
         adapter.setTableView(newsTable: newsTableView)
         setupComponent()
         presenter.loadNewsSliders()
-       
         adapter.reloadData = newsTableView.reloadData
     }
     
     func setupComponent() {
-//        newsTableView.estimatedRowHeight = 50
+//        newsTableView.estimatedRowHeight = 120.0
+//        newsTableView.rowHeight = UITableView.automaticDimension
+        
         let materialNib = UINib(nibName: "MaterialTableViewCell", bundle: nil)
         newsTableView.register(materialNib, forCellReuseIdentifier: "MaterialTableViewCell")
         
         let sliderNib = UINib(nibName: "SliderTableViewCell", bundle: nil)
-            newsTableView.register(sliderNib, forCellReuseIdentifier: "SliderTableViewCell")
+        newsTableView.register(sliderNib, forCellReuseIdentifier: "SliderTableViewCell")
         
         let videoNib = UINib(nibName: "VideoTableViewCell", bundle: nil)
         newsTableView.register(videoNib, forCellReuseIdentifier: "VideoTableViewCell")
@@ -52,18 +53,18 @@ class NewsViewController: BaseViewController< NewsPresenter > , NewsViewProtocal
     }
     
     func getNewsVideosList(videoArr: [Comic]) {
-//        adapter.addVideos(items: videoArr)
-//        presenter.loadNewsVideos()
+       adapter.addVideos(items: videoArr)
+        presenter.loadNewsVideos()
     }
     
     func getNewsImagesList(ImagesArr: [Comic]) {
-//        adapter.addImages(items: ImagesArr)
-//        presenter.loadNewsImages()
+        adapter.addImages(items: ImagesArr)
+      presenter.loadNewsImages()
     }
     
     func getNewsArticlesList(articlesArr: [Material]) {
-//        adapter.addArticles(items: articlesArr)
-//        presenter.loadNewsArticles()
+        adapter.addArticles(items: articlesArr)
+        presenter.loadNewsArticles()
         
     }
     
@@ -97,9 +98,20 @@ class NewsViewController: BaseViewController< NewsPresenter > , NewsViewProtocal
 }
 extension NewsViewController : UITableViewDelegate {
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        if indexPath.section == 0 {
-            return 510
+        switch indexPath.section {
+        case 0:
+            return CGFloat(integerLiteral: 300)
+        default:
+            switch indexPath.row{
+            case 5:
+                return CGFloat(integerLiteral: 380)
+            case 11:
+                return CGFloat(integerLiteral: 350)
+            case 17:
+                return CGFloat(integerLiteral: 380)
+            default:
+                return CGFloat(integerLiteral: 120)
+            }
         }
-        return CGFloat(integerLiteral: 130)
     }
 }

@@ -45,10 +45,11 @@ class TabbarController: UITabBarController {
         let nav = self.navigationController?.navigationBar
 //         nav?.tintColor = UIColor.white
 
-        let userImage = UIBarButtonItem(image: UIImage (named: "img_user"), style: UIBarButtonItem.Style.plain, target: self, action: #selector(user))
+        let userImage = UIBarButtonItem(image: UIImage (named: "img_user")?.withRenderingMode(.alwaysOriginal), style: UIBarButtonItem.Style.plain, target: self, action: #selector(user))
+        
         self.navigationItem.leftBarButtonItem = userImage
         
-         let notification_btn = UIBarButtonItem(image: UIImage (named: "notification-icon"), style: UIBarButtonItem.Style.plain, target: self, action: #selector(notificationButton))
+         let notification_btn = UIBarButtonItem(image: UIImage (named: "notification-icon")?.withRenderingMode(.alwaysOriginal), style: UIBarButtonItem.Style.plain, target: self, action: #selector(notificationButton))
         self.navigationItem.rightBarButtonItem = notification_btn
         
         

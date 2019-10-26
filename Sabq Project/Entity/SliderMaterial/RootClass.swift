@@ -11,17 +11,17 @@ struct RootClass : Decodable {
 	let slider : [Material]?
 
 
-	enum CodingKeys: String, CodingKey {
-		case code = "code"
-		case materials = "materials"
-		case slider = "slider"
-	}
-	init(from decoder: Decoder) throws {
-		let values = try decoder.container(keyedBy: CodingKeys.self)
-		code = try values.decodeIfPresent(Int.self, forKey: .code)
-		materials = try values.decodeIfPresent([Material].self, forKey: .materials)
-		slider = try values.decodeIfPresent([Material].self, forKey: .slider)
-	}
+//    enum CodingKeys: String, CodingKey {
+//        case code = "code"
+//        case materials = "materials"
+//        case slider = "slider"
+//    }
+//    init(from decoder: Decoder) throws {
+//        let values = try decoder.container(keyedBy: CodingKeys.self)
+//        code = try values.decodeIfPresent(Int.self, forKey: .code)
+//        materials = try values.decodeIfPresent([Material].self, forKey: .materials)
+//        slider = try values.decodeIfPresent([Material].self, forKey: .slider)
+//    }
 
 
 }

@@ -54,30 +54,30 @@ class NewsAdapter: NSObject, BaseListAdapterProtocal{
     
     
     
-//    func addVideos(items: [Comic]) {
-//    if !items.isEmpty {
-//    let materialsItem = VideoItems(videos: items)
-//    list?.insert(materialsItem, at: 5)
-//    }
-//    reloadData?()
-//    }
-//
-//
-//    func addImages(items: [Comic]) {
-//        if !items.isEmpty {
-//            let materialsItem = ImagesItems(images: items)
-//            list?.insert(materialsItem, at: 11)
-//        }
-//        reloadData?()
-//    }
-//
-//    func addArticles(items: [Material]) {
-//        if !items.isEmpty {
-//            let materialsItem = ArticlesItems(articles: items)
-//            list?.insert(materialsItem, at: 17)
-//        }
-//        reloadData?()
-//    }
+    func addVideos(items: [Comic]) {
+   
+    let materialsItem = VideoItems(videos: items)
+    list?.insert(materialsItem, at: 5)
+    
+    reloadData!()
+    }
+
+
+    func addImages(items: [Comic]) {
+        
+            let materialsItem = ImagesItems(images: items)
+            list?.insert(materialsItem, at: 11)
+        
+        reloadData!()
+    }
+
+    func addArticles(items: [Material]) {
+        
+            let materialsItem = ArticlesItems(articles: items)
+            list?.insert(materialsItem, at: 17)
+        
+        reloadData!()
+    }
     
     func add(item: NewsListItem) {
 //        list = item
@@ -124,33 +124,40 @@ extension NewsAdapter: UITableViewDataSource {
         switch indexPath.section {
         case 0: //slidertableSection
             if let cell = homeTable?.dequeueReusableCell(withIdentifier: "SliderTableViewCell", for: indexPath) as? SliderTableViewCell {
-                cell.slideList = slider!
+                
+                cell.slideList = slider
                 return cell
             }
         default:
             switch  list![indexPath.row].type{
+            case .material:
+                //   let item = item as! MaterialItems
+                if let cell = homeTable?.dequeueReusableCell(withIdentifier: "MaterialTableViewCell", for: indexPath) as? MaterialTableViewCell {
+                    let x = list![indexPath.row] as! Material
+                    cell.config(materialObj: x)
+                    return cell
+                }
                 
             case .videos:
                 //let item = item as! VideoItems
-                let cell = homeTable?.dequeueReusableCell(withIdentifier: "VideoTableViewCell", for: indexPath) as! VideoTableViewCell
-                cell.videosList = list![indexPath.row] as! [Comic]
-                 return cell
+                if let cell = homeTable?.dequeueReusableCell(withIdentifier: "VideoTableViewCell", for: indexPath) as? VideoTableViewCell {
                 
+                cell.videosList = list![indexPath.row] as? [Comic]
+                 return cell
+                }
             case .images:
            //     let item = item as! ImagesItems
-                let cell = homeTable?.dequeueReusableCell(withIdentifier: "ImageTableViewCell", for: indexPath) as! ImageTableViewCell
-                cell.imageList = list![indexPath.row] as! [Comic]
+                if let cell = homeTable?.dequeueReusableCell(withIdentifier: "ImageTableViewCell", for: indexPath) as? ImageTableViewCell {
+                cell.imageList = list![indexPath.row] as? [Comic]
+                return cell
+                }
                 
             case .aricles:
                // let item = item as! ArticlesItems
-                let cell = homeTable?.dequeueReusableCell(withIdentifier: "ArticleTableViewCell", for: indexPath) as! ArticleTableViewCell
+                if let cell = homeTable?.dequeueReusableCell(withIdentifier: "ArticleTableViewCell", for: indexPath) as? ArticleTableViewCell {
                 cell.articleList = list![indexPath.row] as? [Material]
-                
-            case .material:
-             //   let item = item as! MaterialItems
-                let cell = homeTable?.dequeueReusableCell(withIdentifier: "MaterialTableViewCell", for: indexPath) as! MaterialTableViewCell
-                let x = list![indexPath.row] as! Material
-                cell.config(materialObj: x)
+                return cell
+                }
             }
            
         }

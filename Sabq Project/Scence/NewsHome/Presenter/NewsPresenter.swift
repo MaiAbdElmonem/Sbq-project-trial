@@ -35,7 +35,7 @@ class NewsPresenter : BasePresenter, NewsPresenterProtocal {
                 let slider = (obj as! RootClass).slider!
                 let material = (obj  as! RootClass).materials!
                 self.homeView!.getNewsSliderList(sliderArr: slider, materialsArr: material)
-            case .failure(_): print("help from model")
+            case .failure(_): print("help from presenter")
             }
         }
     }

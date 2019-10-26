@@ -10,23 +10,26 @@ import Foundation
 
 class NewsModel : BaseModel, NewsModelProtocal {
   
+  
     func getNewsSlider(compelation: @escaping (Result<Any, Error>) -> Void) {
         NetworkManager.shared.getNewsSlider { (result,statusCode) in
-//            do {
-//                let res = try result.get()
-//                compelation(.success(res))
-//                print(res)
-//            } catch {
-//                print(error)
-//                compelation(.failure(error))
-//            }
-            
-            switch result{
-                case .success(let obj): compelation(.success(obj))
-                case .failure(_): print("help from model")
+            do {
+                let res =  try result.get()
+                compelation(.success(res))
+                print(res)
+            } catch {
+                print(error)
+                compelation(.failure(error))
             }
         }
     }
+            
+//            switch result{
+//                case .success(let obj): compelation(.success(obj))
+//                case .failure(_): print("help from model")
+//            }
+//        }
+//    }
     
     func getNewsImages(compelation: @escaping (Result<Any, Error>) -> Void) {
         NetworkManager.shared.getNewsImages { (result,statusCode) in
