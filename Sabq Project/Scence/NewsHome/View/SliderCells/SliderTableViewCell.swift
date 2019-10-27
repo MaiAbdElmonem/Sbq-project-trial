@@ -8,7 +8,7 @@
 
 import UIKit
 
-class SliderTableViewCell:UITableViewCell,UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
+class SliderTableViewCell:UITableViewCell,UICollectionViewDataSource, UICollectionViewDelegate {
     
     @IBOutlet weak var sliderCollectionView: UICollectionView!
     
@@ -17,7 +17,7 @@ class SliderTableViewCell:UITableViewCell,UICollectionViewDataSource, UICollecti
 //        let cell = Bundle.main.loadNibNamed("SliderTableViewCell", owner: self, options: nil)?.last
 //        return cell as! SliderTableViewCell
 //    }
-    
+//    
     override func awakeFromNib() {
         super.awakeFromNib()
         self.sliderCollectionView.delegate = self
@@ -42,7 +42,11 @@ class SliderTableViewCell:UITableViewCell,UICollectionViewDataSource, UICollecti
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return slideList?.count ?? 0
+        if let sliderlist=slideList{
+            return sliderlist.count
+        }else{
+            return 0
+        }
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
@@ -50,11 +54,16 @@ class SliderTableViewCell:UITableViewCell,UICollectionViewDataSource, UICollecti
         cell.config(materialObj: slideList![indexPath.row])
         return cell
     }
+   
     
 //    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
 //        return UIEdgeInsets(top: 0, left: 10, bottom: 0, right: 10)
 //    }
-    
-   
-    
 }
+    extension SliderTableViewCell : UICollectionViewDelegateFlowLayout{
+        func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+            return CGSize(width: UIScreen.main.bounds.width, height: collectionView.frame.height)
+        }
+    }
+    
+

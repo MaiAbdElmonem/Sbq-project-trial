@@ -8,7 +8,7 @@
 
 import UIKit
 
-class NewsViewController: BaseViewController< NewsPresenter > , NewsViewProtocal{
+class NewsViewController: BaseViewController< NewsPresenter> , NewsViewProtocal{
    
 //    var results : RootClass?
 
@@ -18,9 +18,11 @@ class NewsViewController: BaseViewController< NewsPresenter > , NewsViewProtocal
         super.viewDidLoad()
         newsTableView.delegate = self
         newsTableView.dataSource = adapter
+//        newsTableView.separatorStyle = .none
         adapter.setTableView(newsTable: newsTableView)
         setupComponent()
         presenter.loadNewsSliders()
+      
         adapter.reloadData = newsTableView.reloadData
     }
     

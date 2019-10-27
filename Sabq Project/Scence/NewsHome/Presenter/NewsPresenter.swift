@@ -53,14 +53,23 @@ class NewsPresenter : BasePresenter, NewsPresenterProtocal {
     
     func loadNewsVideos() {
         homeModel?.getNewsVideos { result in
-            do {
-                let videocomics = (try result.get() as! VideoResponse).comics
-                self.homeView?.getNewsVideosList(videoArr: videocomics!)
-            }catch {
-                print(error)
+        switch result{
+        case .success(let Vobj):
+            let video = (Vobj as! VideoResponse).comics!
+            self.homeView!.getNewsVideosList(videoArr: video)
+        case .failure(_): print("help from presenter")
         }
     }
-  }
+    }
+//        homeModel?.getNewsVideos { result in
+//            do {
+//                let videocomics = (try result.get() as! VideoResponse).comics
+//                self.homeView?.getNewsVideosList(videoArr: videocomics!)
+//            }catch {
+//                print(error)
+//        }
+//    }
+//  }
     
     func loadNewsArticles() {
         homeModel?.getNewsArticles { result in

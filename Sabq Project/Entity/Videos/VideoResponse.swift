@@ -4,7 +4,7 @@
 
 import Foundation
 
-struct VideoResponse : Codable {
+struct VideoResponse : Decodable {
 
 	let code : Int?
 	let comics : [Comic]?

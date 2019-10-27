@@ -8,7 +8,7 @@
 
 import Foundation
 
-struct ImageResponse : Codable {
+struct ImageResponse : Decodable {
     
     let code : Int?
     let comics : [Comic]?

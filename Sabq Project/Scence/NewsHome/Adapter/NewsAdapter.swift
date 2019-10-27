@@ -44,7 +44,6 @@ class NewsAdapter: NSObject, BaseListAdapterProtocal{
        
         for material in materials {
             let materialsItems = MaterialItems(material: material)
-            print("\(material.title)")
             list?.append(materialsItems)
      
         }
@@ -52,12 +51,10 @@ class NewsAdapter: NSObject, BaseListAdapterProtocal{
     }
     
     
-    
-    
     func addVideos(items: [Comic]) {
    
-    let materialsItem = VideoItems(videos: items)
-    list?.insert(materialsItem, at: 5)
+    let videoitems = VideoItems(videos: items)
+    list?.insert(videoitems, at: 5)
     
     reloadData!()
     }
@@ -65,16 +62,16 @@ class NewsAdapter: NSObject, BaseListAdapterProtocal{
 
     func addImages(items: [Comic]) {
         
-            let materialsItem = ImagesItems(images: items)
-            list?.insert(materialsItem, at: 11)
+            let imagesitems = ImagesItems(images: items)
+            list?.insert(imagesitems, at: 11)
         
         reloadData!()
     }
 
     func addArticles(items: [Material]) {
         
-            let materialsItem = ArticlesItems(articles: items)
-            list?.insert(materialsItem, at: 17)
+            let articlesitems = ArticlesItems(articles: items)
+            list?.insert(articlesitems, at: 17)
         
         reloadData!()
     }
@@ -124,7 +121,6 @@ extension NewsAdapter: UITableViewDataSource {
         switch indexPath.section {
         case 0: //slidertableSection
             if let cell = homeTable?.dequeueReusableCell(withIdentifier: "SliderTableViewCell", for: indexPath) as? SliderTableViewCell {
-                
                 cell.slideList = slider
                 return cell
             }
@@ -141,7 +137,6 @@ extension NewsAdapter: UITableViewDataSource {
             case .videos:
                 //let item = item as! VideoItems
                 if let cell = homeTable?.dequeueReusableCell(withIdentifier: "VideoTableViewCell", for: indexPath) as? VideoTableViewCell {
-                
                 cell.videosList = list![indexPath.row] as? [Comic]
                  return cell
                 }
