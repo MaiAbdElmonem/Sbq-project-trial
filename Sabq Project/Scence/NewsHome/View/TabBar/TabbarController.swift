@@ -9,7 +9,7 @@
 import UIKit
 
 class TabbarController: UITabBarController {
-    var newsViewController : NewsViewController?
+    var newsViewController:NewsViewController?
     var commonViewController : CommonNewsViewController?
     var searchViewController : SearchNewsViewController?
     var bookmarkViewController : BookmarksViewController?
@@ -42,8 +42,7 @@ class TabbarController: UITabBarController {
     }
     
     override func viewDidAppear(_ animated: Bool) {
-        let nav = self.navigationController?.navigationBar
-//         nav?.tintColor = UIColor.white
+        _ = self.navigationController?.navigationBar
 
         let userImage = UIBarButtonItem(image: UIImage (named: "img_user")?.withRenderingMode(.alwaysOriginal), style: UIBarButtonItem.Style.plain, target: self, action: #selector(user))
         
