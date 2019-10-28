@@ -10,15 +10,13 @@ import UIKit
 
 class NewsViewController: BaseViewController< NewsPresenter> , NewsViewProtocal{
    
-//    var results : RootClass?
-
     @IBOutlet weak var newsTableView: UITableView!
     var adapter = NewsAdapter()
     override func viewDidLoad() {
         super.viewDidLoad()
         newsTableView.delegate = self
         newsTableView.dataSource = adapter
-//        newsTableView.separatorStyle = .none
+        newsTableView.separatorStyle = .none
         adapter.setTableView(newsTable: newsTableView)
         setupComponent()
         presenter.loadNewsSliders()
@@ -52,50 +50,25 @@ class NewsViewController: BaseViewController< NewsPresenter> , NewsViewProtocal{
     func getNewsSliderList(sliderArr: [Material], materialsArr: [Material]) {
        adapter.addSlidersandMaterial(sliders: sliderArr, materials: materialsArr)
         newsTableView.reloadData()
+        presenter.loadNewsVideos()
     }
     
     func getNewsVideosList(videoArr: [Comic]) {
        adapter.addVideos(items: videoArr)
-        presenter.loadNewsVideos()
+        newsTableView.reloadData()
+        presenter.loadNewsImages()
     }
     
     func getNewsImagesList(ImagesArr: [Comic]) {
         adapter.addImages(items: ImagesArr)
-      presenter.loadNewsImages()
+        newsTableView.reloadData()
+        presenter.loadNewsArticles()
     }
     
     func getNewsArticlesList(articlesArr: [Material]) {
         adapter.addArticles(items: articlesArr)
-        presenter.loadNewsArticles()
-        
+        newsTableView.reloadData()
     }
-    
-//    func numberOfSections(in tableView: UITableView) -> Int {
-//        return 2
-//    }
-//
-//    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-//        if section == 0 {
-//            if((results?.slider?.count) != nil)  {
-//              return 1
-//            }
-//
-//        }else{
-//            if let cellNum = results?.materials?.count {
-//                return cellNum
-//            }
-//        }
-//       return 0
-//    }
-//
-//    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-////        if indexPath.section == 0 {
-////            let typeACell = newsTableView.dequeueReusableCell(withIdentifier: "NewsTableViewCell", for: indexPath) as! NewsTableViewCell
-////            if let sliderArr = results?.slider {
-////                typeACell
-////            }
-//            return typeACell
-//        }
     
 }
 extension NewsViewController : UITableViewDelegate {

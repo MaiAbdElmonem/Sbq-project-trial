@@ -8,10 +8,14 @@
 
 import UIKit
 
-class VideoTableViewCell: UITableViewCell, UICollectionViewDelegate, UICollectionViewDataSource,UICollectionViewDelegateFlowLayout {
+class VideoTableViewCell: UITableViewCell, UICollectionViewDelegate, UICollectionViewDataSource {
    
     @IBOutlet weak var videoCollectionCell: UICollectionView!
-    var videosList : [Comic]?
+    var videosList : [Comic]? {
+        didSet {
+            videoCollectionCell.reloadData()
+        }
+    }
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -36,7 +40,11 @@ class VideoTableViewCell: UITableViewCell, UICollectionViewDelegate, UICollectio
         // Configure the view for the selected state
     }
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return videosList!.count
+        if let videolist=videosList{
+            return videolist.count
+        }else{
+            return 0
+        }
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
@@ -44,7 +52,13 @@ class VideoTableViewCell: UITableViewCell, UICollectionViewDelegate, UICollectio
         cell.config(comicsObj: videosList![indexPath.row])
         return cell
     }
-    
-    
-    
 }
+    extension VideoTableViewCell : UICollectionViewDelegateFlowLayout{
+        func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+            return CGSize(width: UIScreen.main.bounds.width, height: collectionView.frame.height)
+        }
+    }
+    
+    
+    
+

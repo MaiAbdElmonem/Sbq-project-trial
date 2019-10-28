@@ -13,80 +13,80 @@ class NewsModel : BaseModel, NewsModelProtocal {
   
     func getNewsSlider(compelation: @escaping (Result<Any, Error>) -> Void) {
         NetworkManager.shared.getNewsSlider { (result,statusCode) in
-//            do {
-//                let res =  try result.get()
-//                compelation(.success(res))
-//                print(res)
-//            } catch {
-//                print(error)
-//                compelation(.failure(error))
-//            }
-//        }
-//    }
-            
-            switch result{
-                case .success(let obj): compelation(.success(obj))
-                case .failure(_): print("help from model")
+            do {
+                let res =  try result.get()
+                compelation(.success(res))
+                print(res)
+            } catch {
+                print(error)
+                compelation(.failure(error))
             }
         }
     }
+            
+//            switch result{
+//                case .success(let obj): compelation(.success(obj))
+//                case .failure(_): print("help from model")
+//            }
+//        }
+//    }
     
     func getNewsImages(compelation: @escaping (Result<Any, Error>) -> Void) {
         NetworkManager.shared.getNewsImages { (result,statusCode) in
-            switch result{
-            case .success(let imageobj): compelation(.success(imageobj))
-            case .failure(_): print("help from model")
-            }
-        }
-    }
-//            do {
-//                let res = try result.get()
-//                compelation(.success(res))
-//                print(res)
-//            } catch {
-//                print(error)
-//                compelation(.failure(error))
+//            switch result{
+//            case .success(let imageobj): compelation(.success(imageobj))
+//            case .failure(_): print("help from model")
 //            }
 //        }
 //    }
+            do {
+                let res = try result.get()
+                compelation(.success(res))
+                print(res)
+            } catch {
+                print(error)
+                compelation(.failure(error))
+            }
+        }
+    }
     
     
     
     func getNewsVideos(compelation: @escaping (Result<Any, Error>) -> Void) {
         NetworkManager.shared.getNewsVideos { (result,statusCode) in
-            
-                        switch result{
-                            case .success(let videoobj): compelation(.success(videoobj))
-                            case .failure(_): print("help from model")
-                        }
-                    }
-                }
-//            do {
-//                let res = try result.get()
-//                compelation(.success(res))
-//            } catch {
-//                print(error)
-//                compelation(.failure(error))
-//            }
-//        }
-//    }
-    
-    func getNewsArticles(compelation: @escaping (Result<Any, Error>) -> Void) {
-        NetworkManager.shared.getNewsAricles { (result,statusCode) in
-            switch result{
-            case .success(let articleobj): compelation(.success(articleobj))
-            case .failure(_): print("help from model")
+//
+//                        switch result{
+//                            case .success(let videoobj): compelation(.success(videoobj))
+//                            case .failure(_): print("help from model")
+//                        }
+//                    }
+//                }
+            do {
+                let res = try result.get()
+                compelation(.success(res))
+            } catch {
+                print(error)
+                compelation(.failure(error))
             }
         }
     }
-            
-//            do {
-//                let res = try result.get()
-//                compelation(.success(res))
-//            } catch {
-//                print(error)
-//                compelation(.failure(error))
+    
+    func getNewsArticles(compelation: @escaping (Result<Any, Error>) -> Void) {
+        NetworkManager.shared.getNewsAricles { (result,statusCode) in
+//            switch result{
+//            case .success(let articleobj): compelation(.success(articleobj))
+//            case .failure(_): print("help from model")
 //            }
 //        }
 //    }
+            
+            do {
+                let res = try result.get()
+                compelation(.success(res))
+            } catch {
+                print(error)
+                compelation(.failure(error))
+            }
+        }
+    }
 }

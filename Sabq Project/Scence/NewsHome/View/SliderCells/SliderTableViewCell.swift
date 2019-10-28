@@ -12,12 +12,12 @@ class SliderTableViewCell:UITableViewCell,UICollectionViewDataSource, UICollecti
     
     @IBOutlet weak var sliderCollectionView: UICollectionView!
     
-    var slideList : [Material]?
-//    class var customCell : SliderTableViewCell {
-//        let cell = Bundle.main.loadNibNamed("SliderTableViewCell", owner: self, options: nil)?.last
-//        return cell as! SliderTableViewCell
-//    }
-//    
+    var slideList : [Material]? {
+        didSet {
+            sliderCollectionView.reloadData()
+        }
+    }
+  
     override func awakeFromNib() {
         super.awakeFromNib()
         self.sliderCollectionView.delegate = self

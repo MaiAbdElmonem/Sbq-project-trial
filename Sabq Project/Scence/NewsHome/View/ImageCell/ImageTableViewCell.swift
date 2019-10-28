@@ -11,7 +11,11 @@ import UIKit
 class ImageTableViewCell: UITableViewCell, UICollectionViewDelegate, UICollectionViewDataSource,UICollectionViewDelegateFlowLayout{
    
     @IBOutlet weak var imageCollectionCell: UICollectionView!
-    var imageList : [Comic]?
+    var imageList : [Comic]?{
+        didSet {
+            imageCollectionCell.reloadData()
+        }
+    }
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -37,7 +41,11 @@ class ImageTableViewCell: UITableViewCell, UICollectionViewDelegate, UICollectio
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return imageList!.count
+        if let imageslist=imageList{
+            return imageslist.count
+        }else{
+            return 0
+        }
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {

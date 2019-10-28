@@ -17,15 +17,14 @@ class CustomSliderCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var timeLabel: UILabel!
     @IBOutlet weak var noOfViewsLabel: UILabel!
     
-    class var CustomCell : CustomSliderCollectionViewCell {
-        let cell = Bundle.main.loadNibNamed("CustomSliderCollectionViewCell", owner: self, options: nil)?.last
-        return cell as! CustomSliderCollectionViewCell
-    }
+//    class var CustomCell : CustomSliderCollectionViewCell {
+//        let cell = Bundle.main.loadNibNamed("CustomSliderCollectionViewCell", owner: self, options: nil)?.last
+//        return cell as! CustomSliderCollectionViewCell
+//    }
 
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
-//        self.backgroundColor = UIColor.red
+
     }
     
     func config(materialObj : Material){

@@ -11,7 +11,11 @@ import UIKit
 class ArticleTableViewCell: UITableViewCell, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
   
     @IBOutlet weak var articleCollectionCell: UICollectionView!
-    var articleList : [Material]?
+    var articleList : [Material]?{
+        didSet {
+            articleCollectionCell.reloadData()
+        }
+    }
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -37,7 +41,11 @@ class ArticleTableViewCell: UITableViewCell, UICollectionViewDelegate, UICollect
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return articleList!.count
+        if let articleslist=articleList{
+            return articleslist.count
+        }else{
+            return 0
+        }
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {

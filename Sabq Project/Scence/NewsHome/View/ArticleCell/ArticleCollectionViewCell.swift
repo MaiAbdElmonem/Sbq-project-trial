@@ -13,10 +13,10 @@ class ArticleCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var authorImage: UIImageView!
     
     @IBOutlet weak var authorNameLabel: UILabel!
-    class var CustomCell : ArticleCollectionViewCell {
-        let cell = Bundle.main.loadNibNamed("ArticleCollectionViewCell", owner: self, options: nil)?.last
-        return cell as! ArticleCollectionViewCell
-    }
+//    class var CustomCell : ArticleCollectionViewCell {
+//        let cell = Bundle.main.loadNibNamed("ArticleCollectionViewCell", owner: self, options: nil)?.last
+//        return cell as! ArticleCollectionViewCell
+//    }
 
     override func awakeFromNib() {
         super.awakeFromNib()

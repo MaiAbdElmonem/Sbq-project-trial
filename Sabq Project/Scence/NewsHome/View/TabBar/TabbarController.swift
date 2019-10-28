@@ -55,7 +55,7 @@ class TabbarController: UITabBarController {
         
         let logoImage = UIImageView(frame: CGRect(x: 0, y: 0, width: 40, height: 40))
         logoImage.contentMode = .scaleAspectFill
-        let image = UIImage(named: "img_logo")
+        let image = UIImage(named: "img_logo")?.withRenderingMode(.alwaysOriginal)
         logoImage.image = image
         navigationItem.titleView = logoImage
     }
