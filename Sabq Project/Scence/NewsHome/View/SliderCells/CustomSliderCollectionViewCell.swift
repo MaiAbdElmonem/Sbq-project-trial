@@ -8,6 +8,7 @@
 
 import UIKit
 import SDWebImage
+import SkeletonView
 
 class CustomSliderCollectionViewCell: UICollectionViewCell {
     
@@ -24,13 +25,19 @@ class CustomSliderCollectionViewCell: UICollectionViewCell {
 
     override func awakeFromNib() {
         super.awakeFromNib()
-
+//         titleTextview.showAnimatedGradientSkeleton()
+//        hideSkeleton()
+    }
+    
+    func hideSliderSkelton() {
+        let skeltonSlider = [newsImage, titleTextview, descriptionTextview, timeLabel, noOfViewsLabel]
+        skeltonSlider.forEach { $0?.hideSkeleton() }
     }
     
     func config(materialObj: Material) {
         titleTextview.text = materialObj.title
         descriptionTextview.text = materialObj.descriptionString
-        timeLabel.text = materialObj.publishDate
+        timeLabel.text = (materialObj.publishDate?.convetDate())?.timeAgo()
         noOfViewsLabel.text = materialObj.noOfViews?.formatNumber()
         let placeholderimage = #imageLiteral(resourceName: "imgslider")
         if let imageUrl = materialObj.coverPhoto {

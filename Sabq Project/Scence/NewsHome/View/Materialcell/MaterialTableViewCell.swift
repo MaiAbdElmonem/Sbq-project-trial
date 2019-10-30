@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import LocalizedTimeAgo
 
 class MaterialTableViewCell: UITableViewCell {
 
@@ -28,7 +29,7 @@ class MaterialTableViewCell: UITableViewCell {
   
     func config(materialObj: Material) {
         titleLabel.text = materialObj.title
-        timeLabel.text = materialObj.publishDate
+        timeLabel.text = (materialObj.publishDate?.convetDate())?.timeAgo()
         
         numofViews.text = materialObj.noOfViews?.formatNumber()
         let placeholderimage = #imageLiteral(resourceName: "imgslider")

@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import LocalizedTimeAgo
 
 class ImageCollectionViewCell: UICollectionViewCell {
     @IBOutlet private weak var newsImage: UIImageView!
@@ -25,7 +26,7 @@ class ImageCollectionViewCell: UICollectionViewCell {
     
     func configImage(comicsObj: Comic) {
         titleLabel.text = comicsObj.title
-        timeLabel.text = comicsObj.publishDate
+        timeLabel.text = (comicsObj.publishDate?.convetDate())?.timeAgo()
         let placeholderimage = #imageLiteral(resourceName: "imgslider")
          if let imageUrl = comicsObj.coverPhoto {
                 newsImage.sd_setImage(with: URL(string: imageUrl), placeholderImage: placeholderimage)

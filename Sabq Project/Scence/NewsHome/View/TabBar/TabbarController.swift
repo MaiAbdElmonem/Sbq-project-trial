@@ -20,23 +20,23 @@ class TabbarController: UITabBarController {
         super.viewDidLoad()
         
         newsViewController.tabBarItem = UITabBarItem(
-            title: NSLocalizedString("titleOftab1", comment: "tab1"), image: #imageLiteral(resourceName: "ic_newspaper"), selectedImage: #imageLiteral(resourceName: "ic_newspaper_active"))
+            title: NSLocalizedString("news", comment: "tab1"), image: #imageLiteral(resourceName: "ic_newspaper"), selectedImage: #imageLiteral(resourceName: "ic_newspaper_active"))
         newsViewController.tabBarItem.tag = 0
         commonViewController.tabBarItem = UITabBarItem(
-            title: NSLocalizedString("titleOftab2", comment: "tab2"), image: #imageLiteral(resourceName: "ic_star"), selectedImage: #imageLiteral(resourceName: "ic_star_active"))
+            title: NSLocalizedString("common", comment: "tab2"), image: #imageLiteral(resourceName: "ic_star"), selectedImage: #imageLiteral(resourceName: "ic_star_active"))
         commonViewController.tabBarItem.tag = 1
         searchViewController.tabBarItem = UITabBarItem(
-            title: NSLocalizedString("titleOftab3", comment: "tab3"), image: #imageLiteral(resourceName: "ic_search"), selectedImage: #imageLiteral(resourceName: "ic_search_active"))
+            title: NSLocalizedString("search", comment: "tab3"), image: #imageLiteral(resourceName: "ic_search"), selectedImage: #imageLiteral(resourceName: "ic_search_active"))
         searchViewController.tabBarItem.tag = 2
         bookmarkViewController.tabBarItem = UITabBarItem(
-            title: NSLocalizedString("titleOftab4", comment: "tab4"), image: #imageLiteral(resourceName: "ic_bookmark"), selectedImage: #imageLiteral(resourceName: "ic_bookmark_active"))
+            title: NSLocalizedString("bookmark", comment: "tab4"), image: #imageLiteral(resourceName: "ic_bookmark"), selectedImage: #imageLiteral(resourceName: "ic_bookmark_active"))
         bookmarkViewController.tabBarItem.tag = 3
         
         self.setViewControllers(subviewControllers, animated: true)
         self.selectedIndex = 0
         self.selectedViewController = newsViewController
     }
-       
+    
     override func viewDidAppear(_ animated: Bool) {
            super.viewDidAppear(animated)
         _ = self.navigationController?.navigationBar

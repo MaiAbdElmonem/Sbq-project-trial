@@ -8,6 +8,7 @@
 
 import Foundation
 import UIKit
+import SkeletonView
 
 //Each enum case represents the data type that requires the different TableViewCell
 enum  NewsItemType {
@@ -121,7 +122,7 @@ extension NewsAdapter: UITableViewDataSource {
         
         switch indexPath.section {
         case 0: //slidertableSection
-            if let cell = homeTable?.dequeueReusableCell(withIdentifier: "SliderTableViewCell", for: indexPath)
+            if let cell = tableView.dequeueReusableCell(withIdentifier: "SliderTableViewCell", for: indexPath)
                 as? SliderTableViewCell {
 //                cell.configureCell(slider: slider)
             cell.slideList = slider
@@ -215,5 +216,29 @@ class ArticlesItems: NewsListItem {
     var articles: [Material]
     init(articles: [Material]) {
         self.articles = articles
+    }
+}
+
+extension NewsAdapter: SkeletonTableViewDataSource {
+    func numSections(in collectionSkeletonView: UITableView) -> Int {
+        return 2
+    }
+    func collectionSkeletonView(_ skeletonView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        switch section {
+        case 0:
+           return 1
+        default:
+           return 3
+        }
+    }
+    
+    func collectionSkeletonView(_ skeletonView: UITableView, cellIdentifierForRowAt indexPath: IndexPath)
+        -> ReusableCellIdentifier {
+        switch indexPath.section {
+        case 0:
+            return "SliderTableViewCell"
+        default:
+            return "MaterialTableViewCell"
+        }
     }
 }
