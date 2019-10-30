@@ -8,7 +8,7 @@
 
 import Foundation
 
-struct Videos: Codable {
+struct Videos: Decodable {
     let vid: String?
     let caption: String?
     

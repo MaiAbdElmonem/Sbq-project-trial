@@ -27,11 +27,14 @@ class VideoCollectionViewCell: UICollectionViewCell {
     func config(comicsObj: Comic) {
       titleLabel.text = comicsObj.title
         timeLabel.text = (comicsObj.publishDate?.convetDate())?.timeAgo()
-        let placeholderimage = #imageLiteral(resourceName: "imgslider")
-        if let imageUrl = comicsObj.coverPhoto {
-        videoImage.sd_setImage(with: URL(string: imageUrl), placeholderImage: placeholderimage)
-        } else {
-            videoImage.image = placeholderimage
-        }
+        guard let path = comicsObj.vid else { return }
+        self.videoImage.sd_setImage(with: URL(
+            string: "https://img.youtube.com/vi/\(path)/1.jpg"), placeholderImage: #imageLiteral(resourceName: "loaded") )
+//        let placeholderimage = #imageLiteral(resourceName: "loaded")
+//        if let imageUrl = comicsObj.coverPhoto {
+//        videoImage.sd_setImage(with: URL(string: imageUrl), placeholderImage: placeholderimage)
+//        } else {
+//            videoImage.image = placeholderimage
+//        }
   }
 }

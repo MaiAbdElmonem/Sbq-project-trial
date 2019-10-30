@@ -26,7 +26,7 @@ class ArticleCollectionViewCell: UICollectionViewCell {
     func configArticle(materialObj: Material) {
         titleLabel.text = materialObj.title
         authorNameLabel.text = materialObj.authorName
-        let placeholderimage = #imageLiteral(resourceName: "imgslider")
+        let placeholderimage = #imageLiteral(resourceName: "loaded")
         if let imageUrl = materialObj.authorImg {
              authorImage.sd_setImage(with: URL(string: imageUrl), placeholderImage: placeholderimage)
         } else {

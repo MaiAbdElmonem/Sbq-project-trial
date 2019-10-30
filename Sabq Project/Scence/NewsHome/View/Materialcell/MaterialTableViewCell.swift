@@ -32,7 +32,7 @@ class MaterialTableViewCell: UITableViewCell {
         timeLabel.text = (materialObj.publishDate?.convetDate())?.timeAgo()
         
         numofViews.text = materialObj.noOfViews?.formatNumber()
-        let placeholderimage = #imageLiteral(resourceName: "imgslider")
+        let placeholderimage = #imageLiteral(resourceName: "loaded")
          if let imageUrl = materialObj.coverPhoto {
                 newsImage.sd_setImage(with: URL(string: imageUrl), placeholderImage: placeholderimage)
            } else {

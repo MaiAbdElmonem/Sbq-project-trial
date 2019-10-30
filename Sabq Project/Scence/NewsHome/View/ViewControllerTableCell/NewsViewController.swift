@@ -16,7 +16,7 @@ class NewsViewController: BaseViewController< NewsPresenter>, NewsViewProtocal {
         super.viewDidLoad()
         newsTableView.delegate = self
         newsTableView.dataSource = adapter
-        newsTableView.separatorStyle = .none
+//        newsTableView.separatorStyle = .none
         adapter.setTableView(newsTable: newsTableView)
         setupComponent()
         presenter.loadNewsSliders()
@@ -25,7 +25,7 @@ class NewsViewController: BaseViewController< NewsPresenter>, NewsViewProtocal {
     }
     
     func setupComponent() {
-//        newsTableView.estimatedRowHeight = 120.0
+//        newsTableView.estimatedRowHeight = 150.0
 //        newsTableView.rowHeight = UITableView.automaticDimension
         
         let materialNib = UINib(nibName: "MaterialTableViewCell", bundle: nil)
@@ -73,7 +73,7 @@ extension NewsViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         switch indexPath.section {
         case 0:
-            return CGFloat(integerLiteral: 300)
+            return CGFloat(integerLiteral: 380)
         default:
             switch indexPath.row {
             case 5:

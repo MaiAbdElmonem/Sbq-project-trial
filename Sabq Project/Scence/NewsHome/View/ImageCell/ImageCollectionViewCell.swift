@@ -27,7 +27,7 @@ class ImageCollectionViewCell: UICollectionViewCell {
     func configImage(comicsObj: Comic) {
         titleLabel.text = comicsObj.title
         timeLabel.text = (comicsObj.publishDate?.convetDate())?.timeAgo()
-        let placeholderimage = #imageLiteral(resourceName: "imgslider")
+        let placeholderimage = #imageLiteral(resourceName: "loaded")
          if let imageUrl = comicsObj.coverPhoto {
                 newsImage.sd_setImage(with: URL(string: imageUrl), placeholderImage: placeholderimage)
          } else {

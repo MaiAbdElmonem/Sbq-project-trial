@@ -71,6 +71,7 @@ class SliderTableViewCell: UITableViewCell, UICollectionViewDataSource, UICollec
         func collectionView(_ collectionView: UICollectionView,
                             layout collectionViewLayout: UICollectionViewLayout,
                             sizeForItemAt indexPath: IndexPath) -> CGSize {
-            return CGSize(width: UIScreen.main.bounds.width, height: collectionView.frame.height)
+            return CGSize(width: sliderCollectionView.frame.width,
+                          height: sliderCollectionView.frame.height)
         }
     }

@@ -124,7 +124,7 @@ extension NewsAdapter: UITableViewDataSource {
         case 0: //slidertableSection
             if let cell = tableView.dequeueReusableCell(withIdentifier: "SliderTableViewCell", for: indexPath)
                 as? SliderTableViewCell {
-//                cell.configureCell(slider: slider)
+  //             cell.configureCell(slider: slider)
             cell.slideList = slider
             return cell
             }

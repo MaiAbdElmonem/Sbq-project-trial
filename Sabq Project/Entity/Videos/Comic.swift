@@ -19,7 +19,7 @@ struct Comic: Decodable {
 //    let tags : [Tag]?
     let title: String?
 //    let updateDateHijryDate : String?
-//    let url : String?
-//    let vid : String?
+    let url: String?
+    let vid: String?
 //    let videoCaption : String?
 }

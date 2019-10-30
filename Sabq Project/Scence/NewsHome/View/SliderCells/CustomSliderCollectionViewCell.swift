@@ -13,8 +13,8 @@ import SkeletonView
 class CustomSliderCollectionViewCell: UICollectionViewCell {
     
     @IBOutlet weak var newsImage: UIImageView!
-    @IBOutlet weak var titleTextview: UITextView!
-    @IBOutlet weak var descriptionTextview: UITextView!
+    @IBOutlet weak var titleLabel: UILabel!
+    @IBOutlet weak var describtionLabel: UILabel!
     @IBOutlet weak var timeLabel: UILabel!
     @IBOutlet weak var noOfViewsLabel: UILabel!
     
@@ -30,16 +30,16 @@ class CustomSliderCollectionViewCell: UICollectionViewCell {
     }
     
     func hideSliderSkelton() {
-        let skeltonSlider = [newsImage, titleTextview, descriptionTextview, timeLabel, noOfViewsLabel]
+        let skeltonSlider = [newsImage, titleLabel, describtionLabel, timeLabel, noOfViewsLabel]
         skeltonSlider.forEach { $0?.hideSkeleton() }
     }
     
     func config(materialObj: Material) {
-        titleTextview.text = materialObj.title
-        descriptionTextview.text = materialObj.descriptionString
+        titleLabel.text = materialObj.title
+        describtionLabel.text = materialObj.descriptionString
         timeLabel.text = (materialObj.publishDate?.convetDate())?.timeAgo()
         noOfViewsLabel.text = materialObj.noOfViews?.formatNumber()
-        let placeholderimage = #imageLiteral(resourceName: "imgslider")
+        let placeholderimage = #imageLiteral(resourceName: "loaded")
         if let imageUrl = materialObj.coverPhoto {
         newsImage.sd_setImage(with: URL(string: imageUrl), placeholderImage: placeholderimage)
         } else {

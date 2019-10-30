@@ -11,7 +11,7 @@ import Foundation
 extension String {
     func convetDate() -> Date? {
         let dateFormatter = DateFormatter()
-        dateFormatter.dateFormat = "yyyy'-'MM'-'dd'T'HH':'mm':'ssZZZ"
+        dateFormatter.dateFormat = "yyyy'-'MM'-'dd' 'HH':'mm' 'ss"
         let date = dateFormatter.date(from: self)
         return date
     }
