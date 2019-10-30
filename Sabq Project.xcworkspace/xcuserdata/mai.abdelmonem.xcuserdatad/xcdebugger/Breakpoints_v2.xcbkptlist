@@ -1,0 +1,373 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   type = "0"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Sabq Project/Scence/NewsHome/View/SliderCells/SliderTableViewCell.swift"
+            timestampString = "594141187.6780601"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "15"
+            endingLineNumber = "15"
+            landmarkName = "slideList"
+            landmarkType = "24">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Sabq_Project.SliderTableViewCell.slideList.modify : Swift.Optional&lt;Swift.Array&lt;Sabq_Project.Material&gt;&gt;"
+                  moduleName = "Sabq Project"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/mai.abdelmonem/Developer/XcodeProjects/Sbq%20project%20trial/Sabq%20Project/Scence/NewsHome/View/SliderCells/SliderTableViewCell.swift"
+                  timestampString = "593957428.984744"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "26">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Sabq_Project.SliderTableViewCell.slideList.modify : Swift.Optional&lt;Swift.Array&lt;Sabq_Project.Material&gt;&gt; with unmangled suffix &quot;.resume.0&quot;"
+                  moduleName = "Sabq Project"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/mai.abdelmonem/Developer/XcodeProjects/Sbq%20project%20trial/Sabq%20Project/Scence/NewsHome/View/SliderCells/SliderTableViewCell.swift"
+                  timestampString = "593957428.986747"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "15"
+                  endingLineNumber = "15"
+                  offsetFromSymbolStart = "27">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Sabq_Project.SliderTableViewCell.init(style: __C.UITableViewCellStyle, reuseIdentifier: Swift.Optional&lt;Swift.String&gt;) -&gt; Sabq_Project.SliderTableViewCell"
+                  moduleName = "Sabq Project"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/mai.abdelmonem/Developer/XcodeProjects/Sbq%20project%20trial/Sabq%20Project/Scence/NewsHome/View/SliderCells/SliderTableViewCell.swift"
+                  timestampString = "593957428.988721"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "15"
+                  endingLineNumber = "15"
+                  offsetFromSymbolStart = "303">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Sabq_Project.SliderTableViewCell.init(coder: __C.NSCoder) -&gt; Swift.Optional&lt;Sabq_Project.SliderTableViewCell&gt;"
+                  moduleName = "Sabq Project"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/mai.abdelmonem/Developer/XcodeProjects/Sbq%20project%20trial/Sabq%20Project/Scence/NewsHome/View/SliderCells/SliderTableViewCell.swift"
+                  timestampString = "593957428.992095"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "15"
+                  endingLineNumber = "15"
+                  offsetFromSymbolStart = "205">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Sabq Project/Scence/NewsHome/View/SliderCells/SliderTableViewCell.swift"
+            timestampString = "594141187.678139"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "58"
+            endingLineNumber = "58"
+            landmarkName = "collectionView(_:cellForItemAt:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Sabq Project/Scence/NewsHome/View/SliderCells/SliderTableViewCell.swift"
+            timestampString = "594141187.678197"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "59"
+            endingLineNumber = "59"
+            landmarkName = "collectionView(_:cellForItemAt:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Sabq Project/Scence/NewsHome/Model/NewsModel.swift"
+            timestampString = "593960744.148296"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "35"
+            endingLineNumber = "35"
+            landmarkName = "getNewsImages(compelation:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Sabq_Project.NewsModel.getNewsImages(compelation: (Swift.Result&lt;Any, Swift.Error&gt;) -&gt; ()) -&gt; ()"
+                  moduleName = "Sabq Project"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/mai.abdelmonem/Developer/XcodeProjects/Sbq%20project%20trial/Sabq%20Project/Scence/NewsHome/Model/NewsModel.swift"
+                  timestampString = "593745824.118818"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "35"
+                  endingLineNumber = "35"
+                  offsetFromSymbolStart = "109">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Result&lt;Sabq_Project.ImageResponse, Sabq_Project.NetworkError&gt;, Swift.Optional&lt;Swift.Int&gt;) -&gt; () in Sabq_Project.NewsModel.getNewsImages(compelation: (Swift.Result&lt;Any, Swift.Error&gt;) -&gt; ()) -&gt; ()"
+                  moduleName = "Sabq Project"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/mai.abdelmonem/Developer/XcodeProjects/Sbq%20project%20trial/Sabq%20Project/Scence/NewsHome/Model/NewsModel.swift"
+                  timestampString = "593745824.121847"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "37"
+                  endingLineNumber = "37"
+                  offsetFromSymbolStart = "106">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Sabq Project/Scence/NewsHome/Model/NewsModel.swift"
+            timestampString = "593960744.14834"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "34"
+            endingLineNumber = "34"
+            landmarkName = "getNewsImages(compelation:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Sabq Project/Scence/NewsHome/Model/NewsModel.swift"
+            timestampString = "593960744.148566"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "14"
+            endingLineNumber = "14"
+            landmarkName = "getNewsSlider(compelation:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Sabq Project/Scence/NewsHome/Model/NewsModel.swift"
+            timestampString = "593960744.148605"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "15"
+            endingLineNumber = "15"
+            landmarkName = "getNewsSlider(compelation:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Sabq_Project.NewsModel.getNewsSlider(compelation: (Swift.Result&lt;Any, Swift.Error&gt;) -&gt; ()) -&gt; ()"
+                  moduleName = "Sabq Project"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/mai.abdelmonem/Developer/XcodeProjects/Sbq%20project%20trial/Sabq%20Project/Scence/NewsHome/Model/NewsModel.swift"
+                  timestampString = "593957589.473259"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "15"
+                  endingLineNumber = "15"
+                  offsetFromSymbolStart = "109">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Result&lt;Sabq_Project.RootClass, Sabq_Project.NetworkError&gt;, Swift.Optional&lt;Swift.Int&gt;) -&gt; () in Sabq_Project.NewsModel.getNewsSlider(compelation: (Swift.Result&lt;Any, Swift.Error&gt;) -&gt; ()) -&gt; ()"
+                  moduleName = "Sabq Project"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/mai.abdelmonem/Developer/XcodeProjects/Sbq%20project%20trial/Sabq%20Project/Scence/NewsHome/Model/NewsModel.swift"
+                  timestampString = "593957589.475089"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "17"
+                  endingLineNumber = "17"
+                  offsetFromSymbolStart = "106">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Sabq Project/Scence/NewsHome/Model/NewsModel.swift"
+            timestampString = "593960744.1486419"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "8"
+            endingLineNumber = "8"
+            landmarkName = "unknown"
+            landmarkType = "0">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Sabq Project/Scence/NewsHome/View/SliderCells/SliderTableViewCell.swift"
+            timestampString = "594141187.678347"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "34"
+            endingLineNumber = "34"
+            landmarkName = "awakeFromNib()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Sabq Project/Scence/NewsHome/View/SliderCells/CustomSliderCollectionViewCell.swift"
+            timestampString = "594141187.678412"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "37"
+            endingLineNumber = "37"
+            landmarkName = "config(materialObj:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Sabq Project/Scence/NewsHome/Adapter/NewsAdapter.swift"
+            timestampString = "594144925.28847"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "127"
+            endingLineNumber = "127"
+            landmarkName = "tableView(_:cellForRowAt:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Sabq Project/Scence/NewsHome/Adapter/NewsAdapter.swift"
+            timestampString = "594144925.288554"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "125"
+            endingLineNumber = "125"
+            landmarkName = "tableView(_:cellForRowAt:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Sabq Project/Scence/NewsHome/Adapter/NewsAdapter.swift"
+            timestampString = "594144925.288602"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "128"
+            endingLineNumber = "128"
+            landmarkName = "tableView(_:cellForRowAt:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Sabq Project/Scence/NewsHome/View/VideoCells/VideoCollectionViewCell.swift"
+            timestampString = "594141187.67865"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "30"
+            endingLineNumber = "30"
+            landmarkName = "config(comicsObj:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Sabq Project/Scence/NewsHome/View/VideoCells/VideoCollectionViewCell.swift"
+            timestampString = "594141187.678715"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "31"
+            endingLineNumber = "31"
+            landmarkName = "config(comicsObj:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>
