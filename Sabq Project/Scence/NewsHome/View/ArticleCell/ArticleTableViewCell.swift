@@ -9,7 +9,7 @@
 import UIKit
 
 class ArticleTableViewCell: UITableViewCell, UICollectionViewDelegate,
- UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
+ UICollectionViewDataSource {
   
     @IBOutlet private weak var articleCollectionCell: UICollectionView!
     var articleList: [Material]? {
@@ -27,8 +27,8 @@ class ArticleTableViewCell: UITableViewCell, UICollectionViewDelegate,
         let flowLayout = UICollectionViewFlowLayout()
         flowLayout.scrollDirection = .horizontal
         //        flowLayout.itemSize = CGSize(width: 70, height: 80)
-        flowLayout.minimumLineSpacing = 0
-        flowLayout.minimumInteritemSpacing = 0
+        flowLayout.minimumLineSpacing = 10
+        flowLayout.minimumInteritemSpacing = 10
         self.articleCollectionCell.collectionViewLayout = flowLayout
         //————————register the xib for collection view cell
         let cellNib = UINib(nibName: "ArticleCollectionViewCell", bundle: nil)
@@ -63,3 +63,10 @@ class ArticleTableViewCell: UITableViewCell, UICollectionViewDelegate,
         return cell
     }
 }
+    extension ArticleTableViewCell: UICollectionViewDelegateFlowLayout {
+        func collectionView(_ collectionView: UICollectionView,
+                            layout collectionViewLayout: UICollectionViewLayout,
+                            sizeForItemAt indexPath: IndexPath) -> CGSize {
+            return CGSize(width: 0.5 * UIScreen.main.bounds.width, height: 0.7 * collectionView.frame.height)
+        }
+    }

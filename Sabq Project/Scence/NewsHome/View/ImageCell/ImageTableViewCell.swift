@@ -9,7 +9,7 @@
 import UIKit
 
 class ImageTableViewCell: UITableViewCell, UICollectionViewDelegate,
- UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
+ UICollectionViewDataSource {
    
     @IBOutlet private weak var imageCollectionCell: UICollectionView!
     var imageList: [Comic]? {
@@ -27,8 +27,8 @@ class ImageTableViewCell: UITableViewCell, UICollectionViewDelegate,
         let flowLayout = UICollectionViewFlowLayout()
         flowLayout.scrollDirection = .horizontal
         //        flowLayout.itemSize = CGSize(width: 70, height: 80)
-        flowLayout.minimumLineSpacing = 0
-        flowLayout.minimumInteritemSpacing = 0
+        flowLayout.minimumLineSpacing = 10
+        flowLayout.minimumInteritemSpacing = 10
         self.imageCollectionCell.collectionViewLayout = flowLayout
         //————————register the xib for collection view cell
         let cellNib = UINib(nibName: "ImageCollectionViewCell", bundle: nil)
@@ -62,5 +62,12 @@ class ImageTableViewCell: UITableViewCell, UICollectionViewDelegate,
         cell.configImage(comicsObj: imageComic)
         return cell
     }
-    
+}
+
+extension ImageTableViewCell: UICollectionViewDelegateFlowLayout {
+    func collectionView(_ collectionView: UICollectionView,
+                        layout collectionViewLayout: UICollectionViewLayout,
+                        sizeForItemAt indexPath: IndexPath) -> CGSize {
+        return CGSize(width: 0.5 * UIScreen.main.bounds.width, height: 0.8 * collectionView.frame.height)
+    }
 }

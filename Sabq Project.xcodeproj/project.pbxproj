@@ -35,9 +35,9 @@
 		2D1837E9235CAB0D00EE99AF /* CustomSliderCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2D1837E7235CAB0D00EE99AF /* CustomSliderCollectionViewCell.xib */; };
 		2D7233272369E1D500F0EB79 /* NewsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2D7233292369E1D500F0EB79 /* NewsViewController.xib */; };
 		2D72332E2369E1EC00F0EB79 /* VideoCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2D7233302369E1EC00F0EB79 /* VideoCollectionViewCell.xib */; };
-		2D7233372369E5A100F0EB79 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2D7233392369E5A100F0EB79 /* Localizable.strings */; };
 		2D840E622361DB2B00DC70BB /* MaterialTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D840E602361DB2B00DC70BB /* MaterialTableViewCell.swift */; };
 		2D840E632361DB2B00DC70BB /* MaterialTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2D840E612361DB2B00DC70BB /* MaterialTableViewCell.xib */; };
+		2D90D8512369EE8F00D8935D /* Localized.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2D90D8502369EE8F00D8935D /* Localized.strings */; };
 		2D92157523589EC400E8245A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D92157423589EC400E8245A /* AppDelegate.swift */; };
 		2D92157C23589EC500E8245A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2D92157B23589EC500E8245A /* Assets.xcassets */; };
 		2D9215872358A25900E8245A /* TabbarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D9215862358A25900E8245A /* TabbarController.swift */; };
@@ -97,9 +97,9 @@
 		2D1837E7235CAB0D00EE99AF /* CustomSliderCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomSliderCollectionViewCell.xib; sourceTree = "<group>"; };
 		2D7233282369E1D500F0EB79 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/NewsViewController.xib; sourceTree = "<group>"; };
 		2D72332F2369E1EC00F0EB79 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/VideoCollectionViewCell.xib; sourceTree = "<group>"; };
-		2D7233382369E5A100F0EB79 /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/Localizable.strings; sourceTree = "<group>"; };
 		2D840E602361DB2B00DC70BB /* MaterialTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MaterialTableViewCell.swift; sourceTree = "<group>"; };
 		2D840E612361DB2B00DC70BB /* MaterialTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MaterialTableViewCell.xib; sourceTree = "<group>"; };
+		2D90D8502369EE8F00D8935D /* Localized.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = Localized.strings; sourceTree = "<group>"; };
 		2D92157123589EC400E8245A /* Sabq Project.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Sabq Project.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2D92157423589EC400E8245A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2D92157B23589EC500E8245A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -246,7 +246,7 @@
 				2D92158023589EC500E8245A /* Info.plist */,
 				2D04FE1E23691CB200B9C802 /* Int+Extentions.swift */,
 				2D04FE2B23693F0100B9C802 /* String+Extensions.swift */,
-				2D7233392369E5A100F0EB79 /* Localizable.strings */,
+				2D90D8502369EE8F00D8935D /* Localized.strings */,
 			);
 			path = "Supporting files";
 			sourceTree = "<group>";
@@ -498,6 +498,7 @@
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				en,
 				Base,
 				ar,
 			);
@@ -525,8 +526,8 @@
 				2D92157C23589EC500E8245A /* Assets.xcassets in Resources */,
 				2D03FF5A236131AF00952302 /* ImageTableViewCell.xib in Resources */,
 				5D3B3E7C235A93D200EA3C6A /* LaunchScreen.storyboard in Resources */,
-				2D7233372369E5A100F0EB79 /* Localizable.strings in Resources */,
 				5D3B3E79235A8AB000EA3C6A /* SliderTableViewCell.xib in Resources */,
+				2D90D8512369EE8F00D8935D /* Localized.strings in Resources */,
 				2D03FF562361319600952302 /* ImageCollectionViewCell.xib in Resources */,
 				2D7233272369E1D500F0EB79 /* NewsViewController.xib in Resources */,
 			);
@@ -664,14 +665,6 @@
 				2D72332F2369E1EC00F0EB79 /* Base */,
 			);
 			name = VideoCollectionViewCell.xib;
-			sourceTree = "<group>";
-		};
-		2D7233392369E5A100F0EB79 /* Localizable.strings */ = {
-			isa = PBXVariantGroup;
-			children = (
-				2D7233382369E5A100F0EB79 /* ar */,
-			);
-			name = Localizable.strings;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
