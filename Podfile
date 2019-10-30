@@ -8,5 +8,7 @@ target 'Sabq Project' do
   # Pods for Sabq Project
 pod 'Moya'
 pod 'SDWebImage', '~> 5.0'
+pod 'LocalizedTimeAgo', '~> 1.3.0'
+pod "SkeletonView"
 
 end

@@ -8,7 +8,7 @@
 
 import UIKit
 
-class NewsViewController: BaseViewController< NewsPresenter> , NewsViewProtocal{
+class NewsViewController: BaseViewController< NewsPresenter>, NewsViewProtocal {
    
     @IBOutlet weak var newsTableView: UITableView!
     var adapter = NewsAdapter()
@@ -43,10 +43,8 @@ class NewsViewController: BaseViewController< NewsPresenter> , NewsViewProtocal{
         let articleNib = UINib(nibName: "ArticleTableViewCell", bundle: nil)
         newsTableView.register(articleNib, forCellReuseIdentifier: "ArticleTableViewCell")
 
-
     }
 
-    
     func getNewsSliderList(sliderArr: [Material], materialsArr: [Material]) {
        adapter.addSlidersandMaterial(sliders: sliderArr, materials: materialsArr)
         newsTableView.reloadData()
@@ -59,8 +57,8 @@ class NewsViewController: BaseViewController< NewsPresenter> , NewsViewProtocal{
         presenter.loadNewsImages()
     }
     
-    func getNewsImagesList(ImagesArr: [Comic]) {
-        adapter.addImages(items: ImagesArr)
+    func getNewsImagesList(imagesArr: [Comic]) {
+        adapter.addImages(items: imagesArr)
         newsTableView.reloadData()
         presenter.loadNewsArticles()
     }
@@ -71,13 +69,13 @@ class NewsViewController: BaseViewController< NewsPresenter> , NewsViewProtocal{
     }
     
 }
-extension NewsViewController : UITableViewDelegate {
+extension NewsViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         switch indexPath.section {
         case 0:
             return CGFloat(integerLiteral: 300)
         default:
-            switch indexPath.row{
+            switch indexPath.row {
             case 5:
                 return CGFloat(integerLiteral: 380)
             case 11:

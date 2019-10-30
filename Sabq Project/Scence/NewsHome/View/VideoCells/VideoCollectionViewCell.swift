@@ -9,26 +9,28 @@
 import UIKit
 
 class VideoCollectionViewCell: UICollectionViewCell {
-    @IBOutlet weak var videoImage: UIImageView!
-    @IBOutlet weak var titleLabel: UILabel!
-    @IBOutlet weak var timeLabel: UILabel!
+    @IBOutlet private weak var videoImage: UIImageView!
+    @IBOutlet private weak var titleLabel: UILabel!
+    @IBOutlet private weak var timeLabel: UILabel!
     
-    class var CustomCell : VideoCollectionViewCell {
-        let cell = Bundle.main.loadNibNamed("VideoCollectionViewCell", owner: self, options: nil)?.last
-        return cell as! VideoCollectionViewCell
-    }
+//    class var CustomCell : VideoCollectionViewCell {
+//        let cell = Bundle.main.loadNibNamed("VideoCollectionViewCell", owner: self, options: nil)?.last
+//        return cell as! VideoCollectionViewCell
+//    }
     
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
     }
     
-    func config(comicsObj : Comic){
+    func config(comicsObj: Comic) {
       titleLabel.text = comicsObj.title
         timeLabel.text = comicsObj.publishDate
-        let placeholderimage = UIImage(named: "imgslider")
-        videoImage.sd_setImage(with: URL(string: comicsObj.coverPhoto!), placeholderImage: placeholderimage)
-    }
-
-
+        let placeholderimage = #imageLiteral(resourceName: "imgslider")
+        if let imageUrl = comicsObj.coverPhoto {
+        videoImage.sd_setImage(with: URL(string: imageUrl), placeholderImage: placeholderimage)
+        } else {
+            videoImage.image = placeholderimage
+        }
+  }
 }

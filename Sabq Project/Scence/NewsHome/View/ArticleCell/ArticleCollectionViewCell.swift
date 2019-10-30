@@ -9,10 +9,10 @@
 import UIKit
 
 class ArticleCollectionViewCell: UICollectionViewCell {
-    @IBOutlet weak var titleLabel: UILabel!
-    @IBOutlet weak var authorImage: UIImageView!
+    @IBOutlet private weak var titleLabel: UILabel!
+    @IBOutlet private weak var authorImage: UIImageView!
     
-    @IBOutlet weak var authorNameLabel: UILabel!
+    @IBOutlet private weak var authorNameLabel: UILabel!
 //    class var CustomCell : ArticleCollectionViewCell {
 //        let cell = Bundle.main.loadNibNamed("ArticleCollectionViewCell", owner: self, options: nil)?.last
 //        return cell as! ArticleCollectionViewCell
@@ -23,11 +23,16 @@ class ArticleCollectionViewCell: UICollectionViewCell {
         // Initialization code
     }
     
-    func configArticle(materialObj : Material){
+    func configArticle(materialObj: Material) {
         titleLabel.text = materialObj.title
         authorNameLabel.text = materialObj.authorName
-        let placeholderimage = UIImage(named: "imgslider")
-                authorImage.sd_setImage(with: URL(string: materialObj.authorImg!), placeholderImage: placeholderimage)
+        let placeholderimage = #imageLiteral(resourceName: "imgslider")
+        if let imageUrl = materialObj.authorImg {
+             authorImage.sd_setImage(with: URL(string: imageUrl), placeholderImage: placeholderimage)
+        } else {
+            authorImage.image = placeholderimage
+        }
+        
     }
 
 }

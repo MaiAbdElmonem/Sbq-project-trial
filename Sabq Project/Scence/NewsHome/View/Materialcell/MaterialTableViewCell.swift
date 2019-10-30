@@ -10,10 +10,10 @@ import UIKit
 
 class MaterialTableViewCell: UITableViewCell {
 
-    @IBOutlet weak var titleLabel: UILabel!
-    @IBOutlet weak var newsImage: UIImageView!
-    @IBOutlet weak var timeLabel: UILabel!
-    @IBOutlet weak var numofViews: UILabel!
+    @IBOutlet private weak var titleLabel: UILabel!
+    @IBOutlet private weak var newsImage: UIImageView!
+    @IBOutlet private weak var timeLabel: UILabel!
+    @IBOutlet private weak var numofViews: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -25,13 +25,18 @@ class MaterialTableViewCell: UITableViewCell {
 
         // Configure the view for the selected state
     }
-    
-    func config(materialObj : Material){
+  
+    func config(materialObj: Material) {
         titleLabel.text = materialObj.title
         timeLabel.text = materialObj.publishDate
-        numofViews.text = String(materialObj.noOfViews!)
-        let placeholderimage = UIImage(named: "imgslider")
-        newsImage.sd_setImage(with: URL(string: materialObj.coverPhoto!), placeholderImage: placeholderimage)
+        
+        numofViews.text = materialObj.noOfViews?.formatNumber()
+        let placeholderimage = #imageLiteral(resourceName: "imgslider")
+         if let imageUrl = materialObj.coverPhoto {
+                newsImage.sd_setImage(with: URL(string: imageUrl), placeholderImage: placeholderimage)
+           } else {
+            newsImage.image = placeholderimage
+        }
     }
     
 }

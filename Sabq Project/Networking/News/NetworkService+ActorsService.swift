@@ -12,7 +12,7 @@ import Moya
 extension NetworkManager {
     
     func getNewsSlider(completion: @escaping (
-        _ result: Swift.Result<RootClass, NetworkError>,
+        _ result: Swift.Result<SliderResponse, NetworkError>,
         _ statusCode: StatusCode?
         ) -> Void) {
         
@@ -21,7 +21,7 @@ extension NetworkManager {
             case .success(let response):
                 if (200...299 ~= response.statusCode) {
                     do {
-                        let result = try JSONDecoder().decode(RootClass.self, from: response.data)
+                        let result = try JSONDecoder().decode(SliderResponse.self, from: response.data)
                         completion(.success(result), response.statusCode)
                     } catch {
                         completion(.failure(NetworkError.parseError), response.statusCode)
@@ -79,7 +79,6 @@ extension NetworkManager {
         }
     }
 
-    
     func getNewsVideos(completion: @escaping (
         _ result: Swift.Result<VideoResponse, NetworkError>,
         _ statusCode: StatusCode?

@@ -8,18 +8,18 @@
 
 import Foundation
 
-class NewsPresenter : BasePresenter, NewsPresenterProtocal {
+class NewsPresenter: BasePresenter, NewsPresenterProtocal {
   
-    var homeModel : NewsModelProtocal?
-    var homeView : NewsViewProtocal?
+    var homeModel: NewsModelProtocal
+    var homeView: NewsViewProtocal
     
-    init(model : NewsModelProtocal , view : NewsViewProtocal) {
+    init(model: NewsModelProtocal, view: NewsViewProtocal) {
         homeModel = model
         homeView = view
     }
     
     func loadNewsSliders() {
-        homeModel?.getNewsSlider { result in
+        homeModel.getNewsSlider { result in
 //            do {
 ////                let results = try result.get() as! RootClass
 //                let newsslider =result
@@ -30,36 +30,39 @@ class NewsPresenter : BasePresenter, NewsPresenterProtocal {
 //                print(error)
 //            }
             
-            switch result{
+            switch result {
             case .success(let obj):
-                let slider = (obj as! RootClass).slider!
-                let material = (obj  as! RootClass).materials!
-                self.homeView!.getNewsSliderList(sliderArr: slider, materialsArr: material)
-            case .failure(_): print("help from presenter")
+                let slider = (obj as? SliderResponse)?.slider
+                let material = (obj  as? SliderResponse)?.materials
+                guard let sliderLists = slider, let materialLists = material else { return }
+                self.homeView.getNewsSliderList(sliderArr: sliderLists, materialsArr: materialLists)
+            case .failure: (print("help from presenter"))
             }
         }
     }
     
     func loadNewsImages() {
-        homeModel?.getNewsImages { result in
-            do{
-                let imagecomics = (try result.get() as! ImageResponse).comics
-                self.homeView?.getNewsImagesList(ImagesArr: imagecomics!)
-            }catch{
+        homeModel.getNewsImages { result in
+            do {
+                let imagecomics = (try result.get() as? ImageResponse)?.comics
+                guard let res = imagecomics else { return }
+                self.homeView.getNewsImagesList(imagesArr: res)
+            } catch {
                 print(error)
             }
         }
     }
     
     func loadNewsVideos() {
-        homeModel?.getNewsVideos { result in
-        switch result{
-        case .success(let Vobj):
-            let video = (Vobj as! VideoResponse).comics!
-            self.homeView!.getNewsVideosList(videoArr: video)
-        case .failure(_): print("help from presenter")
+        homeModel.getNewsVideos { result in
+        switch result {
+        case .success(let vobj):
+            let video = (vobj as? VideoResponse)?.comics
+            guard let res = video else { return }
+            self.homeView.getNewsVideosList(videoArr: res)
+        case .failure: (print("help from presenter"))
+            }
         }
-    }
     }
 //        homeModel?.getNewsVideos { result in
 //            do {
@@ -72,16 +75,16 @@ class NewsPresenter : BasePresenter, NewsPresenterProtocal {
 //  }
     
     func loadNewsArticles() {
-        homeModel?.getNewsArticles { result in
+        homeModel.getNewsArticles { result in
             do {
-                let articlesmaterials = (try result.get() as! ArticleResponse).materials
-                self.homeView?.getNewsArticlesList(articlesArr: articlesmaterials!)
-            }catch{
+                let articlesmaterials = (try result.get() as? ArticleResponse)?.materials
+                guard let res = articlesmaterials else { return }
+                self.homeView.getNewsArticlesList(articlesArr: res)
+            } catch {
                 print(error)
             }
             
         }
     }
-    
     
 }

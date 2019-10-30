@@ -27,5 +27,4 @@ protocol PresenterLifeCycleProtocol {
 
 protocol BasePresenterProtocol: PresenterLifeCycleProtocol {
     
-//    init(view: BaseViewProtocal, model: BaseModelProtocal)
 }

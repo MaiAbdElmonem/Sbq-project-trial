@@ -55,18 +55,18 @@ extension NewsService: TargetType {
         switch self {
         case .slider :
             
-            return .requestParameters(parameters: ["" : ""],
+            return .requestParameters(parameters: ["": ""],
                                                 encoding: URLEncoding.default)
         case .videos:
            
-            return .requestParameters(parameters: ["type":"video"], encoding: URLEncoding.default)
+            return .requestParameters(parameters: ["type": "video"], encoding: URLEncoding.default)
             
         case .images:
-            return .requestParameters(parameters: ["type":"image"], encoding: URLEncoding.default)
+            return .requestParameters(parameters: ["type": "image"], encoding: URLEncoding.default)
             
         case .aricles:
             
-            return .requestParameters(parameters: ["" : ""], encoding: URLEncoding.default)
+            return .requestParameters(parameters: ["": ""], encoding: URLEncoding.default)
         }
     }
     

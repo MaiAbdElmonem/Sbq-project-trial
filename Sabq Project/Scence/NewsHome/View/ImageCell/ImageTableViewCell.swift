@@ -8,10 +8,11 @@
 
 import UIKit
 
-class ImageTableViewCell: UITableViewCell, UICollectionViewDelegate, UICollectionViewDataSource,UICollectionViewDelegateFlowLayout{
+class ImageTableViewCell: UITableViewCell, UICollectionViewDelegate,
+ UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
    
-    @IBOutlet weak var imageCollectionCell: UICollectionView!
-    var imageList : [Comic]?{
+    @IBOutlet private weak var imageCollectionCell: UICollectionView!
+    var imageList: [Comic]? {
         didSet {
             imageCollectionCell.reloadData()
         }
@@ -40,17 +41,25 @@ class ImageTableViewCell: UITableViewCell, UICollectionViewDelegate, UICollectio
         // Configure the view for the selected state
     }
     
+    func configureCell(images: [Comic]) {
+        imageList = images
+    }
+    
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        if let imageslist=imageList{
+        if let imageslist = imageList {
             return imageslist.count
-        }else{
+        } else {
             return 0
         }
     }
     
-    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = imageCollectionCell.dequeueReusableCell(withReuseIdentifier: "ImageCollectionViewCell", for: indexPath) as! ImageCollectionViewCell
-        cell.configImage(comicsObj: imageList![indexPath.row])
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) ->
+        UICollectionViewCell {
+        guard let cell = imageCollectionCell.dequeueReusableCell(
+            withReuseIdentifier: "ImageCollectionViewCell", for: indexPath)
+            as? ImageCollectionViewCell,
+             let imageComic = imageList?[indexPath.row] else { return UICollectionViewCell() }
+        cell.configImage(comicsObj: imageComic)
         return cell
     }
     

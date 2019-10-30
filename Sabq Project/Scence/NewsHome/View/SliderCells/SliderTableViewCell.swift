@@ -8,11 +8,11 @@
 
 import UIKit
 
-class SliderTableViewCell:UITableViewCell,UICollectionViewDataSource, UICollectionViewDelegate {
+class SliderTableViewCell: UITableViewCell, UICollectionViewDataSource, UICollectionViewDelegate {
     
     @IBOutlet weak var sliderCollectionView: UICollectionView!
     
-    var slideList : [Material]? {
+    var slideList: [Material]? {
         didSet {
             sliderCollectionView.reloadData()
         }
@@ -41,29 +41,36 @@ class SliderTableViewCell:UITableViewCell,UICollectionViewDataSource, UICollecti
         // Configure the view for the selected state
     }
     
+    func configureCell(slider: [Material]) {
+        slideList = slider
+    }
+    
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        if let sliderlist=slideList{
+        if let sliderlist = slideList {
             return sliderlist.count
-        }else{
+        } else {
             return 0
         }
     }
     
-    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        guard let cell = sliderCollectionView.dequeueReusableCell(withReuseIdentifier: "CustomSliderCollectionViewCell", for: indexPath) as? CustomSliderCollectionViewCell else{return UICollectionViewCell()}
-        cell.config(materialObj: slideList![indexPath.row])
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath)
+        -> UICollectionViewCell {
+        guard let cell = sliderCollectionView.dequeueReusableCell(
+            withReuseIdentifier: "CustomSliderCollectionViewCell", for: indexPath)
+            as? CustomSliderCollectionViewCell,
+            let sliderMaterial = slideList?[indexPath.row] else { return UICollectionViewCell() }
+        cell.config(materialObj: sliderMaterial)
         return cell
     }
    
-    
 //    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
 //        return UIEdgeInsets(top: 0, left: 10, bottom: 0, right: 10)
 //    }
 }
-    extension SliderTableViewCell : UICollectionViewDelegateFlowLayout{
-        func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+    extension SliderTableViewCell: UICollectionViewDelegateFlowLayout {
+        func collectionView(_ collectionView: UICollectionView,
+                            layout collectionViewLayout: UICollectionViewLayout,
+                            sizeForItemAt indexPath: IndexPath) -> CGSize {
             return CGSize(width: UIScreen.main.bounds.width, height: collectionView.frame.height)
         }
     }
-    
-

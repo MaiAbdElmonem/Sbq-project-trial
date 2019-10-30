@@ -9,5 +9,5 @@
 import Foundation
 
 protocol BaseModelProtocal {
-//    func getActors(forPage page:Int , compelation: Result<Any,Error>)
+
 }

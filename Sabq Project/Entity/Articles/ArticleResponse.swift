@@ -8,21 +8,9 @@
 
 import Foundation
 
-struct ArticleResponse : Decodable {
+struct ArticleResponse: Decodable {
     
-    let code : Int?
-    let materials : [Material]?
-    
-    
-    enum CodingKeys: String, CodingKey {
-        case code = "code"
-        case materials = "materials"
-    }
-    init(from decoder: Decoder) throws {
-        let values = try decoder.container(keyedBy: CodingKeys.self)
-        code = try values.decodeIfPresent(Int.self, forKey: .code)
-        materials = try values.decodeIfPresent([Material].self, forKey: .materials)
-    }
-    
+    let code: Int?
+    let materials: [Material]?
     
 }

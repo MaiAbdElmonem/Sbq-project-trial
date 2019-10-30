@@ -27,13 +27,16 @@ class CustomSliderCollectionViewCell: UICollectionViewCell {
 
     }
     
-    func config(materialObj : Material){
+    func config(materialObj: Material) {
         titleTextview.text = materialObj.title
         descriptionTextview.text = materialObj.descriptionString
         timeLabel.text = materialObj.publishDate
-        noOfViewsLabel.text = String(materialObj.noOfViews!)
-        let placeholderimage = UIImage(named: "imgslider")
-        newsImage.sd_setImage(with: URL(string: materialObj.coverPhoto!), placeholderImage: placeholderimage)
-    }
-
+        noOfViewsLabel.text = materialObj.noOfViews?.formatNumber()
+        let placeholderimage = #imageLiteral(resourceName: "imgslider")
+        if let imageUrl = materialObj.coverPhoto {
+        newsImage.sd_setImage(with: URL(string: imageUrl), placeholderImage: placeholderimage)
+        } else {
+            newsImage.image = placeholderimage
+        }
+  }
 }

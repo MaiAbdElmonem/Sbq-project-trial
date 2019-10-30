@@ -16,7 +16,6 @@ class BookmarksViewController: UIViewController {
          self.view.backgroundColor = .gray
     }
     
-
     /*
     // MARK: - Navigation
 

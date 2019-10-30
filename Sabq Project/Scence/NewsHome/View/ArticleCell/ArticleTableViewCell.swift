@@ -8,10 +8,11 @@
 
 import UIKit
 
-class ArticleTableViewCell: UITableViewCell, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
+class ArticleTableViewCell: UITableViewCell, UICollectionViewDelegate,
+ UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
   
-    @IBOutlet weak var articleCollectionCell: UICollectionView!
-    var articleList : [Material]?{
+    @IBOutlet private weak var articleCollectionCell: UICollectionView!
+    var articleList: [Material]? {
         didSet {
             articleCollectionCell.reloadData()
         }
@@ -40,20 +41,25 @@ class ArticleTableViewCell: UITableViewCell, UICollectionViewDelegate, UICollect
         // Configure the view for the selected state
     }
     
+    func configureCell(articles: [Material]) {
+        articleList = articles
+    }
+    
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        if let articleslist=articleList{
+        if let articleslist = articleList {
             return articleslist.count
-        }else{
+        } else {
             return 0
         }
     }
     
-    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = articleCollectionCell.dequeueReusableCell(withReuseIdentifier: "ArticleCollectionViewCell", for: indexPath) as! ArticleCollectionViewCell
-        cell.configArticle(materialObj: articleList![indexPath.row])
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) ->
+        UICollectionViewCell {
+       guard let cell = articleCollectionCell.dequeueReusableCell(
+            withReuseIdentifier: "ArticleCollectionViewCell", for: indexPath)
+        as? ArticleCollectionViewCell,
+        let articleMaterial = articleList?[indexPath.row] else { return UICollectionViewCell() }
+        cell.configArticle(materialObj: articleMaterial)
         return cell
     }
-    
-
-    
 }

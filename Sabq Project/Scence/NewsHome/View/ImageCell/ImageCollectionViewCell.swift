@@ -9,26 +9,29 @@
 import UIKit
 
 class ImageCollectionViewCell: UICollectionViewCell {
-    @IBOutlet weak var newsImage: UIImageView!
-    @IBOutlet weak var titleLabel: UILabel!
-    @IBOutlet weak var timeLabel: UILabel!
+    @IBOutlet private weak var newsImage: UIImageView!
+    @IBOutlet private weak var titleLabel: UILabel!
+    @IBOutlet private weak var timeLabel: UILabel!
     
-    class var CustomCell : ImageCollectionViewCell {
-        let cell = Bundle.main.loadNibNamed("ImageCollectionViewCell", owner: self, options: nil)?.last
-        return cell as! ImageCollectionViewCell
-    }
+//    class var CustomCell: ImageCollectionViewCell {
+//        let cell = Bundle.main.loadNibNamed("ImageCollectionViewCell", owner: self, options: nil)?.last
+//        return cell as! ImageCollectionViewCell
+//    }
 
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
     }
     
-    func configImage(comicsObj : Comic){
+    func configImage(comicsObj: Comic) {
         titleLabel.text = comicsObj.title
         timeLabel.text = comicsObj.publishDate
-        let placeholderimage = UIImage(named: "imgslider")
-                newsImage.sd_setImage(with: URL(string: comicsObj.coverPhoto!), placeholderImage: placeholderimage)
+        let placeholderimage = #imageLiteral(resourceName: "imgslider")
+         if let imageUrl = comicsObj.coverPhoto {
+                newsImage.sd_setImage(with: URL(string: imageUrl), placeholderImage: placeholderimage)
+         } else {
+             newsImage.image = placeholderimage
+        }
     }
-
 
 }

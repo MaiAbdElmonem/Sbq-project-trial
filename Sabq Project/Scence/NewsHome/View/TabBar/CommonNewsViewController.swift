@@ -16,7 +16,6 @@ class CommonNewsViewController: UIViewController {
         self.view.backgroundColor = .blue
     }
     
-
     /*
     // MARK: - Navigation
 

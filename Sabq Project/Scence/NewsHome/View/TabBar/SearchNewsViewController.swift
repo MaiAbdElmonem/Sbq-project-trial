@@ -16,7 +16,6 @@ class SearchNewsViewController: UIViewController {
          self.view.backgroundColor = .black
     }
     
-
     /*
     // MARK: - Navigation
 
