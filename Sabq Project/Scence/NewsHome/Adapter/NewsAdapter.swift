@@ -228,7 +228,7 @@ extension NewsAdapter: SkeletonTableViewDataSource {
         case 0:
            return 1
         default:
-           return 3
+           return 2
         }
     }
     

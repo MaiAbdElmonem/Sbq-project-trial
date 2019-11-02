@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SkeletonView
 import LocalizedTimeAgo
 
 class MaterialTableViewCell: UITableViewCell {
@@ -27,7 +28,13 @@ class MaterialTableViewCell: UITableViewCell {
         // Configure the view for the selected state
     }
   
+        func hideSliderSkelton() {
+            let skeltonMaterial = [titleLabel, timeLabel, numofViews]
+            skeltonMaterial.forEach { $0?.hideSkeleton() }
+        }
+    
     func config(materialObj: Material) {
+        
         titleLabel.text = materialObj.title
         timeLabel.text = (materialObj.publishDate?.convetDate())?.timeAgo()
         

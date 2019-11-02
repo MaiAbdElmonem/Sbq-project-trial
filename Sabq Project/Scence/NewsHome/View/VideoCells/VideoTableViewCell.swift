@@ -66,6 +66,6 @@ class VideoTableViewCell: UITableViewCell, UICollectionViewDelegate, UICollectio
         func collectionView(_ collectionView: UICollectionView,
                             layout collectionViewLayout: UICollectionViewLayout,
                             sizeForItemAt indexPath: IndexPath) -> CGSize {
-            return CGSize(width: 0.5 * UIScreen.main.bounds.width, height: 0.7 * collectionView.frame.height)
+            return CGSize(width: 0.5 * UIScreen.main.bounds.width, height: 0.9 * collectionView.frame.height)
         }
     }

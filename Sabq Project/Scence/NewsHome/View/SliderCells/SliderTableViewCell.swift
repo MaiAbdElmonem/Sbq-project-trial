@@ -26,7 +26,7 @@ class SliderTableViewCell: UITableViewCell, UICollectionViewDataSource, UICollec
         //TODO: need to setup collection view flow layout
         let flowLayout = UICollectionViewFlowLayout()
         flowLayout.scrollDirection = .horizontal
-        flowLayout.itemSize = CGSize(width: 70, height: 80)
+        flowLayout.itemSize = CGSize(width: 100, height: 100)
         flowLayout.minimumLineSpacing = 0
         flowLayout.minimumInteritemSpacing = 0
         self.sliderCollectionView.collectionViewLayout = flowLayout
@@ -63,9 +63,6 @@ class SliderTableViewCell: UITableViewCell, UICollectionViewDataSource, UICollec
         return cell
     }
    
-//    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
-//        return UIEdgeInsets(top: 0, left: 10, bottom: 0, right: 10)
-//    }
 }
     extension SliderTableViewCell: UICollectionViewDelegateFlowLayout {
         func collectionView(_ collectionView: UICollectionView,

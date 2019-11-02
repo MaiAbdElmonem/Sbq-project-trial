@@ -19,6 +19,7 @@ class NewsViewController: BaseViewController< NewsPresenter>, NewsViewProtocal {
 //        newsTableView.separatorStyle = .none
         adapter.setTableView(newsTable: newsTableView)
         setupComponent()
+        newsTableView.showSkeleton()
         presenter.loadNewsSliders()
       
         adapter.reloadData = newsTableView.reloadData
@@ -46,7 +47,8 @@ class NewsViewController: BaseViewController< NewsPresenter>, NewsViewProtocal {
     }
 
     func getNewsSliderList(sliderArr: [Material], materialsArr: [Material]) {
-       adapter.addSlidersandMaterial(sliders: sliderArr, materials: materialsArr)
+       newsTableView.hideSkeleton()
+        adapter.addSlidersandMaterial(sliders: sliderArr, materials: materialsArr)
         newsTableView.reloadData()
         presenter.loadNewsVideos()
     }

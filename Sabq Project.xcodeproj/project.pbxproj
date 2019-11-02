@@ -37,13 +37,15 @@
 		2D72332E2369E1EC00F0EB79 /* VideoCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2D7233302369E1EC00F0EB79 /* VideoCollectionViewCell.xib */; };
 		2D840E622361DB2B00DC70BB /* MaterialTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D840E602361DB2B00DC70BB /* MaterialTableViewCell.swift */; };
 		2D840E632361DB2B00DC70BB /* MaterialTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2D840E612361DB2B00DC70BB /* MaterialTableViewCell.xib */; };
-		2D90D8512369EE8F00D8935D /* Localized.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2D90D8502369EE8F00D8935D /* Localized.strings */; };
 		2D92157523589EC400E8245A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D92157423589EC400E8245A /* AppDelegate.swift */; };
 		2D92157C23589EC500E8245A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2D92157B23589EC500E8245A /* Assets.xcassets */; };
 		2D9215872358A25900E8245A /* TabbarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D9215862358A25900E8245A /* TabbarController.swift */; };
 		2D92158B2358A8C300E8245A /* CommonNewsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D92158A2358A8C300E8245A /* CommonNewsViewController.swift */; };
 		2D92158D2358A90F00E8245A /* SearchNewsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D92158C2358A90F00E8245A /* SearchNewsViewController.swift */; };
 		2D92158F2358A92500E8245A /* BookmarksViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D92158E2358A92500E8245A /* BookmarksViewController.swift */; };
+		2DBAFBBC236AF7B500759A23 /* SkeltonTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DBAFBBA236AF7B500759A23 /* SkeltonTableViewCell.swift */; };
+		2DBAFBBD236AF7B500759A23 /* SkeltonTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2DBAFBBB236AF7B500759A23 /* SkeltonTableViewCell.xib */; };
+		2DBAFBC0236E1F6300759A23 /* Localized.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2DBAFBC2236E1F6300759A23 /* Localized.strings */; };
 		2DCBF835235D970600BC5C41 /* AppDelegate+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DCBF833235D970600BC5C41 /* AppDelegate+Extensions.swift */; };
 		2DCBF841235D9B4600BC5C41 /* StaticHeaderPlugin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DCBF83A235D9B4600BC5C41 /* StaticHeaderPlugin.swift */; };
 		2DCBF842235D9B4600BC5C41 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DCBF83B235D9B4600BC5C41 /* NetworkManager.swift */; };
@@ -99,7 +101,6 @@
 		2D72332F2369E1EC00F0EB79 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/VideoCollectionViewCell.xib; sourceTree = "<group>"; };
 		2D840E602361DB2B00DC70BB /* MaterialTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MaterialTableViewCell.swift; sourceTree = "<group>"; };
 		2D840E612361DB2B00DC70BB /* MaterialTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MaterialTableViewCell.xib; sourceTree = "<group>"; };
-		2D90D8502369EE8F00D8935D /* Localized.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = Localized.strings; sourceTree = "<group>"; };
 		2D92157123589EC400E8245A /* Sabq Project.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Sabq Project.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2D92157423589EC400E8245A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2D92157B23589EC500E8245A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -108,6 +109,11 @@
 		2D92158A2358A8C300E8245A /* CommonNewsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonNewsViewController.swift; sourceTree = "<group>"; };
 		2D92158C2358A90F00E8245A /* SearchNewsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchNewsViewController.swift; sourceTree = "<group>"; };
 		2D92158E2358A92500E8245A /* BookmarksViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookmarksViewController.swift; sourceTree = "<group>"; };
+		2DBAFBBA236AF7B500759A23 /* SkeltonTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SkeltonTableViewCell.swift; sourceTree = "<group>"; };
+		2DBAFBBB236AF7B500759A23 /* SkeltonTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SkeltonTableViewCell.xib; sourceTree = "<group>"; };
+		2DBAFBBE236E1DEB00759A23 /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/VideoCollectionViewCell.strings; sourceTree = "<group>"; };
+		2DBAFBBF236E1DEB00759A23 /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/NewsViewController.strings; sourceTree = "<group>"; };
+		2DBAFBC1236E1F6300759A23 /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/Localized.strings; sourceTree = "<group>"; };
 		2DCBF833235D970600BC5C41 /* AppDelegate+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "AppDelegate+Extensions.swift"; sourceTree = "<group>"; };
 		2DCBF83A235D9B4600BC5C41 /* StaticHeaderPlugin.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StaticHeaderPlugin.swift; sourceTree = "<group>"; };
 		2DCBF83B235D9B4600BC5C41 /* NetworkManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
@@ -246,7 +252,7 @@
 				2D92158023589EC500E8245A /* Info.plist */,
 				2D04FE1E23691CB200B9C802 /* Int+Extentions.swift */,
 				2D04FE2B23693F0100B9C802 /* String+Extensions.swift */,
-				2D90D8502369EE8F00D8935D /* Localized.strings */,
+				2DBAFBC2236E1F6300759A23 /* Localized.strings */,
 			);
 			path = "Supporting files";
 			sourceTree = "<group>";
@@ -297,6 +303,8 @@
 		2D2D96E123607D24000B3F26 /* SliderCells */ = {
 			isa = PBXGroup;
 			children = (
+				2DBAFBBA236AF7B500759A23 /* SkeltonTableViewCell.swift */,
+				2DBAFBBB236AF7B500759A23 /* SkeltonTableViewCell.xib */,
 				5D3B3E76235A8AB000EA3C6A /* SliderTableViewCell.swift */,
 				5D3B3E77235A8AB000EA3C6A /* SliderTableViewCell.xib */,
 				2D1837E6235CAB0D00EE99AF /* CustomSliderCollectionViewCell.swift */,
@@ -527,8 +535,9 @@
 				2D03FF5A236131AF00952302 /* ImageTableViewCell.xib in Resources */,
 				5D3B3E7C235A93D200EA3C6A /* LaunchScreen.storyboard in Resources */,
 				5D3B3E79235A8AB000EA3C6A /* SliderTableViewCell.xib in Resources */,
-				2D90D8512369EE8F00D8935D /* Localized.strings in Resources */,
+				2DBAFBC0236E1F6300759A23 /* Localized.strings in Resources */,
 				2D03FF562361319600952302 /* ImageCollectionViewCell.xib in Resources */,
+				2DBAFBBD236AF7B500759A23 /* SkeltonTableViewCell.xib in Resources */,
 				2D7233272369E1D500F0EB79 /* NewsViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -616,6 +625,7 @@
 				2D03FF612361324600952302 /* ArticleCollectionViewCell.swift in Sources */,
 				2D9215872358A25900E8245A /* TabbarController.swift in Sources */,
 				2D03FF512361314A00952302 /* VideoCollectionViewCell.swift in Sources */,
+				2DBAFBBC236AF7B500759A23 /* SkeltonTableViewCell.swift in Sources */,
 				2D1837D4235C7A4500EE99AF /* BaseListAdaptor.swift in Sources */,
 				2DCBF846235D9B4600BC5C41 /* ProductService.swift in Sources */,
 				2D04FE1F23691CB200B9C802 /* Int+Extentions.swift in Sources */,
@@ -655,6 +665,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				2D7233282369E1D500F0EB79 /* Base */,
+				2DBAFBBF236E1DEB00759A23 /* ar */,
 			);
 			name = NewsViewController.xib;
 			sourceTree = "<group>";
@@ -663,8 +674,17 @@
 			isa = PBXVariantGroup;
 			children = (
 				2D72332F2369E1EC00F0EB79 /* Base */,
+				2DBAFBBE236E1DEB00759A23 /* ar */,
 			);
 			name = VideoCollectionViewCell.xib;
+			sourceTree = "<group>";
+		};
+		2DBAFBC2236E1F6300759A23 /* Localized.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2DBAFBC1236E1F6300759A23 /* ar */,
+			);
+			name = Localized.strings;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */

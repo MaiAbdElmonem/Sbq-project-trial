@@ -29,10 +29,10 @@ class CustomSliderCollectionViewCell: UICollectionViewCell {
 //        hideSkeleton()
     }
     
-    func hideSliderSkelton() {
-        let skeltonSlider = [newsImage, titleLabel, describtionLabel, timeLabel, noOfViewsLabel]
-        skeltonSlider.forEach { $0?.hideSkeleton() }
-    }
+//    func hideSliderSkelton() {
+//        let skeltonSlider = [newsImage, titleLabel, describtionLabel, timeLabel, noOfViewsLabel]
+//        skeltonSlider.forEach { $0?.hideSkeleton() }
+//    }
     
     func config(materialObj: Material) {
         titleLabel.text = materialObj.title
