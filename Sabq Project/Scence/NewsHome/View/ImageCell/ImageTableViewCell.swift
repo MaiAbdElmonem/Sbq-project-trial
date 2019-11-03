@@ -27,8 +27,8 @@ class ImageTableViewCell: UITableViewCell, UICollectionViewDelegate,
         let flowLayout = UICollectionViewFlowLayout()
         flowLayout.scrollDirection = .horizontal
         //        flowLayout.itemSize = CGSize(width: 70, height: 80)
-        flowLayout.minimumLineSpacing = 10
-        flowLayout.minimumInteritemSpacing = 10
+        flowLayout.minimumLineSpacing = 3
+        flowLayout.minimumInteritemSpacing = 3
         self.imageCollectionCell.collectionViewLayout = flowLayout
         //————————register the xib for collection view cell
         let cellNib = UINib(nibName: "ImageCollectionViewCell", bundle: nil)

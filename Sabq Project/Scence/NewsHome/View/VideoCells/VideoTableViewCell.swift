@@ -26,8 +26,8 @@ class VideoTableViewCell: UITableViewCell, UICollectionViewDelegate, UICollectio
         let flowLayout = UICollectionViewFlowLayout()
         flowLayout.scrollDirection = .horizontal
 //        flowLayout.itemSize = CGSize(width: 70, height: 80)
-        flowLayout.minimumLineSpacing = 10
-        flowLayout.minimumInteritemSpacing = 10
+        flowLayout.minimumLineSpacing = 14
+        flowLayout.minimumInteritemSpacing = 14
         self.videoCollectionCell.collectionViewLayout = flowLayout
         //————————register the xib for collection view cell
         let cellNib = UINib(nibName: "VideoCollectionViewCell", bundle: nil)

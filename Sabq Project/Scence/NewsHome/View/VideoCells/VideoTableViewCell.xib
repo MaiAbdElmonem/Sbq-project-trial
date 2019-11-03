@@ -21,6 +21,10 @@
                     <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="tXo-zt-F0R">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="347.5"/>
                         <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="375" id="51L-3c-Eg3"/>
+                            <constraint firstAttribute="height" constant="347.5" id="eUF-yp-am3"/>
+                        </constraints>
                         <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="nDg-2F-xfD">
                             <size key="itemSize" width="156" height="245"/>
                             <size key="headerReferenceSize" width="0.0" height="0.0"/>

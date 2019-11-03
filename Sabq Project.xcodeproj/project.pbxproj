@@ -43,6 +43,8 @@
 		2D92158B2358A8C300E8245A /* CommonNewsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D92158A2358A8C300E8245A /* CommonNewsViewController.swift */; };
 		2D92158D2358A90F00E8245A /* SearchNewsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D92158C2358A90F00E8245A /* SearchNewsViewController.swift */; };
 		2D92158F2358A92500E8245A /* BookmarksViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D92158E2358A92500E8245A /* BookmarksViewController.swift */; };
+		2DB501AB236F22A700243D34 /* 4_28.otf in Resources */ = {isa = PBXBuildFile; fileRef = 2DB501AA236F22A700243D34 /* 4_28.otf */; };
+		2DB501AD236F22B300243D34 /* 4_27.otf in Resources */ = {isa = PBXBuildFile; fileRef = 2DB501AC236F22B300243D34 /* 4_27.otf */; };
 		2DBAFBBC236AF7B500759A23 /* SkeltonTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DBAFBBA236AF7B500759A23 /* SkeltonTableViewCell.swift */; };
 		2DBAFBBD236AF7B500759A23 /* SkeltonTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2DBAFBBB236AF7B500759A23 /* SkeltonTableViewCell.xib */; };
 		2DBAFBC0236E1F6300759A23 /* Localized.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2DBAFBC2236E1F6300759A23 /* Localized.strings */; };
@@ -109,6 +111,8 @@
 		2D92158A2358A8C300E8245A /* CommonNewsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonNewsViewController.swift; sourceTree = "<group>"; };
 		2D92158C2358A90F00E8245A /* SearchNewsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchNewsViewController.swift; sourceTree = "<group>"; };
 		2D92158E2358A92500E8245A /* BookmarksViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookmarksViewController.swift; sourceTree = "<group>"; };
+		2DB501AA236F22A700243D34 /* 4_28.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = 4_28.otf; sourceTree = "<group>"; };
+		2DB501AC236F22B300243D34 /* 4_27.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = 4_27.otf; sourceTree = "<group>"; };
 		2DBAFBBA236AF7B500759A23 /* SkeltonTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SkeltonTableViewCell.swift; sourceTree = "<group>"; };
 		2DBAFBBB236AF7B500759A23 /* SkeltonTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SkeltonTableViewCell.xib; sourceTree = "<group>"; };
 		2DBAFBBE236E1DEB00759A23 /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/VideoCollectionViewCell.strings; sourceTree = "<group>"; };
@@ -249,6 +253,8 @@
 		2D1837D6235C7AE700EE99AF /* Supporting files */ = {
 			isa = PBXGroup;
 			children = (
+				2DB501AC236F22B300243D34 /* 4_27.otf */,
+				2DB501AA236F22A700243D34 /* 4_28.otf */,
 				2D92158023589EC500E8245A /* Info.plist */,
 				2D04FE1E23691CB200B9C802 /* Int+Extentions.swift */,
 				2D04FE2B23693F0100B9C802 /* String+Extensions.swift */,
@@ -536,6 +542,8 @@
 				5D3B3E7C235A93D200EA3C6A /* LaunchScreen.storyboard in Resources */,
 				5D3B3E79235A8AB000EA3C6A /* SliderTableViewCell.xib in Resources */,
 				2DBAFBC0236E1F6300759A23 /* Localized.strings in Resources */,
+				2DB501AD236F22B300243D34 /* 4_27.otf in Resources */,
+				2DB501AB236F22A700243D34 /* 4_28.otf in Resources */,
 				2D03FF562361319600952302 /* ImageCollectionViewCell.xib in Resources */,
 				2DBAFBBD236AF7B500759A23 /* SkeltonTableViewCell.xib in Resources */,
 				2D7233272369E1D500F0EB79 /* NewsViewController.xib in Resources */,

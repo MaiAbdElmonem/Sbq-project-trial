@@ -8,7 +8,7 @@
 
 import UIKit
 
-class NewsViewController: BaseViewController< NewsPresenter>, NewsViewProtocal {
+class NewsViewController: BaseViewController< NewsPresenter>, NewsViewProtocal, UITableViewDelegate {
    
     @IBOutlet weak var newsTableView: UITableView!
     var adapter = NewsAdapter()
@@ -19,15 +19,13 @@ class NewsViewController: BaseViewController< NewsPresenter>, NewsViewProtocal {
 //        newsTableView.separatorStyle = .none
         adapter.setTableView(newsTable: newsTableView)
         setupComponent()
-        newsTableView.showSkeleton()
+//        newsTableView.showSkeleton()
         presenter.loadNewsSliders()
-      
+       newsTableView.rowHeight = UITableView.automaticDimension
         adapter.reloadData = newsTableView.reloadData
     }
     
     func setupComponent() {
-//        newsTableView.estimatedRowHeight = 150.0
-//        newsTableView.rowHeight = UITableView.automaticDimension
         
         let materialNib = UINib(nibName: "MaterialTableViewCell", bundle: nil)
         newsTableView.register(materialNib, forCellReuseIdentifier: "MaterialTableViewCell")
@@ -47,7 +45,7 @@ class NewsViewController: BaseViewController< NewsPresenter>, NewsViewProtocal {
     }
 
     func getNewsSliderList(sliderArr: [Material], materialsArr: [Material]) {
-       newsTableView.hideSkeleton()
+//       newsTableView.hideSkeleton()
         adapter.addSlidersandMaterial(sliders: sliderArr, materials: materialsArr)
         newsTableView.reloadData()
         presenter.loadNewsVideos()
@@ -71,22 +69,22 @@ class NewsViewController: BaseViewController< NewsPresenter>, NewsViewProtocal {
     }
     
 }
-extension NewsViewController: UITableViewDelegate {
-    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        switch indexPath.section {
-        case 0:
-            return CGFloat(integerLiteral: 380)
-        default:
-            switch indexPath.row {
-            case 5:
-                return CGFloat(integerLiteral: 380)
-            case 11:
-                return CGFloat(integerLiteral: 350)
-            case 17:
-                return CGFloat(integerLiteral: 380)
-            default:
-                return CGFloat(integerLiteral: 120)
-            }
-        }
-    }
-}
+//extension NewsViewController: UITableViewDelegate {
+//    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+//        switch indexPath.section {
+//        case 0:
+//            return CGFloat(integerLiteral: 380)
+//        default:
+//            switch indexPath.row {
+//            case 5:
+//                return CGFloat(integerLiteral: 380)
+//            case 11:
+//                return CGFloat(integerLiteral: 350)
+//            case 17:
+//                return CGFloat(integerLiteral: 380)
+//            default:
+//                return CGFloat(integerLiteral: 120)
+//            }
+//        }
+//    }
+//}
