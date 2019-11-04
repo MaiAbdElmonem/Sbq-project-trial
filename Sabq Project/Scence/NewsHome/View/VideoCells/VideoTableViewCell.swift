@@ -32,6 +32,7 @@ class VideoTableViewCell: UITableViewCell, UICollectionViewDelegate, UICollectio
         //————————register the xib for collection view cell
         let cellNib = UINib(nibName: "VideoCollectionViewCell", bundle: nil)
         self.videoCollectionCell.register(cellNib, forCellWithReuseIdentifier: "VideoCollectionViewCell")
+        videoCollectionCell.backgroundColor = UIColor(named: "VideoCollectionCellColor")
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {

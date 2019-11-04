@@ -34,6 +34,7 @@ class SliderTableViewCell: UITableViewCell, UICollectionViewDataSource, UICollec
         //————————register the xib for collection view cell
         let cellNib = UINib(nibName: "CustomSliderCollectionViewCell", bundle: nil)
         self.sliderCollectionView.register(cellNib, forCellWithReuseIdentifier: "CustomSliderCollectionViewCell")
+        sliderCollectionView.backgroundColor = UIColor(named: "SliderCollectionColor")
       
     }
     

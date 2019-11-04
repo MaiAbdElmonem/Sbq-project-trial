@@ -311,34 +311,16 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "FEA0CBAB-FD23-4D47-88EA-33D28F22458E"
+            uuid = "7AE85557-7554-4016-9A20-3529DEC81D79"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "Sabq Project/Scence/NewsHome/View/VideoCells/VideoCollectionViewCell.swift"
-            timestampString = "594141187.67865"
+            filePath = "Sabq Project/Scence/NewsHome/View/SliderCells/CustomSliderCollectionViewCell.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "30"
-            endingLineNumber = "30"
-            landmarkName = "config(comicsObj:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "441420A5-F18B-480D-9296-AB33CF9A48DA"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Sabq Project/Scence/NewsHome/View/VideoCells/VideoCollectionViewCell.swift"
-            timestampString = "594141187.678715"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "31"
-            endingLineNumber = "31"
-            landmarkName = "config(comicsObj:)"
+            startingLineNumber = "25"
+            endingLineNumber = "25"
+            landmarkName = "awakeFromNib()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

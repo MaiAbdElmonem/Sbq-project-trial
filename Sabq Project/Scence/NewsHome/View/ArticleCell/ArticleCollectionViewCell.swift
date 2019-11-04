@@ -13,14 +13,15 @@ class ArticleCollectionViewCell: UICollectionViewCell {
     @IBOutlet private weak var authorImage: UIImageView!
     
     @IBOutlet private weak var authorNameLabel: UILabel!
-//    class var CustomCell : ArticleCollectionViewCell {
-//        let cell = Bundle.main.loadNibNamed("ArticleCollectionViewCell", owner: self, options: nil)?.last
-//        return cell as! ArticleCollectionViewCell
-//    }
-
+    @IBOutlet weak var articleView: UIView!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
+        titleLabel.textColor = UIColor(named: "ArticleTitleColor")
+        authorNameLabel.textColor = UIColor(named: "AuthorNameColor")
+        self.backgroundColor = UIColor(named: "ArticleCustomCellColor")
+        articleView.backgroundColor = UIColor(named: "ViewColor")
     }
     
     func configArticle(materialObj: Material) {

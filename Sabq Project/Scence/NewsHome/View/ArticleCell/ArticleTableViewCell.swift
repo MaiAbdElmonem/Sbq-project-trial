@@ -33,6 +33,8 @@ class ArticleTableViewCell: UITableViewCell, UICollectionViewDelegate,
         //————————register the xib for collection view cell
         let cellNib = UINib(nibName: "ArticleCollectionViewCell", bundle: nil)
         self.articleCollectionCell.register(cellNib, forCellWithReuseIdentifier: "ArticleCollectionViewCell")
+        articleCollectionCell.backgroundColor = UIColor(named: "ArticleCollectionCellColor")
+        
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {

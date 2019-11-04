@@ -58,6 +58,7 @@ class TabbarController: UITabBarController {
         let image = #imageLiteral(resourceName: "img_logo").withRenderingMode(.alwaysOriginal)
         logoImage.image = image
         navigationItem.titleView = logoImage
+        
     }
     
     @objc

@@ -17,16 +17,13 @@ class CustomSliderCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var describtionLabel: UILabel!
     @IBOutlet weak var timeLabel: UILabel!
     @IBOutlet weak var noOfViewsLabel: UILabel!
-    
-//    class var CustomCell : CustomSliderCollectionViewCell {
-//        let cell = Bundle.main.loadNibNamed("CustomSliderCollectionViewCell", owner: self, options: nil)?.last
-//        return cell as! CustomSliderCollectionViewCell
-//    }
 
     override func awakeFromNib() {
         super.awakeFromNib()
 //         titleTextview.showAnimatedGradientSkeleton()
 //        hideSkeleton()
+        titleLabel.textColor = UIColor(named: "SliderTitleColor")
+        describtionLabel.textColor = UIColor(named: "DescriptionColor")
     }
     
 //    func hideSliderSkelton() {

@@ -16,16 +16,13 @@ class MaterialTableViewCell: UITableViewCell {
     @IBOutlet private weak var newsImage: UIImageView!
     @IBOutlet private weak var timeLabel: UILabel!
     @IBOutlet private weak var numofViews: UILabel!
+    @IBOutlet private weak var materialView: UIView!
     
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
-    }
-
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
+        titleLabel.textColor = UIColor(named: "MaterialTitleColor")
+        materialView.backgroundColor = UIColor(named: "ViewColor")
     }
   
 //        func hideSliderSkelton() {
