@@ -12,7 +12,12 @@ class SkeltonTableViewCell: UITableViewCell {
 
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
+       
+        //    func collectionView(_ collectionView: UICollectionView,
+        //                        willDisplay cell: UICollectionViewCell,
+        //                        forItemAt indexPath: IndexPath) {
+        //        pageControl.currentPage = indexPath.row
+        //    }
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {

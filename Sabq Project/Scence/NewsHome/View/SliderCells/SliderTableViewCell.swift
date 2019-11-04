@@ -11,7 +11,7 @@ import UIKit
 class SliderTableViewCell: UITableViewCell, UICollectionViewDataSource, UICollectionViewDelegate {
     
     @IBOutlet weak var sliderCollectionView: UICollectionView!
-    @IBOutlet weak var pageControl: UIPageControl!
+    @IBOutlet private weak var pageControl: UIPageControl!
     
     var slideList: [Material]? {
         didSet {
@@ -34,25 +34,25 @@ class SliderTableViewCell: UITableViewCell, UICollectionViewDataSource, UICollec
         //————————register the xib for collection view cell
         let cellNib = UINib(nibName: "CustomSliderCollectionViewCell", bundle: nil)
         self.sliderCollectionView.register(cellNib, forCellWithReuseIdentifier: "CustomSliderCollectionViewCell")
-//        pageControl.currentPage = 0
+      
     }
     
-//    func collectionView(_ collectionView: UICollectionView,
-//                        willDisplay cell: UICollectionViewCell,
-//                        forItemAt indexPath: IndexPath) {
-//        pageControl.currentPage = indexPath.row
+        func collectionView(_ collectionView: UICollectionView,
+                            willDisplay cell: UICollectionViewCell,
+                            forItemAt indexPath: IndexPath) {
+            pageControl.currentPage = indexPath.row
+        }
+    
+//    func configureCell(slider: [Material]) {
+//    slideList = slider
 //    }
-
-    func configureCell(slider: [Material]) {
-        slideList = slider
-    }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         if let sliderlist = slideList {
-//            pageControl.numberOfPages = sliderlist.count
+           self.pageControl.numberOfPages = sliderlist.count
             return sliderlist.count
         } else {
-            pageControl.numberOfPages = 0
+            self.pageControl.numberOfPages = 0
             return 0
         }
     }
@@ -63,7 +63,8 @@ class SliderTableViewCell: UITableViewCell, UICollectionViewDataSource, UICollec
             withReuseIdentifier: "CustomSliderCollectionViewCell", for: indexPath)
             as? CustomSliderCollectionViewCell,
             let sliderMaterial = slideList?[indexPath.row] else { return UICollectionViewCell() }
-        cell.config(materialObj: sliderMaterial)
+            cell.config(materialObj: sliderMaterial)
+           
         return cell
     }
    

@@ -1,16 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Bucket
+   uuid = "5458B583-353C-489B-AC17-3FE2FF77CFBD"
    type = "0"
    version = "2.0">
    <Breakpoints>
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
+            uuid = "AC3BA0AE-64E7-4CCF-9234-B57DECD0E467"
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Sabq Project/Scence/NewsHome/View/SliderCells/SliderTableViewCell.swift"
-            timestampString = "594522936.451703"
+            timestampString = "594552582.654891"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "16"
@@ -19,6 +21,7 @@
             landmarkType = "24">
             <Locations>
                <Location
+                  uuid = "AC3BA0AE-64E7-4CCF-9234-B57DECD0E467 - 52391dfbdefd06e4"
                   shouldBeEnabled = "No"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
@@ -34,6 +37,7 @@
                   offsetFromSymbolStart = "26">
                </Location>
                <Location
+                  uuid = "AC3BA0AE-64E7-4CCF-9234-B57DECD0E467 - 7012f8aa789ae3a7"
                   shouldBeEnabled = "No"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
@@ -49,6 +53,7 @@
                   offsetFromSymbolStart = "27">
                </Location>
                <Location
+                  uuid = "AC3BA0AE-64E7-4CCF-9234-B57DECD0E467 - 5645bb4409cdcdd"
                   shouldBeEnabled = "No"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
@@ -64,6 +69,7 @@
                   offsetFromSymbolStart = "303">
                </Location>
                <Location
+                  uuid = "AC3BA0AE-64E7-4CCF-9234-B57DECD0E467 - 969bdf2b939d0e8f"
                   shouldBeEnabled = "No"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
@@ -84,38 +90,7 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Sabq Project/Scence/NewsHome/View/SliderCells/SliderTableViewCell.swift"
-            timestampString = "594522936.451843"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "62"
-            endingLineNumber = "62"
-            landmarkName = "collectionView(_:cellForItemAt:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Sabq Project/Scence/NewsHome/View/SliderCells/SliderTableViewCell.swift"
-            timestampString = "594522936.451901"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "63"
-            endingLineNumber = "63"
-            landmarkName = "collectionView(_:cellForItemAt:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
+            uuid = "EB2B7A4C-9A8E-4EC8-B013-0326D83142B6"
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
@@ -129,6 +104,7 @@
             landmarkType = "7">
             <Locations>
                <Location
+                  uuid = "EB2B7A4C-9A8E-4EC8-B013-0326D83142B6 - 9c516292f614431a"
                   shouldBeEnabled = "No"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
@@ -144,6 +120,7 @@
                   offsetFromSymbolStart = "109">
                </Location>
                <Location
+                  uuid = "EB2B7A4C-9A8E-4EC8-B013-0326D83142B6 - 1d5075eb4b6afc12"
                   shouldBeEnabled = "No"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
@@ -164,6 +141,7 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
+            uuid = "D7DEC4DB-C08C-43F1-9609-A21635967B18"
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
@@ -180,6 +158,7 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
+            uuid = "31D35D01-686F-4709-82EE-C3569341BB85"
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
@@ -196,6 +175,7 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
+            uuid = "150FBA04-10A4-4B47-81A7-B2E8D1510E36"
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
@@ -209,6 +189,7 @@
             landmarkType = "7">
             <Locations>
                <Location
+                  uuid = "150FBA04-10A4-4B47-81A7-B2E8D1510E36 - 5404b4880e6f026d"
                   shouldBeEnabled = "No"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
@@ -224,6 +205,7 @@
                   offsetFromSymbolStart = "109">
                </Location>
                <Location
+                  uuid = "150FBA04-10A4-4B47-81A7-B2E8D1510E36 - e181cf430bf1cd0c"
                   shouldBeEnabled = "No"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
@@ -244,6 +226,7 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
+            uuid = "CEF24446-3F6C-4353-BA2B-F9BD0DB2B0CC"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
@@ -260,22 +243,7 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Sabq Project/Scence/NewsHome/View/SliderCells/SliderTableViewCell.swift"
-            timestampString = "594522936.452035"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "35"
-            endingLineNumber = "35"
-            landmarkName = "awakeFromNib()"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
+            uuid = "F3526726-705A-4E36-A0F7-DA28A3A9215D"
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
@@ -292,11 +260,12 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
+            uuid = "D05F1724-4C7E-4F47-BC47-99B54747DC66"
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Sabq Project/Scence/NewsHome/Adapter/NewsAdapter.swift"
-            timestampString = "594431831.313848"
+            timestampString = "594551341.9477611"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "127"
@@ -308,11 +277,12 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
+            uuid = "C230938E-1055-44C3-BA02-318FBC7960C5"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Sabq Project/Scence/NewsHome/Adapter/NewsAdapter.swift"
-            timestampString = "594431831.3139009"
+            timestampString = "594551341.948415"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "125"
@@ -324,11 +294,12 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
+            uuid = "F15960BC-7EE6-4F21-AAE4-ED9863568BDA"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Sabq Project/Scence/NewsHome/Adapter/NewsAdapter.swift"
-            timestampString = "594431831.3139499"
+            timestampString = "594551341.948934"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "128"
@@ -340,6 +311,7 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
+            uuid = "FEA0CBAB-FD23-4D47-88EA-33D28F22458E"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
@@ -356,6 +328,7 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
+            uuid = "441420A5-F18B-480D-9296-AB33CF9A48DA"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"

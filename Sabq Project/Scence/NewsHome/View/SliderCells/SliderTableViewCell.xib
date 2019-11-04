@@ -53,6 +53,7 @@
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
+                <outlet property="pageControl" destination="CSp-3V-OKg" id="5zD-4N-Sjc"/>
                 <outlet property="sliderCollectionView" destination="KMT-g3-nqE" id="YjN-OD-uVA"/>
             </connections>
             <point key="canvasLocation" x="112.8" y="188.45577211394306"/>
