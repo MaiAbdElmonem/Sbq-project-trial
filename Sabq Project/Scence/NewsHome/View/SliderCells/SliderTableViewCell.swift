@@ -11,6 +11,7 @@ import UIKit
 class SliderTableViewCell: UITableViewCell, UICollectionViewDataSource, UICollectionViewDelegate {
     
     @IBOutlet weak var sliderCollectionView: UICollectionView!
+    @IBOutlet weak var pageControl: UIPageControl!
     
     var slideList: [Material]? {
         didSet {
@@ -26,29 +27,32 @@ class SliderTableViewCell: UITableViewCell, UICollectionViewDataSource, UICollec
         //TODO: need to setup collection view flow layout
         let flowLayout = UICollectionViewFlowLayout()
         flowLayout.scrollDirection = .horizontal
-        flowLayout.itemSize = CGSize(width: 100, height: 100)
+        flowLayout.itemSize = UICollectionViewFlowLayout.automaticSize
         flowLayout.minimumLineSpacing = 0
         flowLayout.minimumInteritemSpacing = 0
         self.sliderCollectionView.collectionViewLayout = flowLayout
         //————————register the xib for collection view cell
         let cellNib = UINib(nibName: "CustomSliderCollectionViewCell", bundle: nil)
         self.sliderCollectionView.register(cellNib, forCellWithReuseIdentifier: "CustomSliderCollectionViewCell")
-    }
-
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
+//        pageControl.currentPage = 0
     }
     
+//    func collectionView(_ collectionView: UICollectionView,
+//                        willDisplay cell: UICollectionViewCell,
+//                        forItemAt indexPath: IndexPath) {
+//        pageControl.currentPage = indexPath.row
+//    }
+
     func configureCell(slider: [Material]) {
         slideList = slider
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         if let sliderlist = slideList {
+//            pageControl.numberOfPages = sliderlist.count
             return sliderlist.count
         } else {
+            pageControl.numberOfPages = 0
             return 0
         }
     }

@@ -10,11 +10,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Sabq Project/Scence/NewsHome/View/SliderCells/SliderTableViewCell.swift"
-            timestampString = "594431831.313444"
+            timestampString = "594522936.451703"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "15"
-            endingLineNumber = "15"
+            startingLineNumber = "16"
+            endingLineNumber = "16"
             landmarkName = "slideList"
             landmarkType = "24">
             <Locations>
@@ -88,11 +88,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Sabq Project/Scence/NewsHome/View/SliderCells/SliderTableViewCell.swift"
-            timestampString = "594431831.313519"
+            timestampString = "594522936.451843"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "58"
-            endingLineNumber = "58"
+            startingLineNumber = "62"
+            endingLineNumber = "62"
             landmarkName = "collectionView(_:cellForItemAt:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -104,11 +104,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Sabq Project/Scence/NewsHome/View/SliderCells/SliderTableViewCell.swift"
-            timestampString = "594431831.313575"
+            timestampString = "594522936.451901"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "59"
-            endingLineNumber = "59"
+            startingLineNumber = "63"
+            endingLineNumber = "63"
             landmarkName = "collectionView(_:cellForItemAt:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -264,11 +264,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Sabq Project/Scence/NewsHome/View/SliderCells/SliderTableViewCell.swift"
-            timestampString = "594431831.313728"
+            timestampString = "594522936.452035"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "34"
-            endingLineNumber = "34"
+            startingLineNumber = "35"
+            endingLineNumber = "35"
             landmarkName = "awakeFromNib()"
             landmarkType = "7">
          </BreakpointContent>

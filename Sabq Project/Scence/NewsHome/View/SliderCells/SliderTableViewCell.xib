@@ -35,19 +35,27 @@
                             <userDefinedRuntimeAttribute type="boolean" keyPath="isSkeletonable" value="YES"/>
                         </userDefinedRuntimeAttributes>
                     </collectionView>
+                    <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="5" translatesAutoresizingMaskIntoConstraints="NO" id="CSp-3V-OKg">
+                        <rect key="frame" x="36" y="476" width="303" height="37"/>
+                        <color key="pageIndicatorTintColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="currentPageIndicatorTintColor" name="selectedContentBackgroundColor" catalog="System" colorSpace="catalog"/>
+                    </pageControl>
                 </subviews>
                 <constraints>
                     <constraint firstAttribute="trailing" secondItem="KMT-g3-nqE" secondAttribute="trailing" id="A1C-Aw-SN6"/>
                     <constraint firstItem="KMT-g3-nqE" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="WRq-A5-75M"/>
                     <constraint firstItem="KMT-g3-nqE" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="Wpa-hE-aQI"/>
                     <constraint firstAttribute="bottom" secondItem="KMT-g3-nqE" secondAttribute="bottom" id="c0M-8R-JzL"/>
+                    <constraint firstItem="CSp-3V-OKg" firstAttribute="bottom" secondItem="KMT-g3-nqE" secondAttribute="bottom" constant="-3" id="c4P-kS-ErE"/>
+                    <constraint firstItem="CSp-3V-OKg" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="20" id="taE-tp-iC8"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="CSp-3V-OKg" secondAttribute="trailing" constant="20" id="xWl-Wz-H18"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
                 <outlet property="sliderCollectionView" destination="KMT-g3-nqE" id="YjN-OD-uVA"/>
             </connections>
-            <point key="canvasLocation" x="112.8" y="188.90554722638683"/>
+            <point key="canvasLocation" x="112.8" y="188.45577211394306"/>
         </tableViewCell>
     </objects>
 </document>

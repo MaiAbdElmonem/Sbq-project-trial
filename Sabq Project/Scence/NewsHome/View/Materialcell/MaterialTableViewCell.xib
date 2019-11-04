@@ -49,26 +49,26 @@
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="shY-oh-UgG">
-                                <rect key="frame" x="124" y="0.0" width="31" height="21"/>
+                                <rect key="frame" x="79" y="0.0" width="31" height="21"/>
                                 <fontDescription key="fontDescription" name="BBCNassim-EX-Bold" family="BBCNassim-EX" pointSize="15"/>
                                 <color key="textColor" red="0.71764705882352942" green="0.71764705882352942" blue="0.71764705882352942" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qbD-Ku-tDZ">
-                                <rect key="frame" x="59" y="0.0" width="31" height="21"/>
+                                <rect key="frame" x="14" y="0.0" width="31" height="21"/>
                                 <fontDescription key="fontDescription" name="BBCNassim-EX-Bold" family="BBCNassim-EX" pointSize="15"/>
                                 <color key="textColor" red="0.71764705882352942" green="0.71764705882352942" blue="0.71764705882352942" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_views_icon_hot" translatesAutoresizingMaskIntoConstraints="NO" id="fdN-1c-aOX">
-                                <rect key="frame" x="104" y="0.0" width="11" height="21"/>
+                                <rect key="frame" x="59" y="0.0" width="11" height="21"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="21" id="Arz-p5-aZr"/>
                                     <constraint firstAttribute="width" constant="11" id="DZR-OA-95n"/>
                                 </constraints>
                             </imageView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_time" translatesAutoresizingMaskIntoConstraints="NO" id="OPm-2g-7ab">
-                                <rect key="frame" x="40" y="0.0" width="15" height="21"/>
+                                <rect key="frame" x="-5" y="0.0" width="15" height="21"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="15" id="sb5-do-qvd"/>
                                     <constraint firstAttribute="height" constant="21" id="wMh-Ma-nwB"/>
@@ -82,7 +82,7 @@
                             <constraint firstAttribute="bottom" secondItem="fdN-1c-aOX" secondAttribute="bottom" id="HM7-Wc-Y1X"/>
                             <constraint firstItem="qbD-Ku-tDZ" firstAttribute="top" secondItem="eU1-Pd-gIm" secondAttribute="top" id="HdU-52-6dD"/>
                             <constraint firstAttribute="height" constant="21" id="IEe-Iv-Gg5"/>
-                            <constraint firstItem="U8q-G8-Jf2" firstAttribute="leading" secondItem="shY-oh-UgG" secondAttribute="trailing" constant="38" id="LnI-Ja-RGI"/>
+                            <constraint firstItem="U8q-G8-Jf2" firstAttribute="leading" secondItem="shY-oh-UgG" secondAttribute="trailing" constant="83" id="LnI-Ja-RGI"/>
                             <constraint firstItem="qbD-Ku-tDZ" firstAttribute="leading" secondItem="OPm-2g-7ab" secondAttribute="trailing" constant="4" id="SB1-dI-1Jk"/>
                             <constraint firstAttribute="bottom" secondItem="shY-oh-UgG" secondAttribute="bottom" id="UO7-rN-LOh"/>
                             <constraint firstItem="fdN-1c-aOX" firstAttribute="top" secondItem="eU1-Pd-gIm" secondAttribute="top" id="WJw-pZ-AaI"/>
