@@ -11,16 +11,16 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="KGk-i7-Jjw" userLabel="Slider Table View Cell" customClass="SliderTableViewCell" customModule="Sabq_Project" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="375" height="516.5"/>
+            <rect key="frame" x="0.0" y="0.0" width="375" height="555"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" ambiguous="YES" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
-                <rect key="frame" x="0.0" y="0.0" width="375" height="516.5"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="375" height="555"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="KMT-g3-nqE">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="516"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="555"/>
                         <constraints>
-                            <constraint firstAttribute="height" constant="516" id="jhG-be-rPL"/>
+                            <constraint firstAttribute="height" constant="555" id="jhG-be-rPL"/>
                             <constraint firstAttribute="width" constant="375" id="rxZ-YA-GGH"/>
                         </constraints>
                         <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="fxr-BR-LLX">
@@ -34,7 +34,7 @@
                         </userDefinedRuntimeAttributes>
                     </collectionView>
                     <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="5" translatesAutoresizingMaskIntoConstraints="NO" id="CSp-3V-OKg">
-                        <rect key="frame" x="35" y="477" width="305" height="37"/>
+                        <rect key="frame" x="35" y="517" width="305" height="37"/>
                         <color key="pageIndicatorTintColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <color key="currentPageIndicatorTintColor" name="selectedContentBackgroundColor" catalog="System" colorSpace="catalog"/>
                     </pageControl>
@@ -44,7 +44,7 @@
                     <constraint firstItem="KMT-g3-nqE" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="WRq-A5-75M"/>
                     <constraint firstItem="KMT-g3-nqE" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="Wpa-hE-aQI"/>
                     <constraint firstAttribute="bottom" secondItem="KMT-g3-nqE" secondAttribute="bottom" id="c0M-8R-JzL"/>
-                    <constraint firstItem="CSp-3V-OKg" firstAttribute="bottom" secondItem="KMT-g3-nqE" secondAttribute="bottom" constant="-2" id="c4P-kS-ErE"/>
+                    <constraint firstItem="CSp-3V-OKg" firstAttribute="bottom" secondItem="KMT-g3-nqE" secondAttribute="bottom" constant="-1" id="c4P-kS-ErE"/>
                     <constraint firstItem="CSp-3V-OKg" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="20" id="taE-tp-iC8"/>
                     <constraint firstAttribute="trailingMargin" secondItem="CSp-3V-OKg" secondAttribute="trailing" constant="20" id="xWl-Wz-H18"/>
                 </constraints>
