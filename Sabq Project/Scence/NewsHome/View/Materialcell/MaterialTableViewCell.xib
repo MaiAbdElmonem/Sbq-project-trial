@@ -4,6 +4,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15404"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
@@ -22,7 +23,7 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aqc-LM-dvq">
-                        <rect key="frame" x="138" y="22" width="219" height="25.5"/>
+                        <rect key="frame" x="138" y="22" width="219" height="21"/>
                         <fontDescription key="fontDescription" name="BBCNassim-EX-Bold" family="BBCNassim-EX" pointSize="18"/>
                         <color key="textColor" red="0.098039215686274508" green="0.098039215686274508" blue="0.12549019607843137" alpha="1" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
@@ -41,7 +42,7 @@
                         </userDefinedRuntimeAttributes>
                     </imageView>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eU1-Pd-gIm">
-                        <rect key="frame" x="136" y="62.5" width="227" height="21"/>
+                        <rect key="frame" x="136" y="58" width="227" height="21"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_bookmark" translatesAutoresizingMaskIntoConstraints="NO" id="U8q-G8-Jf2">
                                 <rect key="frame" x="181" y="0.0" width="17" height="21"/>
@@ -54,7 +55,7 @@
                                 </userDefinedRuntimeAttributes>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="shY-oh-UgG">
-                                <rect key="frame" x="67" y="0.0" width="31" height="21"/>
+                                <rect key="frame" x="61" y="0.0" width="37" height="21"/>
                                 <fontDescription key="fontDescription" name="BBCNassim-EX-Bold" family="BBCNassim-EX" pointSize="15"/>
                                 <color key="textColor" red="0.71764705882352942" green="0.71764705882352942" blue="0.71764705882352942" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
@@ -63,7 +64,7 @@
                                 </userDefinedRuntimeAttributes>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qbD-Ku-tDZ">
-                                <rect key="frame" x="2" y="0.0" width="31" height="21"/>
+                                <rect key="frame" x="-10" y="0.0" width="37" height="21"/>
                                 <fontDescription key="fontDescription" name="BBCNassim-EX-Bold" family="BBCNassim-EX" pointSize="15"/>
                                 <color key="textColor" red="0.71764705882352942" green="0.71764705882352942" blue="0.71764705882352942" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
@@ -72,7 +73,7 @@
                                 </userDefinedRuntimeAttributes>
                             </label>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_views_icon_hot" translatesAutoresizingMaskIntoConstraints="NO" id="fdN-1c-aOX">
-                                <rect key="frame" x="47" y="0.0" width="11" height="21"/>
+                                <rect key="frame" x="41" y="0.0" width="11" height="21"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="21" id="Arz-p5-aZr"/>
                                     <constraint firstAttribute="width" constant="11" id="DZR-OA-95n"/>
@@ -82,7 +83,7 @@
                                 </userDefinedRuntimeAttributes>
                             </imageView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_time" translatesAutoresizingMaskIntoConstraints="NO" id="OPm-2g-7ab">
-                                <rect key="frame" x="-17" y="0.0" width="15" height="21"/>
+                                <rect key="frame" x="-29" y="0.0" width="15" height="21"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="15" id="sb5-do-qvd"/>
                                     <constraint firstAttribute="height" constant="21" id="wMh-Ma-nwB"/>
@@ -115,21 +116,31 @@
                             <userDefinedRuntimeAttribute type="boolean" keyPath="isSkeletonable" value="YES"/>
                         </userDefinedRuntimeAttributes>
                     </view>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_play_7" translatesAutoresizingMaskIntoConstraints="NO" id="joj-sf-4Hn">
+                        <rect key="frame" x="84" y="22" width="30" height="30"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="30" id="B1Z-lK-JQV"/>
+                            <constraint firstAttribute="height" constant="30" id="VcL-bP-q8m"/>
+                        </constraints>
+                    </imageView>
                 </subviews>
                 <constraints>
                     <constraint firstItem="7Ny-m2-iOt" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="14" id="3Rk-vX-r24"/>
                     <constraint firstItem="eU1-Pd-gIm" firstAttribute="leading" secondItem="7Ny-m2-iOt" secondAttribute="trailing" constant="22" id="3uw-rt-SK6"/>
                     <constraint firstItem="eU1-Pd-gIm" firstAttribute="top" secondItem="aqc-LM-dvq" secondAttribute="bottom" constant="15" id="6AE-y0-EuO"/>
+                    <constraint firstItem="7Ny-m2-iOt" firstAttribute="trailing" secondItem="joj-sf-4Hn" secondAttribute="trailing" id="FAf-P8-n9v"/>
                     <constraint firstItem="7Ny-m2-iOt" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="aUu-zt-lLJ"/>
                     <constraint firstItem="aqc-LM-dvq" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="22" id="aVw-3G-lNq"/>
                     <constraint firstAttribute="trailing" secondItem="aqc-LM-dvq" secondAttribute="trailing" constant="18" id="b0G-zF-a5A"/>
                     <constraint firstItem="aqc-LM-dvq" firstAttribute="leading" secondItem="7Ny-m2-iOt" secondAttribute="trailing" constant="24" id="d7O-6M-sxb"/>
                     <constraint firstAttribute="bottom" secondItem="7Ny-m2-iOt" secondAttribute="bottom" constant="21" id="dua-3N-8qS"/>
+                    <constraint firstItem="joj-sf-4Hn" firstAttribute="top" secondItem="7Ny-m2-iOt" secondAttribute="top" id="i5z-hM-543"/>
                     <constraint firstAttribute="trailing" secondItem="eU1-Pd-gIm" secondAttribute="trailing" constant="12" id="kj1-bR-a7B"/>
                     <constraint firstItem="7Ny-m2-iOt" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="22" id="prK-aH-KtX"/>
                     <constraint firstAttribute="bottom" secondItem="eU1-Pd-gIm" secondAttribute="bottom" constant="12" id="tMs-de-Ja0"/>
                 </constraints>
             </tableViewCellContentView>
+            <color key="backgroundColor" name="bgColor"/>
             <userDefinedRuntimeAttributes>
                 <userDefinedRuntimeAttribute type="boolean" keyPath="isSkeletonable" value="YES"/>
             </userDefinedRuntimeAttributes>
@@ -137,6 +148,7 @@
                 <outlet property="materialView" destination="eU1-Pd-gIm" id="Sqy-f1-c1d"/>
                 <outlet property="newsImage" destination="7Ny-m2-iOt" id="hyV-lq-8eJ"/>
                 <outlet property="numofViews" destination="shY-oh-UgG" id="dbP-Pv-tAt"/>
+                <outlet property="playImage" destination="joj-sf-4Hn" id="Kxk-QD-nyr"/>
                 <outlet property="timeLabel" destination="qbD-Ku-tDZ" id="qEK-1g-Hd1"/>
                 <outlet property="titleLabel" destination="aqc-LM-dvq" id="Jc1-8J-cay"/>
             </connections>
@@ -145,7 +157,11 @@
     </objects>
     <resources>
         <image name="ic_bookmark" width="19" height="24"/>
+        <image name="ic_play_7" width="30" height="30"/>
         <image name="ic_time" width="15" height="15"/>
         <image name="ic_views_icon_hot" width="11" height="15"/>
+        <namedColor name="bgColor">
+            <color red="0.172650516" green="0.16847178339999999" blue="0.1803939044" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+        </namedColor>
     </resources>
 </document>

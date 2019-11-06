@@ -14,11 +14,6 @@ class ImageCollectionViewCell: UICollectionViewCell {
     @IBOutlet private weak var titleLabel: UILabel!
     @IBOutlet private weak var timeLabel: UILabel!
     
-//    class var CustomCell: ImageCollectionViewCell {
-//        let cell = Bundle.main.loadNibNamed("ImageCollectionViewCell", owner: self, options: nil)?.last
-//        return cell as! ImageCollectionViewCell
-//    }
-
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

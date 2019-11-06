@@ -4,6 +4,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15404"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -19,6 +20,7 @@
                 <subviews>
                     <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFill" pagingEnabled="YES" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="ot9-rr-FEp">
                         <rect key="frame" x="0.0" y="0.0" width="301" height="348.5"/>
+                        <color key="backgroundColor" name="bgColor"/>
                         <constraints>
                             <constraint firstAttribute="width" constant="301" id="0PA-7f-dnr"/>
                             <constraint firstAttribute="height" constant="348.5" id="lDd-l7-hRo"/>
@@ -38,6 +40,7 @@
                     <constraint firstItem="ot9-rr-FEp" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="y5p-su-oke"/>
                 </constraints>
             </tableViewCellContentView>
+            <color key="backgroundColor" name="bgColor"/>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
                 <outlet property="imageCollectionCell" destination="ot9-rr-FEp" id="qlM-PJ-2FB"/>
@@ -45,4 +48,9 @@
             <point key="canvasLocation" x="242.75362318840581" y="79.017857142857139"/>
         </tableViewCell>
     </objects>
+    <resources>
+        <namedColor name="bgColor">
+            <color red="0.172650516" green="0.16847178339999999" blue="0.1803939044" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+        </namedColor>
+    </resources>
 </document>

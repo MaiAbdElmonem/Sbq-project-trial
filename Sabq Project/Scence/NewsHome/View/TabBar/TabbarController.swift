@@ -18,7 +18,7 @@ class TabbarController: UITabBarController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        tabBar.barTintColor = UIColor(named: "ViewColor")
+        tabBar.barTintColor = UIColor(named: "bgColor")
         
         let title = NSLocalizedString("titleOftab1", comment: "tab1")
         print(title)

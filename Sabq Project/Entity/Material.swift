@@ -11,6 +11,7 @@ struct Material: Decodable {
     let authorName: String?
     let coverPhoto: String?
     let descriptionString: String?
+    let videoCount: Int?
 //    let images : [String]?
 //    let imagesCount : Int?
 //    let matarialDisplayed : String?

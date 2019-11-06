@@ -28,7 +28,7 @@
                     </userDefinedRuntimeAttributes>
                 </tableView>
             </subviews>
-            <color key="backgroundColor" name="ViewColor"/>
+            <color key="backgroundColor" name="bgColor"/>
             <constraints>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="5Uo-D2-Dgm" secondAttribute="bottom" id="C3h-ZH-wWK"/>
                 <constraint firstItem="5Uo-D2-Dgm" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="HNY-F7-jnw"/>
@@ -40,8 +40,8 @@
         </view>
     </objects>
     <resources>
-        <namedColor name="ViewColor">
-            <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        <namedColor name="bgColor">
+            <color red="0.172650516" green="0.16847178339999999" blue="0.1803939044" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
         </namedColor>
     </resources>
 </document>

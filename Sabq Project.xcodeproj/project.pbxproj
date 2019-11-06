@@ -269,6 +269,7 @@
 				2D03FF4A236130B800952302 /* ArticleCell */,
 				2D03FF49236130A900952302 /* ImageCell */,
 				2D03FF482361308700952302 /* VideoCells */,
+				2D736ADF2372D96B00E32BFE /* SkeltonTableCell */,
 				2D2D96E123607D24000B3F26 /* SliderCells */,
 				2D2D96E223607F06000B3F26 /* ViewControllerTableCell */,
 				2DCBF837235D995700BC5C41 /* TabBar */,
@@ -308,7 +309,6 @@
 		2D2D96E123607D24000B3F26 /* SliderCells */ = {
 			isa = PBXGroup;
 			children = (
-				2D736ADF2372D96B00E32BFE /* SkeltonTableCell */,
 				5D3B3E76235A8AB000EA3C6A /* SliderTableViewCell.swift */,
 				5D3B3E77235A8AB000EA3C6A /* SliderTableViewCell.xib */,
 				2D1837E6235CAB0D00EE99AF /* CustomSliderCollectionViewCell.swift */,

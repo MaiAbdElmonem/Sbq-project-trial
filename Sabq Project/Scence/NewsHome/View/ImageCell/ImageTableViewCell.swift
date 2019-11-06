@@ -34,12 +34,6 @@ class ImageTableViewCell: UITableViewCell, UICollectionViewDelegate,
         let cellNib = UINib(nibName: "ImageCollectionViewCell", bundle: nil)
         self.imageCollectionCell.register(cellNib, forCellWithReuseIdentifier: "ImageCollectionViewCell")
     }
-
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
-    }
     
     func configureCell(images: [Comic]) {
         imageList = images

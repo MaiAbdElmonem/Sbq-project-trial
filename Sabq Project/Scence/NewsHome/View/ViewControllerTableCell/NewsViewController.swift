@@ -16,7 +16,6 @@ class NewsViewController: BaseViewController< NewsPresenter>, NewsViewProtocal, 
         super.viewDidLoad()
         newsTableView.delegate = self
         newsTableView.dataSource = adapter
-//        newsTableView.separatorStyle = .none
         adapter.setTableView(newsTable: newsTableView)
         setupComponent()
         newsTableView.showSkeleton()
