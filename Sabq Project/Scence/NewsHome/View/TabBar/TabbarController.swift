@@ -18,6 +18,8 @@ class TabbarController: UITabBarController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        tabBar.barTintColor = UIColor(named: "ViewColor")
+        
         let title = NSLocalizedString("titleOftab1", comment: "tab1")
         print(title)
         newsViewController.tabBarItem = UITabBarItem(

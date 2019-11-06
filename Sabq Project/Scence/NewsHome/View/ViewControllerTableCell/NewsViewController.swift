@@ -10,7 +10,7 @@ import UIKit
 
 class NewsViewController: BaseViewController< NewsPresenter>, NewsViewProtocal, UITableViewDelegate {
    
-    @IBOutlet weak var newsTableView: UITableView!
+    @IBOutlet private weak var newsTableView: UITableView!
     var adapter = NewsAdapter()
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -19,13 +19,16 @@ class NewsViewController: BaseViewController< NewsPresenter>, NewsViewProtocal, 
 //        newsTableView.separatorStyle = .none
         adapter.setTableView(newsTable: newsTableView)
         setupComponent()
-//        newsTableView.showSkeleton()
+        newsTableView.showSkeleton()
         presenter.loadNewsSliders()
        newsTableView.rowHeight = UITableView.automaticDimension
         adapter.reloadData = newsTableView.reloadData
     }
     
     func setupComponent() {
+        
+        let skeltonNib = UINib(nibName: "SkeltonTableViewCell", bundle: nil)
+        newsTableView.register(skeltonNib, forCellReuseIdentifier: "SkeltonTableViewCell")
         
         let materialNib = UINib(nibName: "MaterialTableViewCell", bundle: nil)
         newsTableView.register(materialNib, forCellReuseIdentifier: "MaterialTableViewCell")
@@ -45,7 +48,7 @@ class NewsViewController: BaseViewController< NewsPresenter>, NewsViewProtocal, 
     }
 
     func getNewsSliderList(sliderArr: [Material], materialsArr: [Material]) {
-//       newsTableView.hideSkeleton()
+       newsTableView.hideSkeleton()
         adapter.addSlidersandMaterial(sliders: sliderArr, materials: materialsArr)
         newsTableView.reloadData()
         presenter.loadNewsVideos()

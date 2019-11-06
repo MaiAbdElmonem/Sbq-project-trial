@@ -10,7 +10,7 @@ import UIKit
 
 class SliderTableViewCell: UITableViewCell, UICollectionViewDataSource, UICollectionViewDelegate {
     
-    @IBOutlet weak var sliderCollectionView: UICollectionView!
+    @IBOutlet private weak var sliderCollectionView: UICollectionView!
     @IBOutlet private weak var pageControl: UIPageControl!
     
     var slideList: [Material]? {

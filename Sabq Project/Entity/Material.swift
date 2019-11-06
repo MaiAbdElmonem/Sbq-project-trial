@@ -7,6 +7,7 @@ import Foundation
 struct Material: Decodable {
 
     let authorImg: String?
+    let authorCity: String?
     let authorName: String?
     let coverPhoto: String?
     let descriptionString: String?

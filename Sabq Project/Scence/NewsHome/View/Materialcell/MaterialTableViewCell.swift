@@ -25,13 +25,13 @@ class MaterialTableViewCell: UITableViewCell {
         materialView.backgroundColor = UIColor(named: "ViewColor")
     }
   
-//        func hideSliderSkelton() {
-//            let skeltonMaterial = [titleLabel, timeLabel, numofViews]
-//            skeltonMaterial.forEach { $0?.hideSkeleton() }
-//        }
+        func hideSliderSkelton() {
+            let skeltonMaterial = [titleLabel, newsImage, materialView]
+            skeltonMaterial.forEach { $0?.hideSkeleton() }
+        }
     
     func config(materialObj: Material) {
-        
+        hideSliderSkelton()
         titleLabel.text = materialObj.title
         timeLabel.text = (materialObj.publishDate?.convetDate())?.timeAgo()
         

@@ -308,8 +308,7 @@
 		2D2D96E123607D24000B3F26 /* SliderCells */ = {
 			isa = PBXGroup;
 			children = (
-				2DBAFBBA236AF7B500759A23 /* SkeltonTableViewCell.swift */,
-				2DBAFBBB236AF7B500759A23 /* SkeltonTableViewCell.xib */,
+				2D736ADF2372D96B00E32BFE /* SkeltonTableCell */,
 				5D3B3E76235A8AB000EA3C6A /* SliderTableViewCell.swift */,
 				5D3B3E77235A8AB000EA3C6A /* SliderTableViewCell.xib */,
 				2D1837E6235CAB0D00EE99AF /* CustomSliderCollectionViewCell.swift */,
@@ -325,6 +324,15 @@
 				2D7233292369E1D500F0EB79 /* NewsViewController.xib */,
 			);
 			path = ViewControllerTableCell;
+			sourceTree = "<group>";
+		};
+		2D736ADF2372D96B00E32BFE /* SkeltonTableCell */ = {
+			isa = PBXGroup;
+			children = (
+				2DBAFBBA236AF7B500759A23 /* SkeltonTableViewCell.swift */,
+				2DBAFBBB236AF7B500759A23 /* SkeltonTableViewCell.xib */,
+			);
+			path = SkeltonTableCell;
 			sourceTree = "<group>";
 		};
 		2D840E5F2361DAE300DC70BB /* Materialcell */ = {
