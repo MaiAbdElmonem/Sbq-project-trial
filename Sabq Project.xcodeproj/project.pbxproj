@@ -33,6 +33,9 @@
 		2D1837D4235C7A4500EE99AF /* BaseListAdaptor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D1837CC235C7A4500EE99AF /* BaseListAdaptor.swift */; };
 		2D1837E8235CAB0D00EE99AF /* CustomSliderCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D1837E6235CAB0D00EE99AF /* CustomSliderCollectionViewCell.swift */; };
 		2D1837E9235CAB0D00EE99AF /* CustomSliderCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2D1837E7235CAB0D00EE99AF /* CustomSliderCollectionViewCell.xib */; };
+		2D29ECD223745477002839B0 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2D29ECD123745477002839B0 /* GoogleService-Info.plist */; };
+		2D29ECD52374578D002839B0 /* GoogleSignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D29ECD32374578D002839B0 /* GoogleSignInViewController.swift */; };
+		2D29ECD62374578D002839B0 /* GoogleSignInViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2D29ECD42374578D002839B0 /* GoogleSignInViewController.xib */; };
 		2D7233272369E1D500F0EB79 /* NewsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2D7233292369E1D500F0EB79 /* NewsViewController.xib */; };
 		2D72332E2369E1EC00F0EB79 /* VideoCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2D7233302369E1EC00F0EB79 /* VideoCollectionViewCell.xib */; };
 		2D840E622361DB2B00DC70BB /* MaterialTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D840E602361DB2B00DC70BB /* MaterialTableViewCell.swift */; };
@@ -99,6 +102,9 @@
 		2D1837CC235C7A4500EE99AF /* BaseListAdaptor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseListAdaptor.swift; sourceTree = "<group>"; };
 		2D1837E6235CAB0D00EE99AF /* CustomSliderCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomSliderCollectionViewCell.swift; sourceTree = "<group>"; };
 		2D1837E7235CAB0D00EE99AF /* CustomSliderCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomSliderCollectionViewCell.xib; sourceTree = "<group>"; };
+		2D29ECD123745477002839B0 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		2D29ECD32374578D002839B0 /* GoogleSignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoogleSignInViewController.swift; sourceTree = "<group>"; };
+		2D29ECD42374578D002839B0 /* GoogleSignInViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GoogleSignInViewController.xib; sourceTree = "<group>"; };
 		2D7233282369E1D500F0EB79 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/NewsViewController.xib; sourceTree = "<group>"; };
 		2D72332F2369E1EC00F0EB79 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/VideoCollectionViewCell.xib; sourceTree = "<group>"; };
 		2D840E602361DB2B00DC70BB /* MaterialTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MaterialTableViewCell.swift; sourceTree = "<group>"; };
@@ -365,6 +371,7 @@
 		2D92157323589EC400E8245A /* Sabq Project */ = {
 			isa = PBXGroup;
 			children = (
+				2D29ECD123745477002839B0 /* GoogleService-Info.plist */,
 				2DCBF831235D970600BC5C41 /* AppDelegate */,
 				2D1837C4235C7A4500EE99AF /* Base */,
 				2D1837C3235C79BA00EE99AF /* Entity */,
@@ -372,6 +379,8 @@
 				2D1837D5235C7A9F00EE99AF /* Scence */,
 				2D1837D6235C7AE700EE99AF /* Supporting files */,
 				2D1837C2235C794900EE99AF /* Resources */,
+				2D29ECD32374578D002839B0 /* GoogleSignInViewController.swift */,
+				2D29ECD42374578D002839B0 /* GoogleSignInViewController.xib */,
 			);
 			path = "Sabq Project";
 			sourceTree = "<group>";
@@ -498,6 +507,7 @@
 				2D92156F23589EC400E8245A /* Resources */,
 				928348D04EA49991CBFD6EF8 /* [CP] Embed Pods Frameworks */,
 				2D972D662367275700BBFC44 /* ShellScript */,
+				9D6BCE12E1447858A875E0B5 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -554,11 +564,13 @@
 				2D72332E2369E1EC00F0EB79 /* VideoCollectionViewCell.xib in Resources */,
 				2D03FF5E2361322F00952302 /* ArticleTableViewCell.xib in Resources */,
 				2D840E632361DB2B00DC70BB /* MaterialTableViewCell.xib in Resources */,
+				2D29ECD62374578D002839B0 /* GoogleSignInViewController.xib in Resources */,
 				2D92157C23589EC500E8245A /* Assets.xcassets in Resources */,
 				2D03FF5A236131AF00952302 /* ImageTableViewCell.xib in Resources */,
 				5D3B3E7C235A93D200EA3C6A /* LaunchScreen.storyboard in Resources */,
 				5D3B3E79235A8AB000EA3C6A /* SliderTableViewCell.xib in Resources */,
 				2DB501AD236F22B300243D34 /* 4_27.otf in Resources */,
+				2D29ECD223745477002839B0 /* GoogleService-Info.plist in Resources */,
 				2DB501AB236F22A700243D34 /* 4_28.otf in Resources */,
 				2D03FF562361319600952302 /* ImageCollectionViewCell.xib in Resources */,
 				2DBAFBBD236AF7B500759A23 /* SkeltonTableViewCell.xib in Resources */,
@@ -626,6 +638,23 @@
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Sabq Project/Pods-Sabq Project-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
+		9D6BCE12E1447858A875E0B5 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Sabq Project/Pods-Sabq Project-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Sabq Project/Pods-Sabq Project-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Sabq Project/Pods-Sabq Project-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -647,6 +676,7 @@
 				2D92157523589EC400E8245A /* AppDelegate.swift in Sources */,
 				2DCBF85F235E248900BC5C41 /* NewsAdapter.swift in Sources */,
 				2D03FF612361324600952302 /* ArticleCollectionViewCell.swift in Sources */,
+				2D29ECD52374578D002839B0 /* GoogleSignInViewController.swift in Sources */,
 				2D9215872358A25900E8245A /* TabbarController.swift in Sources */,
 				2D03FF512361314A00952302 /* VideoCollectionViewCell.swift in Sources */,
 				2DBAFBBC236AF7B500759A23 /* SkeltonTableViewCell.swift in Sources */,

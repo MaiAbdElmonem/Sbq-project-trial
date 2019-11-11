@@ -10,12 +10,12 @@ import Foundation
 import UIKit
 
 class Module {
-    static func homeModule() -> NewsViewController { // as routuing
-        let model = NewsModel()
-        let view = NewsViewController()
-        let presenter = NewsPresenter(model: model, view: view)
+    static func homeModule() -> GoogleSignInViewController { // as routuing
+//        let model = NewsModel()
+        let view = GoogleSignInViewController()
+//        let presenter = NewsPresenter(model: model, view: view)
         //run presenter of what view
-        view.setPresenter(presenter: presenter)
+//        view.setPresenter(presenter: presenter)
         return view    //to return and start listactors
     }
 }
