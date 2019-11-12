@@ -11,6 +11,10 @@ import GoogleSignIn
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate {
+    
+    let controller = GoogleSignInViewController()
+    lazy var navigationController = UINavigationController(rootViewController: controller)
+     
     func sign(_ signIn: GIDSignIn!, didSignInFor user: GIDGoogleUser!, withError error: Error!) {
         if let error = error {
         if (error as NSError).code == GIDSignInErrorCode.hasNoAuthInKeychain.rawValue {
@@ -20,13 +24,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate {
         }
         return
     }
-        // Perform any operations on signed in user here.
-        _ = user.userID                  // For client-side use only!
-        _ = user.authentication.idToken // Safe to send to the server
-        _ = user.profile.name
-        _ = user.profile.givenName
-        _ = user.profile.familyName
-        _ = user.profile.email
+        
+         let tabbarController = TabbarController()
+        navigationController.pushViewController(tabbarController, animated: false)
     }
         
     var window: UIWindow?
@@ -39,8 +39,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate {
         GIDSignIn.sharedInstance().delegate = self
         
         // Override point for customization after application launch.
-        let tabbarController = TabbarController()
-        let navigationController = UINavigationController(rootViewController: tabbarController)
         navigationController.isNavigationBarHidden = false
         window = UIWindow(frame: UIScreen.main.bounds)
         window?.rootViewController = navigationController
@@ -49,7 +47,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate {
     }
     
     @available(iOS 9.0, *)
-    func application(_ app: UIApplication, open url: URL, options: [UIApplication.OpenURLOptionsKey : Any]) -> Bool {
+    func application(_ app: UIApplication, open url: URL, options: [
+        UIApplication.OpenURLOptionsKey : Any]) -> Bool {
         return GIDSignIn.sharedInstance().handle(url)
     }
 }

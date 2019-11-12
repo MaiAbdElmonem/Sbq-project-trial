@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15400" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15404"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SocialMediaViewController" customModule="Sabq_Project" customModuleProvider="target">
+            <connections>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4Dc-NI-U8O">
+                    <rect key="frame" x="0.0" y="610" width="414" height="252"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OWK-nd-sse">
+                            <rect key="frame" x="38" y="50" width="339" height="45"/>
+                            <color key="backgroundColor" red="0.3203724027" green="0.42375457290000001" blue="0.64316374060000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="45" id="osy-7R-ITK"/>
+                            </constraints>
+                            <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="80" maxY="0.0"/>
+                            <state key="normal" title="التسجيل من خلال فيسبوك" image="ic_facebook">
+                                <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </state>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lTE-38-Td7">
+                            <rect key="frame" x="38" y="109" width="339" height="45"/>
+                            <color key="backgroundColor" red="0.50156390669999995" green="0.6590428948" blue="0.894148469" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="45" id="luG-F6-9sV"/>
+                            </constraints>
+                            <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="100" maxY="0.0"/>
+                            <state key="normal" title="التسجيل من خلال تويتر" image="ic_twitter">
+                                <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </state>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RI7-JN-eA4">
+                            <rect key="frame" x="38" y="168" width="339" height="45"/>
+                            <color key="backgroundColor" red="1" green="0.99998217820000002" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="45" id="piJ-T2-thF"/>
+                            </constraints>
+                            <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="95" maxY="0.0"/>
+                            <state key="normal" title="التسجيل من خلال جوجل" image="ic_google">
+                                <color key="titleColor" red="0.40785318609999999" green="0.4078353643" blue="0.40784361959999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                            </state>
+                            <connections>
+                                <action selector="googleLogin:" destination="-1" eventType="touchUpInside" id="Ixb-SL-fD1"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                    <constraints>
+                        <constraint firstAttribute="trailing" secondItem="OWK-nd-sse" secondAttribute="trailing" constant="37" id="0cO-t7-3Fe"/>
+                        <constraint firstItem="OWK-nd-sse" firstAttribute="top" secondItem="4Dc-NI-U8O" secondAttribute="top" constant="50" id="19V-0c-jJH"/>
+                        <constraint firstItem="RI7-JN-eA4" firstAttribute="top" secondItem="lTE-38-Td7" secondAttribute="bottom" constant="14" id="7Re-0K-lIX"/>
+                        <constraint firstItem="lTE-38-Td7" firstAttribute="top" secondItem="OWK-nd-sse" secondAttribute="bottom" constant="14" id="OI2-y0-zX5"/>
+                        <constraint firstItem="RI7-JN-eA4" firstAttribute="leading" secondItem="4Dc-NI-U8O" secondAttribute="leading" constant="38" id="PFd-BV-wHx"/>
+                        <constraint firstAttribute="trailing" secondItem="lTE-38-Td7" secondAttribute="trailing" constant="37" id="cCW-jr-uAF"/>
+                        <constraint firstItem="lTE-38-Td7" firstAttribute="leading" secondItem="4Dc-NI-U8O" secondAttribute="leading" constant="38" id="eCk-Kj-1iI"/>
+                        <constraint firstAttribute="trailing" secondItem="RI7-JN-eA4" secondAttribute="trailing" constant="37" id="ky7-51-3Mx"/>
+                        <constraint firstAttribute="height" constant="252" id="ooF-t5-dV1"/>
+                        <constraint firstItem="OWK-nd-sse" firstAttribute="leading" secondItem="4Dc-NI-U8O" secondAttribute="leading" constant="38" id="s2C-Ck-Ibe"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="4Dc-NI-U8O" secondAttribute="bottom" id="2zK-C6-H8T"/>
+                <constraint firstItem="4Dc-NI-U8O" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="Nfe-ha-xHZ"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="4Dc-NI-U8O" secondAttribute="trailing" id="PTu-ul-cHv"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <point key="canvasLocation" x="132" y="131"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="ic_facebook" width="13" height="22"/>
+        <image name="ic_google" width="25" height="25"/>
+        <image name="ic_twitter" width="23" height="19"/>
+    </resources>
+</document>

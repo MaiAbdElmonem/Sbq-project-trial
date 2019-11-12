@@ -7,48 +7,50 @@
 //
 
 import UIKit
+import FittedSheets
 import GoogleSignIn
 
 class GoogleSignInViewController: UIViewController {
     @IBOutlet private weak var signInBtn: UIButton!
-    @IBOutlet weak var passwordTextField: UITextField!
-    @IBOutlet weak var userNameTextField: UITextField!
+    @IBOutlet private weak var passwordTextField: UITextField!
+    @IBOutlet private weak var userNameTextField: UITextField!
+    @IBOutlet private weak var socialMediaButton: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
 //        self.userNameTextField.addPaddingToTextField()
-         GIDSignIn.sharedInstance()?.presentingViewController = self
-
-        signInBtn.addTarget(self, action: #selector(signInUsingGoogle(_:)), for: .touchUpInside)
+//        let button = UIButton(type: .custom)
+//        button.setImage(#imageLiteral(resourceName: "ic_eye"), for: .normal)
+//        button.imageEdgeInsets = UIEdgeInsets(top: 0, left: 10, bottom: 0, right: 0)
+//         button.frame = CGRect(x: CGFloat(51),
+//                               y: CGFloat(261), width: CGFloat(25), height: CGFloat(19))
+////        button.addTarget(self, action: #selector(self.refresh), for: .touchUpInside)
+//        passwordTextField.rightView = button
+//        passwordTextField.rightViewMode = .always
     }
     
-    @objc
-    func signInUsingGoogle(_ sender: UIButton) {
-           GIDSignIn.sharedInstance()?.signIn()
-       }
-    
-    @IBAction func showActionSheet(_ sender: Any) {
-         let actionSheetController = UIAlertController(title: nil, message: nil, preferredStyle: .actionSheet)
-                let loginWithGoogle = UIAlertAction(title: "التسجيل من خلال جوجل", style: .destructive)
-                { action -> Void in
-                    print("loginWithGoogle")
-                }
-                let loginWithTwitter = UIAlertAction(title: "التسجيل من خلال تويتر", style: .default)
-                { action -> Void in
-                print("loginWithTwitter")
-                }
-                let loginWithFacebook = UIAlertAction(title: "التسجيل من خلال فيسبوك", style: .default)
-                { action -> Void in
-                print("loginWithFacebook")
-                }
-                
-                actionSheetController.addAction(loginWithGoogle)
-                actionSheetController.addAction(loginWithTwitter)
-                actionSheetController.addAction(loginWithFacebook)
-                
-                 present(actionSheetController, animated: true, completion: nil)
-               // present an actionSheet...
-               // present(actionSheetController, animated: true, completion: nil)   // doesn't work for iPad
-        //       actionSheetController.popoverPresentationController?.sourceView = GoogleSignInViewController // works for both iPhone & iPad
+    @IBAction func showActionSheet(_ sender: UIButton) {
+        print("jfjf")
+        let controller = SocialMediaViewController()
+        let sheetController = SheetViewController(
+            controller: controller, sizes: [.fixed(300), .fixed(375), .halfScreen, .fullScreen])
+
+        // Adjust how the bottom safe area is handled on iPhone X screens
+        sheetController.blurBottomSafeArea = false
+        sheetController.adjustForBottomSafeArea = true
+
+        // Turn off rounded corners
+        sheetController.topCornersRadius = 0
+
+        // Make corners more round
+        sheetController.topCornersRadius = 15
+
+        // Disable the dismiss on background tap functionality
+        sheetController.dismissOnBackgroundTap = true
+
+        // Extend the background behind the pull bar instead of having it transparent
+        sheetController.extendBackgroundBehindHandle = true
+
+        self.present(sheetController, animated: false, completion: nil)
     }
 }

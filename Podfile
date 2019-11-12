@@ -11,5 +11,6 @@ pod 'SDWebImage', '~> 5.0'
 pod 'LocalizedTimeAgo', '~> 1.3.0'
 pod "SkeletonView"
 pod 'GoogleSignIn'
+pod 'FittedSheets'
 
 end

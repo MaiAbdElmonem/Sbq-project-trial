@@ -36,6 +36,8 @@
 		2D29ECD223745477002839B0 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2D29ECD123745477002839B0 /* GoogleService-Info.plist */; };
 		2D29ECD52374578D002839B0 /* GoogleSignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D29ECD32374578D002839B0 /* GoogleSignInViewController.swift */; };
 		2D29ECD62374578D002839B0 /* GoogleSignInViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2D29ECD42374578D002839B0 /* GoogleSignInViewController.xib */; };
+		2D3D1C94237AAE2D007BE2B5 /* SocialMediaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D3D1C92237AAE2D007BE2B5 /* SocialMediaViewController.swift */; };
+		2D3D1C95237AAE2D007BE2B5 /* SocialMediaViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2D3D1C93237AAE2D007BE2B5 /* SocialMediaViewController.xib */; };
 		2D7233272369E1D500F0EB79 /* NewsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2D7233292369E1D500F0EB79 /* NewsViewController.xib */; };
 		2D72332E2369E1EC00F0EB79 /* VideoCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2D7233302369E1EC00F0EB79 /* VideoCollectionViewCell.xib */; };
 		2D840E622361DB2B00DC70BB /* MaterialTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D840E602361DB2B00DC70BB /* MaterialTableViewCell.swift */; };
@@ -105,6 +107,8 @@
 		2D29ECD123745477002839B0 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		2D29ECD32374578D002839B0 /* GoogleSignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoogleSignInViewController.swift; sourceTree = "<group>"; };
 		2D29ECD42374578D002839B0 /* GoogleSignInViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GoogleSignInViewController.xib; sourceTree = "<group>"; };
+		2D3D1C92237AAE2D007BE2B5 /* SocialMediaViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SocialMediaViewController.swift; sourceTree = "<group>"; };
+		2D3D1C93237AAE2D007BE2B5 /* SocialMediaViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SocialMediaViewController.xib; sourceTree = "<group>"; };
 		2D7233282369E1D500F0EB79 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/NewsViewController.xib; sourceTree = "<group>"; };
 		2D72332F2369E1EC00F0EB79 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/VideoCollectionViewCell.xib; sourceTree = "<group>"; };
 		2D840E602361DB2B00DC70BB /* MaterialTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MaterialTableViewCell.swift; sourceTree = "<group>"; };
@@ -214,6 +218,7 @@
 		2D1837C2235C794900EE99AF /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				2D92158E2358A92500E8245A /* BookmarksViewController.swift */,
 				5D3B3E7B235A93D200EA3C6A /* LaunchScreen.storyboard */,
 				2D92157B23589EC500E8245A /* Assets.xcassets */,
 			);
@@ -288,8 +293,8 @@
 			isa = PBXGroup;
 			children = (
 				2DCBF85B235E186D00BC5C41 /* CreateModule.swift */,
-				2DCBF855235DF8BF00BC5C41 /* NewsHomeProtocals.swift */,
 				2DCBF85D235E244C00BC5C41 /* Adapter */,
+				2DCBF855235DF8BF00BC5C41 /* NewsHomeProtocals.swift */,
 				2D1837ED235CAC4400EE99AF /* Model */,
 				2D1837EC235CAC3900EE99AF /* Presenter */,
 				2D1837EA235CABF200EE99AF /* View */,
@@ -389,6 +394,8 @@
 			children = (
 				2D29ECD32374578D002839B0 /* GoogleSignInViewController.swift */,
 				2D29ECD42374578D002839B0 /* GoogleSignInViewController.xib */,
+				2D3D1C92237AAE2D007BE2B5 /* SocialMediaViewController.swift */,
+				2D3D1C93237AAE2D007BE2B5 /* SocialMediaViewController.xib */,
 			);
 			path = Login;
 			sourceTree = "<group>";
@@ -425,7 +432,6 @@
 				2D9215862358A25900E8245A /* TabbarController.swift */,
 				2D92158A2358A8C300E8245A /* CommonNewsViewController.swift */,
 				2D92158C2358A90F00E8245A /* SearchNewsViewController.swift */,
-				2D92158E2358A92500E8245A /* BookmarksViewController.swift */,
 			);
 			path = TabBar;
 			sourceTree = "<group>";
@@ -568,6 +574,7 @@
 				2DB501B2236F33D700243D34 /* Localized.strings in Resources */,
 				2D03FF4E2361311F00952302 /* VideoTableViewCell.xib in Resources */,
 				2D03FF622361324600952302 /* ArticleCollectionViewCell.xib in Resources */,
+				2D3D1C95237AAE2D007BE2B5 /* SocialMediaViewController.xib in Resources */,
 				2D1837E9235CAB0D00EE99AF /* CustomSliderCollectionViewCell.xib in Resources */,
 				2D72332E2369E1EC00F0EB79 /* VideoCollectionViewCell.xib in Resources */,
 				2D03FF5E2361322F00952302 /* ArticleTableViewCell.xib in Resources */,
@@ -674,6 +681,7 @@
 				2D92158F2358A92500E8245A /* BookmarksViewController.swift in Sources */,
 				2DCBF841235D9B4600BC5C41 /* StaticHeaderPlugin.swift in Sources */,
 				2D03FF432361239D00952302 /* Videos.swift in Sources */,
+				2D3D1C94237AAE2D007BE2B5 /* SocialMediaViewController.swift in Sources */,
 				2DCBF85A235E008B00BC5C41 /* NewsPresenter.swift in Sources */,
 				2D1837D0235C7A4500EE99AF /* UIViewController+Extension.swift in Sources */,
 				5D3B3E78235A8AB000EA3C6A /* SliderTableViewCell.swift in Sources */,
