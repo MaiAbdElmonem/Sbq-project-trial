@@ -14,11 +14,6 @@ class ImageCollectionViewCell: UICollectionViewCell {
     @IBOutlet private weak var titleLabel: UILabel!
     @IBOutlet private weak var timeLabel: UILabel!
     
-//    class var CustomCell: ImageCollectionViewCell {
-//        let cell = Bundle.main.loadNibNamed("ImageCollectionViewCell", owner: self, options: nil)?.last
-//        return cell as! ImageCollectionViewCell
-//    }
-
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -26,7 +21,7 @@ class ImageCollectionViewCell: UICollectionViewCell {
     
     func configImage(comicsObj: Comic) {
         titleLabel.text = comicsObj.title
-        timeLabel.text = (comicsObj.publishDate?.convetDate())?.timeAgo()
+        timeLabel.text = comicsObj.publishDate
         let placeholderimage = #imageLiteral(resourceName: "loaded")
          if let imageUrl = comicsObj.coverPhoto {
                 newsImage.sd_setImage(with: URL(string: imageUrl), placeholderImage: placeholderimage)

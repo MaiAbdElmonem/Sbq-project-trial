@@ -8,30 +8,20 @@
 
 import UIKit
 import SDWebImage
-import SkeletonView
 
 class CustomSliderCollectionViewCell: UICollectionViewCell {
     
-    @IBOutlet weak var newsImage: UIImageView!
-    @IBOutlet weak var titleLabel: UILabel!
-    @IBOutlet weak var describtionLabel: UILabel!
-    @IBOutlet weak var timeLabel: UILabel!
-    @IBOutlet weak var noOfViewsLabel: UILabel!
-    
-//    class var CustomCell : CustomSliderCollectionViewCell {
-//        let cell = Bundle.main.loadNibNamed("CustomSliderCollectionViewCell", owner: self, options: nil)?.last
-//        return cell as! CustomSliderCollectionViewCell
-//    }
+    @IBOutlet private weak var newsImage: UIImageView!
+    @IBOutlet private weak var titleLabel: UILabel!
+    @IBOutlet private weak var describtionLabel: UILabel!
+    @IBOutlet private weak var timeLabel: UILabel!
+    @IBOutlet private weak var noOfViewsLabel: UILabel!
 
     override func awakeFromNib() {
         super.awakeFromNib()
-//         titleTextview.showAnimatedGradientSkeleton()
-//        hideSkeleton()
-    }
-    
-    func hideSliderSkelton() {
-        let skeltonSlider = [newsImage, titleLabel, describtionLabel, timeLabel, noOfViewsLabel]
-        skeltonSlider.forEach { $0?.hideSkeleton() }
+
+        titleLabel.textColor = UIColor(named: "SliderTitleColor")
+        describtionLabel.textColor = UIColor(named: "DescriptionColor")
     }
     
     func config(materialObj: Material) {

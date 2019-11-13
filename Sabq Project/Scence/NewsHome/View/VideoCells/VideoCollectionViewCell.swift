@@ -14,14 +14,10 @@ class VideoCollectionViewCell: UICollectionViewCell {
     @IBOutlet private weak var titleLabel: UILabel!
     @IBOutlet private weak var timeLabel: UILabel!
     
-//    class var CustomCell : VideoCollectionViewCell {
-//        let cell = Bundle.main.loadNibNamed("VideoCollectionViewCell", owner: self, options: nil)?.last
-//        return cell as! VideoCollectionViewCell
-//    }
-    
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
+        
+        titleLabel.textColor = UIColor(named: "VideoTitleColor")
     }
     
     func config(comicsObj: Comic) {
@@ -30,11 +26,5 @@ class VideoCollectionViewCell: UICollectionViewCell {
         guard let path = comicsObj.vid else { return }
         self.videoImage.sd_setImage(with: URL(
             string: "https://img.youtube.com/vi/\(path)/1.jpg"), placeholderImage: #imageLiteral(resourceName: "loaded") )
-//        let placeholderimage = #imageLiteral(resourceName: "loaded")
-//        if let imageUrl = comicsObj.coverPhoto {
-//        videoImage.sd_setImage(with: URL(string: imageUrl), placeholderImage: placeholderimage)
-//        } else {
-//            videoImage.image = placeholderimage
-//        }
   }
 }

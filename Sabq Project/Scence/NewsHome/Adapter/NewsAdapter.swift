@@ -228,7 +228,7 @@ extension NewsAdapter: SkeletonTableViewDataSource {
         case 0:
            return 1
         default:
-           return 3
+           return 2
         }
     }
     
@@ -236,7 +236,7 @@ extension NewsAdapter: SkeletonTableViewDataSource {
         -> ReusableCellIdentifier {
         switch indexPath.section {
         case 0:
-            return "SliderTableViewCell"
+            return "SkeltonTableViewCell"
         default:
             return "MaterialTableViewCell"
         }

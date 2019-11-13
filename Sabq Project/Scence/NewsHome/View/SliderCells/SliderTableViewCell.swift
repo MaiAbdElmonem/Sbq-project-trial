@@ -10,7 +10,8 @@ import UIKit
 
 class SliderTableViewCell: UITableViewCell, UICollectionViewDataSource, UICollectionViewDelegate {
     
-    @IBOutlet weak var sliderCollectionView: UICollectionView!
+    @IBOutlet private weak var sliderCollectionView: UICollectionView!
+    @IBOutlet private weak var pageControl: UIPageControl!
     
     var slideList: [Material]? {
         didSet {
@@ -26,29 +27,33 @@ class SliderTableViewCell: UITableViewCell, UICollectionViewDataSource, UICollec
         //TODO: need to setup collection view flow layout
         let flowLayout = UICollectionViewFlowLayout()
         flowLayout.scrollDirection = .horizontal
-        flowLayout.itemSize = CGSize(width: 70, height: 80)
+        flowLayout.itemSize = UICollectionViewFlowLayout.automaticSize
         flowLayout.minimumLineSpacing = 0
         flowLayout.minimumInteritemSpacing = 0
         self.sliderCollectionView.collectionViewLayout = flowLayout
         //————————register the xib for collection view cell
         let cellNib = UINib(nibName: "CustomSliderCollectionViewCell", bundle: nil)
         self.sliderCollectionView.register(cellNib, forCellWithReuseIdentifier: "CustomSliderCollectionViewCell")
-    }
-
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
+        sliderCollectionView.backgroundColor = UIColor(named: "bgColor")
+      
     }
     
-    func configureCell(slider: [Material]) {
-        slideList = slider
-    }
+        func collectionView(_ collectionView: UICollectionView,
+                            willDisplay cell: UICollectionViewCell,
+                            forItemAt indexPath: IndexPath) {
+            pageControl.currentPage = indexPath.row
+        }
+    
+//    func configureCell(slider: [Material]) {
+//    slideList = slider
+//    }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         if let sliderlist = slideList {
+           self.pageControl.numberOfPages = sliderlist.count
             return sliderlist.count
         } else {
+            self.pageControl.numberOfPages = 0
             return 0
         }
     }
@@ -59,13 +64,11 @@ class SliderTableViewCell: UITableViewCell, UICollectionViewDataSource, UICollec
             withReuseIdentifier: "CustomSliderCollectionViewCell", for: indexPath)
             as? CustomSliderCollectionViewCell,
             let sliderMaterial = slideList?[indexPath.row] else { return UICollectionViewCell() }
-        cell.config(materialObj: sliderMaterial)
+            cell.config(materialObj: sliderMaterial)
+           
         return cell
     }
    
-//    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
-//        return UIEdgeInsets(top: 0, left: 10, bottom: 0, right: 10)
-//    }
 }
     extension SliderTableViewCell: UICollectionViewDelegateFlowLayout {
         func collectionView(_ collectionView: UICollectionView,

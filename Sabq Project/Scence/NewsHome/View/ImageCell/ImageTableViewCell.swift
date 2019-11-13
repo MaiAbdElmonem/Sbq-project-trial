@@ -27,18 +27,12 @@ class ImageTableViewCell: UITableViewCell, UICollectionViewDelegate,
         let flowLayout = UICollectionViewFlowLayout()
         flowLayout.scrollDirection = .horizontal
         //        flowLayout.itemSize = CGSize(width: 70, height: 80)
-        flowLayout.minimumLineSpacing = 10
-        flowLayout.minimumInteritemSpacing = 10
+        flowLayout.minimumLineSpacing = 3
+        flowLayout.minimumInteritemSpacing = 3
         self.imageCollectionCell.collectionViewLayout = flowLayout
         //————————register the xib for collection view cell
         let cellNib = UINib(nibName: "ImageCollectionViewCell", bundle: nil)
         self.imageCollectionCell.register(cellNib, forCellWithReuseIdentifier: "ImageCollectionViewCell")
-    }
-
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
     }
     
     func configureCell(images: [Comic]) {
@@ -68,6 +62,6 @@ extension ImageTableViewCell: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView,
                         layout collectionViewLayout: UICollectionViewLayout,
                         sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: 0.5 * UIScreen.main.bounds.width, height: 0.8 * collectionView.frame.height)
+        return CGSize(width: 0.6 * UIScreen.main.bounds.width, height: 0.9 * collectionView.frame.height)
     }
 }

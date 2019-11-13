@@ -11,21 +11,21 @@ import UIKit
 class ArticleCollectionViewCell: UICollectionViewCell {
     @IBOutlet private weak var titleLabel: UILabel!
     @IBOutlet private weak var authorImage: UIImageView!
-    
     @IBOutlet private weak var authorNameLabel: UILabel!
-//    class var CustomCell : ArticleCollectionViewCell {
-//        let cell = Bundle.main.loadNibNamed("ArticleCollectionViewCell", owner: self, options: nil)?.last
-//        return cell as! ArticleCollectionViewCell
-//    }
-
+    @IBOutlet private weak var articleView: UIView!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
+        titleLabel.textColor = UIColor(named: "ArticleTitleColor")
+        authorNameLabel.textColor = UIColor(named: "AuthorNameColor")
+        self.backgroundColor = UIColor(named: "ArticleCustomCellColor")
+        articleView.backgroundColor = UIColor(named: "ArticleViewColor")
     }
     
     func configArticle(materialObj: Material) {
         titleLabel.text = materialObj.title
-        authorNameLabel.text = materialObj.authorName
+        authorNameLabel.text = (materialObj.authorName ?? "") + "-" + (materialObj.authorCity ?? "")
         let placeholderimage = #imageLiteral(resourceName: "loaded")
         if let imageUrl = materialObj.authorImg {
              authorImage.sd_setImage(with: URL(string: imageUrl), placeholderImage: placeholderimage)

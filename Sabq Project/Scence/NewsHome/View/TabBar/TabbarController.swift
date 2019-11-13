@@ -18,6 +18,8 @@ class TabbarController: UITabBarController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        tabBar.barTintColor = UIColor(named: "bgColor")
+        
         let title = NSLocalizedString("titleOftab1", comment: "tab1")
         print(title)
         newsViewController.tabBarItem = UITabBarItem(
@@ -58,6 +60,7 @@ class TabbarController: UITabBarController {
         let image = #imageLiteral(resourceName: "img_logo").withRenderingMode(.alwaysOriginal)
         logoImage.image = image
         navigationItem.titleView = logoImage
+        
     }
     
     @objc

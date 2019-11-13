@@ -27,12 +27,14 @@ class ArticleTableViewCell: UITableViewCell, UICollectionViewDelegate,
         let flowLayout = UICollectionViewFlowLayout()
         flowLayout.scrollDirection = .horizontal
         //        flowLayout.itemSize = CGSize(width: 70, height: 80)
-        flowLayout.minimumLineSpacing = 10
-        flowLayout.minimumInteritemSpacing = 10
+        flowLayout.minimumLineSpacing = 12
+        flowLayout.minimumInteritemSpacing = 12
         self.articleCollectionCell.collectionViewLayout = flowLayout
         //————————register the xib for collection view cell
         let cellNib = UINib(nibName: "ArticleCollectionViewCell", bundle: nil)
         self.articleCollectionCell.register(cellNib, forCellWithReuseIdentifier: "ArticleCollectionViewCell")
+        articleCollectionCell.backgroundColor = UIColor(named: "ArticleCollectionCellColor")
+        
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
