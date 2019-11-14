@@ -24,31 +24,41 @@ class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate {
         }
         return
     }
-        
-         let tabbarController = TabbarController()
-        navigationController.pushViewController(tabbarController, animated: false)
-    }
+        setUpHomeScreen()
+}
         
     var window: UIWindow?
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [
         UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         setupNetworking()
-        GIDSignIn.sharedInstance()?.clientID = (
-            "968187002220-e459aaqefque55mhd1i5unh9e33osql4.apps.googleusercontent.com")
-        GIDSignIn.sharedInstance().delegate = self
-        
-        // Override point for customization after application launch.
-        navigationController.isNavigationBarHidden = false
-        window = UIWindow(frame: UIScreen.main.bounds)
-        window?.rootViewController = navigationController
-        window?.makeKeyAndVisible()
+        setUpGoogleSignIn()
+        setUpLoginScreen()
         return true
     }
     
     @available(iOS 9.0, *)
     func application(_ app: UIApplication, open url: URL, options: [
-        UIApplication.OpenURLOptionsKey : Any]) -> Bool {
+        UIApplication.OpenURLOptionsKey: Any]) -> Bool {
         return GIDSignIn.sharedInstance().handle(url)
     }
+    
+    func setUpHomeScreen() {
+          let tabbarController = TabbarController()
+              navigationController.pushViewController(tabbarController, animated: false)
+    }
+    
+    func setUpLoginScreen() {
+        navigationController.isNavigationBarHidden = false
+               window = UIWindow(frame: UIScreen.main.bounds)
+               window?.rootViewController = navigationController
+               window?.makeKeyAndVisible()
+    }
+    
+    func setUpGoogleSignIn() {
+        GIDSignIn.sharedInstance()?.clientID = (
+            "968187002220-e459aaqefque55mhd1i5unh9e33osql4.apps.googleusercontent.com")
+        GIDSignIn.sharedInstance().delegate = self
+    }
+        
 }

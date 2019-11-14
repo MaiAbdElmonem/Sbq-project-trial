@@ -4,12 +4,17 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15404"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SocialMediaViewController" customModule="Sabq_Project" customModuleProvider="target">
             <connections>
+                <outlet property="facebookView" destination="NNW-WJ-5Y1" id="CZl-iz-5p1"/>
+                <outlet property="googleBtn" destination="RI7-JN-eA4" id="IOw-ls-5C4"/>
+                <outlet property="googleView" destination="Nvd-ha-S1t" id="yMH-7q-Gw2"/>
+                <outlet property="twitterView" destination="8SH-zG-MvJ" id="5pv-4o-ciJ"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -28,7 +33,7 @@
                                 <constraint firstAttribute="height" constant="45" id="osy-7R-ITK"/>
                             </constraints>
                             <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="80" maxY="0.0"/>
-                            <state key="normal" title="التسجيل من خلال فيسبوك" image="ic_facebook">
+                            <state key="normal" title="التسجيل من خلال فيسبوك">
                                 <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </state>
                         </button>
@@ -39,7 +44,7 @@
                                 <constraint firstAttribute="height" constant="45" id="luG-F6-9sV"/>
                             </constraints>
                             <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="100" maxY="0.0"/>
-                            <state key="normal" title="التسجيل من خلال تويتر" image="ic_twitter">
+                            <state key="normal" title="التسجيل من خلال تويتر">
                                 <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </state>
                         </button>
@@ -50,26 +55,87 @@
                                 <constraint firstAttribute="height" constant="45" id="piJ-T2-thF"/>
                             </constraints>
                             <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="95" maxY="0.0"/>
-                            <state key="normal" title="التسجيل من خلال جوجل" image="ic_google">
+                            <state key="normal" title="التسجيل من خلال جوجل">
                                 <color key="titleColor" red="0.40785318609999999" green="0.4078353643" blue="0.40784361959999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                             </state>
                             <connections>
                                 <action selector="googleLogin:" destination="-1" eventType="touchUpInside" id="Ixb-SL-fD1"/>
                             </connections>
                         </button>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Nvd-ha-S1t">
+                            <rect key="frame" x="38" y="168" width="50" height="45"/>
+                            <subviews>
+                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_google" translatesAutoresizingMaskIntoConstraints="NO" id="M6s-ec-Lcr">
+                                    <rect key="frame" x="12" y="10" width="25" height="25"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="25" id="6R4-mw-mgl"/>
+                                        <constraint firstAttribute="width" constant="25" id="wj4-ao-PbE"/>
+                                    </constraints>
+                                </imageView>
+                            </subviews>
+                            <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="50" id="HnO-B2-NVG"/>
+                                <constraint firstAttribute="height" constant="45" id="dlN-1d-8C0"/>
+                                <constraint firstItem="M6s-ec-Lcr" firstAttribute="top" secondItem="Nvd-ha-S1t" secondAttribute="top" constant="10" id="fvo-w7-937"/>
+                                <constraint firstItem="M6s-ec-Lcr" firstAttribute="leading" secondItem="Nvd-ha-S1t" secondAttribute="leading" constant="12" id="sju-GS-JKn"/>
+                            </constraints>
+                        </view>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8SH-zG-MvJ">
+                            <rect key="frame" x="38" y="109" width="50" height="45"/>
+                            <subviews>
+                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_twitter" translatesAutoresizingMaskIntoConstraints="NO" id="N0D-K9-Svk">
+                                    <rect key="frame" x="14" y="13" width="23" height="19"/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" constant="23" id="6Wn-gg-Gpy"/>
+                                        <constraint firstAttribute="height" constant="19" id="hGL-q9-pIv"/>
+                                    </constraints>
+                                </imageView>
+                            </subviews>
+                            <constraints>
+                                <constraint firstItem="N0D-K9-Svk" firstAttribute="top" secondItem="8SH-zG-MvJ" secondAttribute="top" constant="13" id="8Zq-u7-ozG"/>
+                                <constraint firstItem="N0D-K9-Svk" firstAttribute="leading" secondItem="8SH-zG-MvJ" secondAttribute="leading" constant="14" id="eW5-vV-msa"/>
+                                <constraint firstAttribute="width" constant="50" id="sNs-Gf-kO9"/>
+                                <constraint firstAttribute="height" constant="45" id="xA0-ba-9TL"/>
+                            </constraints>
+                        </view>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NNW-WJ-5Y1">
+                            <rect key="frame" x="38" y="50" width="50" height="45"/>
+                            <subviews>
+                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_facebook" translatesAutoresizingMaskIntoConstraints="NO" id="zqV-eq-M12">
+                                    <rect key="frame" x="16" y="12" width="13" height="22"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="22" id="9cO-6X-R7H"/>
+                                        <constraint firstAttribute="width" constant="13" id="aeB-69-O9L"/>
+                                    </constraints>
+                                </imageView>
+                            </subviews>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="50" id="alK-XA-zAh"/>
+                                <constraint firstItem="zqV-eq-M12" firstAttribute="top" secondItem="NNW-WJ-5Y1" secondAttribute="top" constant="12" id="sPg-vM-jMS"/>
+                                <constraint firstItem="zqV-eq-M12" firstAttribute="leading" secondItem="NNW-WJ-5Y1" secondAttribute="leading" constant="16" id="wpg-VM-rRr"/>
+                                <constraint firstAttribute="height" constant="45" id="zTf-SE-XV4"/>
+                            </constraints>
+                        </view>
                     </subviews>
-                    <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                    <color key="backgroundColor" name="sheetBgColor"/>
                     <constraints>
+                        <constraint firstItem="Nvd-ha-S1t" firstAttribute="leading" secondItem="4Dc-NI-U8O" secondAttribute="leading" constant="38" id="0U7-vn-sVU"/>
                         <constraint firstAttribute="trailing" secondItem="OWK-nd-sse" secondAttribute="trailing" constant="37" id="0cO-t7-3Fe"/>
                         <constraint firstItem="OWK-nd-sse" firstAttribute="top" secondItem="4Dc-NI-U8O" secondAttribute="top" constant="50" id="19V-0c-jJH"/>
                         <constraint firstItem="RI7-JN-eA4" firstAttribute="top" secondItem="lTE-38-Td7" secondAttribute="bottom" constant="14" id="7Re-0K-lIX"/>
+                        <constraint firstItem="8SH-zG-MvJ" firstAttribute="centerY" secondItem="lTE-38-Td7" secondAttribute="centerY" id="JVf-k9-n8H"/>
                         <constraint firstItem="lTE-38-Td7" firstAttribute="top" secondItem="OWK-nd-sse" secondAttribute="bottom" constant="14" id="OI2-y0-zX5"/>
                         <constraint firstItem="RI7-JN-eA4" firstAttribute="leading" secondItem="4Dc-NI-U8O" secondAttribute="leading" constant="38" id="PFd-BV-wHx"/>
+                        <constraint firstItem="8SH-zG-MvJ" firstAttribute="leading" secondItem="4Dc-NI-U8O" secondAttribute="leading" constant="38" id="ZvS-6P-vvx"/>
                         <constraint firstAttribute="trailing" secondItem="lTE-38-Td7" secondAttribute="trailing" constant="37" id="cCW-jr-uAF"/>
                         <constraint firstItem="lTE-38-Td7" firstAttribute="leading" secondItem="4Dc-NI-U8O" secondAttribute="leading" constant="38" id="eCk-Kj-1iI"/>
                         <constraint firstAttribute="trailing" secondItem="RI7-JN-eA4" secondAttribute="trailing" constant="37" id="ky7-51-3Mx"/>
+                        <constraint firstItem="NNW-WJ-5Y1" firstAttribute="leading" secondItem="4Dc-NI-U8O" secondAttribute="leading" constant="38" id="loH-ct-ARR"/>
                         <constraint firstAttribute="height" constant="252" id="ooF-t5-dV1"/>
                         <constraint firstItem="OWK-nd-sse" firstAttribute="leading" secondItem="4Dc-NI-U8O" secondAttribute="leading" constant="38" id="s2C-Ck-Ibe"/>
+                        <constraint firstItem="NNW-WJ-5Y1" firstAttribute="centerY" secondItem="OWK-nd-sse" secondAttribute="centerY" id="sUj-Q5-J1F"/>
+                        <constraint firstItem="Nvd-ha-S1t" firstAttribute="centerY" secondItem="RI7-JN-eA4" secondAttribute="centerY" id="wEj-Qt-8ta"/>
                     </constraints>
                 </view>
             </subviews>
@@ -80,12 +146,15 @@
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="4Dc-NI-U8O" secondAttribute="trailing" id="PTu-ul-cHv"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
-            <point key="canvasLocation" x="132" y="131"/>
+            <point key="canvasLocation" x="131.8840579710145" y="130.58035714285714"/>
         </view>
     </objects>
     <resources>
         <image name="ic_facebook" width="13" height="22"/>
         <image name="ic_google" width="25" height="25"/>
         <image name="ic_twitter" width="23" height="19"/>
+        <namedColor name="sheetBgColor">
+            <color red="0.17254901960784313" green="0.17254901960784313" blue="0.1803921568627451" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
     </resources>
 </document>

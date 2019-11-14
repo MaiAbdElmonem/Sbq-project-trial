@@ -53,6 +53,7 @@
 		2DB501B2236F33D700243D34 /* Localized.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2DB501B4236F33D700243D34 /* Localized.strings */; };
 		2DBAFBBC236AF7B500759A23 /* SkeltonTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DBAFBBA236AF7B500759A23 /* SkeltonTableViewCell.swift */; };
 		2DBAFBBD236AF7B500759A23 /* SkeltonTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2DBAFBBB236AF7B500759A23 /* SkeltonTableViewCell.xib */; };
+		2DC85BB1237C9F7F006CECA0 /* TextField+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DC85BB0237C9F7F006CECA0 /* TextField+Extensions.swift */; };
 		2DCBF835235D970600BC5C41 /* AppDelegate+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DCBF833235D970600BC5C41 /* AppDelegate+Extensions.swift */; };
 		2DCBF841235D9B4600BC5C41 /* StaticHeaderPlugin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DCBF83A235D9B4600BC5C41 /* StaticHeaderPlugin.swift */; };
 		2DCBF842235D9B4600BC5C41 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DCBF83B235D9B4600BC5C41 /* NetworkManager.swift */; };
@@ -128,6 +129,7 @@
 		2DBAFBBB236AF7B500759A23 /* SkeltonTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SkeltonTableViewCell.xib; sourceTree = "<group>"; };
 		2DBAFBBE236E1DEB00759A23 /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/VideoCollectionViewCell.strings; sourceTree = "<group>"; };
 		2DBAFBBF236E1DEB00759A23 /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/NewsViewController.strings; sourceTree = "<group>"; };
+		2DC85BB0237C9F7F006CECA0 /* TextField+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TextField+Extensions.swift"; sourceTree = "<group>"; };
 		2DCBF833235D970600BC5C41 /* AppDelegate+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "AppDelegate+Extensions.swift"; sourceTree = "<group>"; };
 		2DCBF83A235D9B4600BC5C41 /* StaticHeaderPlugin.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StaticHeaderPlugin.swift; sourceTree = "<group>"; };
 		2DCBF83B235D9B4600BC5C41 /* NetworkManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
@@ -269,6 +271,7 @@
 				2D04FE1E23691CB200B9C802 /* Int+Extentions.swift */,
 				2D04FE2B23693F0100B9C802 /* String+Extensions.swift */,
 				2DB501B4236F33D700243D34 /* Localized.strings */,
+				2DC85BB0237C9F7F006CECA0 /* TextField+Extensions.swift */,
 			);
 			path = "Supporting files";
 			sourceTree = "<group>";
@@ -690,6 +693,7 @@
 				2D1837E8235CAB0D00EE99AF /* CustomSliderCollectionViewCell.swift in Sources */,
 				2DCBF84B235DA79200BC5C41 /* Tags.swift in Sources */,
 				2D92157523589EC400E8245A /* AppDelegate.swift in Sources */,
+				2DC85BB1237C9F7F006CECA0 /* TextField+Extensions.swift in Sources */,
 				2DCBF85F235E248900BC5C41 /* NewsAdapter.swift in Sources */,
 				2D03FF612361324600952302 /* ArticleCollectionViewCell.swift in Sources */,
 				2D29ECD52374578D002839B0 /* GoogleSignInViewController.swift in Sources */,
