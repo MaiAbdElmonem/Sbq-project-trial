@@ -19,6 +19,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="GoogleSignInViewController" customModule="Sabq_Project" customModuleProvider="target">
             <connections>
+                <outlet property="appleSignIn" destination="0EW-py-CVF" id="A7z-sY-KX2"/>
                 <outlet property="passwordTextField" destination="cyD-H2-IG5" id="rEt-xT-DjB"/>
                 <outlet property="signInBtn" destination="zlz-xD-QuK" id="aIS-i6-1V6"/>
                 <outlet property="socialMediaButton" destination="BeV-YB-x8l" id="wmn-Yf-yaf"/>
@@ -133,6 +134,9 @@
                         <constraint firstAttribute="height" constant="44" id="jzf-A8-5pZ"/>
                     </constraints>
                     <state key="normal" backgroundImage="Controls_Buttons_Apple_ID_Sign_in_with_Apple_White"/>
+                    <connections>
+                        <action selector="signInWithApple:" destination="-1" eventType="touchUpInside" id="hic-1B-V6h"/>
+                    </connections>
                 </button>
                 <button opaque="NO" contentMode="scaleAspectFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BeV-YB-x8l">
                     <rect key="frame" x="38" y="636" width="338" height="44"/>

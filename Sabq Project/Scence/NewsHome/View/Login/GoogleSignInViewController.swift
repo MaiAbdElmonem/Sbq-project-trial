@@ -8,17 +8,19 @@
 
 import UIKit
 import FittedSheets
+import AuthenticationServices
 
 class GoogleSignInViewController: UIViewController {
     @IBOutlet private weak var signInBtn: UIButton!
     @IBOutlet private weak var passwordTextField: UITextField!
     @IBOutlet private weak var userNameTextField: UITextField!
     @IBOutlet private weak var socialMediaButton: UIButton!
+    @IBOutlet weak var appleSignIn: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-       userNameTextField.setLeftPaddingPoints()
-       passwordTextField.setLeftPaddingPoints()
+        userNameTextField.setLeftPaddingPoints()
+        passwordTextField.setLeftPaddingPoints()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -27,12 +29,17 @@ class GoogleSignInViewController: UIViewController {
         navigationController?.setNavigationBarHidden(true, animated: false)
     }
     
+    @available(iOS 13.0, *)
+    @IBAction func signInWithApple(_ sender: Any) {
+        performExistingAccountSetupFlows()
+    }
+    
     @IBAction func showActionSheet(_ sender: UIButton) {
         print("show")
         let controller = SocialMediaViewController()
         let sheetController = SheetViewController(
             controller: controller, sizes: [.fixed(300), .fixed(375), .halfScreen, .fullScreen])
-
+        
         sheetController.blurBottomSafeArea = false
         sheetController.adjustForBottomSafeArea = true
         sheetController.topCornersRadius = 0
@@ -40,5 +47,38 @@ class GoogleSignInViewController: UIViewController {
         sheetController.extendBackgroundBehindHandle = true
         
         self.present(sheetController, animated: true, completion: nil)
+    }
+    
+    @available(iOS 13.0, *)
+    func performExistingAccountSetupFlows() {
+        // Prepare requests for both Apple ID and password providers.
+        let requests = [ASAuthorizationAppleIDProvider().createRequest()]
+        
+        // Create an authorization controller with the given requests.
+        let authorizationController = ASAuthorizationController(authorizationRequests: requests)
+        authorizationController.delegate = self
+        authorizationController.presentationContextProvider = self
+        authorizationController.performRequests()
+    }
+}
+
+extension GoogleSignInViewController: ASAuthorizationControllerDelegate {
+    
+    @available(iOS 13.0, *)
+   func authorizationController(controller: ASAuthorizationController,
+                                didCompleteWithAuthorization authorization: ASAuthorization) {
+    if let appleIDCredential = authorization.credential as?  ASAuthorizationAppleIDCredential {
+    let userIdentifier = appleIDCredential.user
+    let fullName = appleIDCredential.fullName
+    let email = appleIDCredential.email
+//        print("User id is \(userIdentifier) \n Full Name is \(String(describing: fullName)) \n Email id is \(String(describing: email))”) }
+    }
+  }
+}
+
+extension GoogleSignInViewController: ASAuthorizationControllerPresentationContextProviding {
+    @available(iOS 13.0, *)
+    func presentationAnchor(for controller: ASAuthorizationController) -> ASPresentationAnchor {
+        return self.view.window ?? UIWindow()
     }
 }
