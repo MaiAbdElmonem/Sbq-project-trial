@@ -148,16 +148,17 @@
                         <action selector="showActionSheet:" destination="-1" eventType="touchUpInside" id="o4R-ga-JCM"/>
                     </connections>
                 </button>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="ليس لديك حساب ؟" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="B9w-qa-lsH">
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ليس لديك حساب ؟" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="B9w-qa-lsH">
                     <rect key="frame" x="99" y="792" width="106.5" height="35"/>
                     <constraints>
+                        <constraint firstAttribute="width" constant="106.5" id="VoH-G3-GGR"/>
                         <constraint firstAttribute="height" constant="35" id="vlC-c5-E0L"/>
                     </constraints>
                     <fontDescription key="fontDescription" name="BBCNassim-EX-Regular" family="BBCNassim-EX" pointSize="18"/>
                     <color key="textColor" name="signInAccountColor"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zlz-xD-QuK">
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zlz-xD-QuK">
                     <rect key="frame" x="214" y="792" width="104" height="35"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="35" id="sUL-AH-CSN"/>

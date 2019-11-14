@@ -9,13 +9,14 @@
 import UIKit
 import FittedSheets
 import AuthenticationServices
+import UserNotifications
 
 class GoogleSignInViewController: UIViewController {
     @IBOutlet private weak var signInBtn: UIButton!
     @IBOutlet private weak var passwordTextField: UITextField!
     @IBOutlet private weak var userNameTextField: UITextField!
     @IBOutlet private weak var socialMediaButton: UIButton!
-    @IBOutlet weak var appleSignIn: UIButton!
+    @IBOutlet private weak var appleSignIn: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -68,10 +69,9 @@ extension GoogleSignInViewController: ASAuthorizationControllerDelegate {
    func authorizationController(controller: ASAuthorizationController,
                                 didCompleteWithAuthorization authorization: ASAuthorization) {
     if let appleIDCredential = authorization.credential as?  ASAuthorizationAppleIDCredential {
-    let userIdentifier = appleIDCredential.user
-    let fullName = appleIDCredential.fullName
-    let email = appleIDCredential.email
-//        print("User id is \(userIdentifier) \n Full Name is \(String(describing: fullName)) \n Email id is \(String(describing: email))”) }
+        _ = appleIDCredential.user
+        _ = appleIDCredential.fullName
+        _ = appleIDCredential.email
     }
   }
 }

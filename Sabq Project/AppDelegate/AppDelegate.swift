@@ -8,6 +8,7 @@
 
 import UIKit
 import GoogleSignIn
+import UserNotifications
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate {
@@ -59,6 +60,17 @@ class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate {
         GIDSignIn.sharedInstance()?.clientID = (
             "968187002220-e459aaqefque55mhd1i5unh9e33osql4.apps.googleusercontent.com")
         GIDSignIn.sharedInstance().delegate = self
+    }
+    
+    func setUpNotifications() {
+        UNUserNotificationCenter.current().requestAuthorization(options: [.alert, .sound], completionHandler: {didAllow, error in
+            
+        })
+        UIApplication.shared.registerForRemoteNotifications()
+    }
+    
+    func application(_ application: UIApplication, didRegisterForRemoteNotificationsWithDeviceToken deviceToken: Data) {
+        <#code#>
     }
         
 }
