@@ -29,6 +29,9 @@ PODS:
     - SDWebImage/Core (= 5.2.2)
   - SDWebImage/Core (5.2.2)
   - SkeletonView (1.8.2)
+  - TwitterCore (3.2.0)
+  - TwitterKit (3.4.2):
+    - TwitterCore (>= 3.2.0)
 
 DEPENDENCIES:
   - FittedSheets
@@ -37,6 +40,7 @@ DEPENDENCIES:
   - Moya
   - SDWebImage (~> 5.0)
   - SkeletonView
+  - TwitterKit
 
 SPEC REPOS:
   trunk:
@@ -51,6 +55,8 @@ SPEC REPOS:
     - Result
     - SDWebImage
     - SkeletonView
+    - TwitterCore
+    - TwitterKit
 
 SPEC CHECKSUMS:
   Alamofire: afc3e7c6db61476cb45cdd23fed06bad03bbc321
@@ -64,7 +70,9 @@ SPEC CHECKSUMS:
   Result: bd966fac789cc6c1563440b348ab2598cc24d5c7
   SDWebImage: 5fcdb02cc35e05fc35791ec514b191d27189f872
   SkeletonView: bb27c39857e5492136f02ee8a3aa78de55d12ecd
+  TwitterCore: 8cbc9ad34d91c63a0035ea05bfbfc0d7ca72a28c
+  TwitterKit: 5e4f41d70b9abdb41df5467f52d7aa2c0fd26ebb
 
-PODFILE CHECKSUM: 3456f0f78a5d591436cda155dcc6476b316c690d
+PODFILE CHECKSUM: 8a23e06e1c2b4611dc547d8f14dd13bd446845df
 
 COCOAPODS: 1.8.4

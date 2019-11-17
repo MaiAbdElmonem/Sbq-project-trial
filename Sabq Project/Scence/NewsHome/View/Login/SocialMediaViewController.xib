@@ -14,6 +14,7 @@
                 <outlet property="facebookView" destination="NNW-WJ-5Y1" id="CZl-iz-5p1"/>
                 <outlet property="googleBtn" destination="RI7-JN-eA4" id="IOw-ls-5C4"/>
                 <outlet property="googleView" destination="Nvd-ha-S1t" id="yMH-7q-Gw2"/>
+                <outlet property="twitterBtn" destination="lTE-38-Td7" id="Vcc-lG-r3J"/>
                 <outlet property="twitterView" destination="8SH-zG-MvJ" id="5pv-4o-ciJ"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
@@ -47,6 +48,9 @@
                             <state key="normal" title="التسجيل من خلال تويتر">
                                 <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </state>
+                            <connections>
+                                <action selector="twitterLogin:" destination="-1" eventType="touchUpInside" id="I8i-Dd-JT6"/>
+                            </connections>
                         </button>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RI7-JN-eA4">
                             <rect key="frame" x="38" y="168" width="339" height="45"/>
