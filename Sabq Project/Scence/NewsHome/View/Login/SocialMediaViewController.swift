@@ -65,7 +65,6 @@ class SocialMediaViewController: UIViewController {
     }
 }
 
-
 //        googleBtn.setImage(#imageLiteral(resourceName: "ic_google"), for: .normal)
 //           googleBtn.imageView?.contentMode = .scaleAspectFit
 //           googleBtn.imageView?.layer.borderWidth = 1.86
