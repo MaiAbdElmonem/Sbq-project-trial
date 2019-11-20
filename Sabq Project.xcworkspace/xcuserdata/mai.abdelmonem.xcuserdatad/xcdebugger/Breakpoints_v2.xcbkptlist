@@ -334,10 +334,10 @@
             filePath = "Sabq Project/Scence/NewsHome/View/Login/GoogleSignInViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "32"
-            endingLineNumber = "32"
-            landmarkName = "GoogleSignInViewController"
-            landmarkType = "3">
+            startingLineNumber = "33"
+            endingLineNumber = "33"
+            landmarkName = "viewWillAppear(_:)"
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -350,8 +350,8 @@
             filePath = "Sabq Project/Scence/NewsHome/View/Login/GoogleSignInViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "33"
-            endingLineNumber = "33"
+            startingLineNumber = "46"
+            endingLineNumber = "46"
             landmarkName = "GoogleSignInViewController"
             landmarkType = "3">
          </BreakpointContent>

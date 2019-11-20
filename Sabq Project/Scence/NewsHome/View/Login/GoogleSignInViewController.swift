@@ -22,12 +22,26 @@ class GoogleSignInViewController: UIViewController {
         super.viewDidLoad()
         userNameTextField.setLeftPaddingPoints()
         passwordTextField.setLeftPaddingPoints()
+        userNameTextField.becomeFirstResponder()
+        passwordTextField.becomeFirstResponder()
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
         navigationController?.setNavigationBarHidden(true, animated: false)
+    }
+    
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        view.endEditing(true)
+        userNameTextField.resignFirstResponder()
+        passwordTextField.resignFirstResponder()
+    }
+    func textFieldShouldReturn(textField: UITextField) -> Bool {
+        
+        userNameTextField.resignFirstResponder()
+        passwordTextField.resignFirstResponder()
+        return true
     }
     
     @available(iOS 13.0, *)

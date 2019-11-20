@@ -75,13 +75,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate {
     
     func registerForPushNotifications() {
       UNUserNotificationCenter.current() // 1
-        .requestAuthorization(options: [.alert, .sound, .badge]) { // 2
-        [weak self] granted, error in
+        .requestAuthorization(options: [.alert, .sound, .badge])
+        { [weak self] granted, _ in
             
           print("Permission granted: \(granted)")
           guard granted else { return }
           self?.getNotificationSettings()
-    }
+        }
  }
     
     func getNotificationSettings() {
