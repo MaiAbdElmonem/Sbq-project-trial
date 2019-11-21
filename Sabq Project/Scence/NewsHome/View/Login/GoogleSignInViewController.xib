@@ -98,7 +98,7 @@
                             </constraints>
                             <color key="textColor" red="0.69019607843137254" green="0.69019607843137254" blue="0.69019607843137254" alpha="1" colorSpace="calibratedRGB"/>
                             <fontDescription key="fontDescription" name="BBCNassim-EX-Regular" family="BBCNassim-EX" pointSize="20"/>
-                            <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                            <textInputTraits key="textInputTraits" returnKeyType="done" enablesReturnKeyAutomatically="YES" secureTextEntry="YES" textContentType="password"/>
                         </textField>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RwJ-RV-wjX">
                             <rect key="frame" x="20" y="311" width="338" height="55"/>
@@ -129,7 +129,7 @@
                             </constraints>
                             <color key="textColor" red="0.69019607843137254" green="0.69019607843137254" blue="0.69019607843137254" alpha="1" colorSpace="calibratedRGB"/>
                             <fontDescription key="fontDescription" name="BBCNassim-EX-Regular" family="BBCNassim-EX" pointSize="20"/>
-                            <textInputTraits key="textInputTraits" keyboardType="namePhonePad"/>
+                            <textInputTraits key="textInputTraits" keyboardType="namePhonePad" returnKeyType="next" enablesReturnKeyAutomatically="YES" textContentType="username"/>
                         </textField>
                         <button opaque="NO" contentMode="scaleAspectFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BeV-YB-x8l">
                             <rect key="frame" x="20" y="551" width="338" height="44"/>
@@ -155,7 +155,7 @@
                                     <nil key="highlightedColor"/>
                                 </label>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zlz-xD-QuK">
-                                    <rect key="frame" x="124" y="0.0" width="116" height="33"/>
+                                    <rect key="frame" x="136" y="0.0" width="104" height="38"/>
                                     <fontDescription key="fontDescription" name="BBCNassim-EX-Regular" family="BBCNassim-EX" pointSize="18"/>
                                     <state key="normal" title="سجل حساب جديد">
                                         <color key="titleColor" red="0.29019607843137252" green="0.56470588235294117" blue="0.88627450980392153" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -166,6 +166,7 @@
                                 <constraint firstItem="zlz-xD-QuK" firstAttribute="top" secondItem="SbE-lT-VVN" secondAttribute="top" id="79M-TP-fd3"/>
                                 <constraint firstItem="B9w-qa-lsH" firstAttribute="top" secondItem="SbE-lT-VVN" secondAttribute="top" id="Dgd-8T-wzy"/>
                                 <constraint firstItem="B9w-qa-lsH" firstAttribute="leading" secondItem="SbE-lT-VVN" secondAttribute="leading" constant="23" id="Naa-JQ-H2J"/>
+                                <constraint firstItem="zlz-xD-QuK" firstAttribute="leading" secondItem="B9w-qa-lsH" secondAttribute="trailing" constant="6.5" id="WFH-sS-2bN"/>
                                 <constraint firstAttribute="trailing" secondItem="zlz-xD-QuK" secondAttribute="trailing" constant="24" id="bF7-rF-ejL"/>
                                 <constraint firstAttribute="height" constant="35" id="qTL-dr-3Mf"/>
                             </constraints>

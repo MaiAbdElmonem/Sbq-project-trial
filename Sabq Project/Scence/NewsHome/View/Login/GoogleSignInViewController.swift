@@ -9,7 +9,6 @@
 import UIKit
 import FittedSheets
 import AuthenticationServices
-import UserNotifications
 
 class GoogleSignInViewController: UIViewController {
     @IBOutlet private weak var signInBtn: UIButton!
@@ -22,26 +21,14 @@ class GoogleSignInViewController: UIViewController {
         super.viewDidLoad()
         userNameTextField.setLeftPaddingPoints()
         passwordTextField.setLeftPaddingPoints()
-        userNameTextField.becomeFirstResponder()
-        passwordTextField.becomeFirstResponder()
+        userNameTextField.delegate = self
+        passwordTextField.delegate = self
+        self.hideKeyboardWhenTappedAround()
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        
         navigationController?.setNavigationBarHidden(true, animated: false)
-    }
-    
-    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-        view.endEditing(true)
-        userNameTextField.resignFirstResponder()
-        passwordTextField.resignFirstResponder()
-    }
-    func textFieldShouldReturn(textField: UITextField) -> Bool {
-        
-        userNameTextField.resignFirstResponder()
-        passwordTextField.resignFirstResponder()
-        return true
     }
     
     @available(iOS 13.0, *)
@@ -94,5 +81,50 @@ extension GoogleSignInViewController: ASAuthorizationControllerPresentationConte
     @available(iOS 13.0, *)
     func presentationAnchor(for controller: ASAuthorizationController) -> ASPresentationAnchor {
         return self.view.window ?? UIWindow()
+    }
+}
+
+extension GoogleSignInViewController: UITextFieldDelegate {
+    
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+           userNameTextField.resignFirstResponder()
+           passwordTextField.resignFirstResponder()
+       }
+    // Next in keyboard and Done
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        if textField == userNameTextField { // Switch focus to other text field
+            passwordTextField.becomeFirstResponder()
+        }
+        return true
+    }
+    
+    // Return in keyboard that dismiss
+    
+//    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+//           let nextTag = textField.tag + 1
+//
+//           if let nextResponder = textField.superview?.viewWithTag(nextTag) {
+//               nextResponder.becomeFirstResponder()
+//           } else {
+//               textField.resignFirstResponder()
+//           }
+//
+//           return true
+//       }
+    
+}
+
+extension UIViewController {
+    func hideKeyboardWhenTappedAround() {
+        let tap: UITapGestureRecognizer = UITapGestureRecognizer(
+            target: self, action: #selector(UIViewController.dismissKeyboard))
+        tap.cancelsTouchesInView = false
+        view.addGestureRecognizer(tap)
+    }
+
+    @objc
+    func dismissKeyboard() {
+        view.endEditing(true)
     }
 }
